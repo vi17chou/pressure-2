@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MainActivity"
         tools:targetApi="31">
         <activity
+            android:name=".EmotionActivity"
+            android:exported="false" />
+        <activity
             android:name=".BalloonActivity"
             android:exported="false" />
         <activity
@@ -41,9 +44,6 @@
             android:exported="false" />
         <activity
             android:name=".DietActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EmotionActivity"
             android:exported="false" />
         <activity
             android:name=".SportActivity"

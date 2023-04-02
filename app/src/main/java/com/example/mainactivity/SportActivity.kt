@@ -10,23 +10,5 @@ class SportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sport)
 
-       /* val guess=findViewById<Button>(R.id.guess)
-        val guess=findViewById<Button>(R.id.guess)
-        val guess=findViewById<Button>(R.id.guess)
-
-        balloon.setOnClickListener {
-            val it= Intent(this,BalloonActivity::class.java)
-            startActivity(it)
-        }
-
-        balloon.setOnClickListener {
-            val it= Intent(this,BalloonActivity::class.java)
-            startActivity(it)
-        }
-
-        balloon.setOnClickListener {
-            val it= Intent(this,BalloonActivity::class.java)
-            startActivity(it)
-        }*/
     }
 }
