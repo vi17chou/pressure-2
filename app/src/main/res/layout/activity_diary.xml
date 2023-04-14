@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DiaryActivity">
+    tools:context=".DiaryActivity"
+    android:background="@drawable/gradient_background">
+
 
     <Button
         android:id="@+id/New"
@@ -13,7 +15,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="15dp"
+        android:backgroundTint="#FDF0D5"
         android:text="心情記錄填寫"
+        android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +30,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="250dp"
         android:layout_marginEnd="15dp"
+        android:backgroundTint="#FDF0D5"
         android:text="查詢心情記錄"
+        android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
@@ -40,7 +46,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="400dp"
         android:layout_marginEnd="15dp"
+        android:backgroundTint="#FDF0D5"
         android:text="刪除心情紀錄"
+        android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.527"
@@ -49,10 +57,12 @@
 
     <Button
         android:id="@+id/back_home"
-        android:layout_width="217dp"
-        android:layout_height="67dp"
+        android:layout_width="165dp"
+        android:layout_height="64dp"
         android:layout_marginBottom="85dp"
+        android:backgroundTint="#EBDEFF"
         android:text="返回"
+        android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
