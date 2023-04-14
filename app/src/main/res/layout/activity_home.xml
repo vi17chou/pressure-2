@@ -4,16 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:background="@drawable/gradient_background">
 
     <Button
         android:id="@+id/diary"
         android:layout_width="268dp"
         android:layout_height="69dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="#FDF0D5"
         android:text="心情日記"
+        android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,11 +25,13 @@
         android:id="@+id/record"
         android:layout_width="268dp"
         android:layout_height="69dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="340dp"
+        android:backgroundTint="#FDF0D5"
         android:text="測驗紀錄"
+        android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,11 +39,23 @@
         android:id="@+id/method"
         android:layout_width="268dp"
         android:layout_height="69dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="512dp"
+        android:backgroundTint="#FDF0D5"
         android:text="紓壓方法"
+        android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="首頁"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="40dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
