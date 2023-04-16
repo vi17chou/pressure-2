@@ -46,10 +46,8 @@ class MethodActivity : AppCompatActivity() {
         }
 
         //返回
-        back.setOnClickListener { v ->
-            val it = Intent(this, HomeActivity::class.java).apply {
-
-            }
+        back.setOnClickListener {
+            finish()
         }
     }
 }

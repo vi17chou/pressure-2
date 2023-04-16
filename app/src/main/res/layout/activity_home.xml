@@ -57,5 +57,6 @@
         android:textColor="@color/black"
         android:textSize="35sp"
         tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="40dp" />
+        tools:layout_editor_absoluteY="40dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

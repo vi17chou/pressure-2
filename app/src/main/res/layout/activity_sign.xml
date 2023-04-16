@@ -44,11 +44,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/sign_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,11 +60,12 @@
         tools:text="輸入你的帳號" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/sign_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,9 +76,9 @@
         tools:text="輸入你的密碼" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/checkpwd"
         android:layout_width="183dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="40dp"
         android:ems="10"
         android:inputType="textPassword"
@@ -98,6 +100,21 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sign_submit"
+        android:layout_width="145dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#EAC8FD"
+        android:text="送出"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.815"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

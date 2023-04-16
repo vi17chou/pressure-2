@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:layout_column="1"
+            android:gravity="left"
+            android:padding="1dip"
+            android:text="提供使用者舒緩壓力的食物一些舒緩壓力的食物包括：" />
+
+    <TableRow>
+
+        <TextView
+            android:padding="1dip"
+            android:text="食物名稱" />
+        <TextView
+            android:layout_column="1"
+            android:text="功效。"
+            android:gravity="left"
+            android:padding="1dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="堅果："
+            android:padding="1dip" />
+        <TextView
+            android:layout_column="1"
+            android:text="如核桃、腰果和杏仁等，它們含有富含ω-3脂肪\n酸和抗氧化物，有助於降低壓力水平。"
+            android:gravity="left"
+            android:padding="1dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="綠茶："
+            android:padding="1dip" />
+        <TextView
+            android:layout_column="1"
+            android:text="含有茶多酚和氨基酸，有助於降低焦慮和壓力。"
+            android:gravity="left"
+            android:padding="1dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="香蕉："
+            android:padding="1dip" />
+        <TextView
+            android:layout_column="1"
+            android:text="富含鎂，有助於緩解壓力和焦慮。"
+            android:gravity="left"
+            android:padding="1dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="燕麥："
+            android:padding="1dip" />
+        <TextView
+            android:layout_column="1"
+            android:text="燕麥中含有鎂和B族維生素，可以幫助減輕壓力\n和焦慮。"
+            android:gravity="left"
+            android:padding="1dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="奶酪："
+            android:padding="1dip" />
+        <TextView
+            android:layout_column="1"
+            android:text="奶酪中含有鈣質和蛋白質，有助於提高血清素水\n平，使人感覺更放鬆和平靜。"
+            android:gravity="left"
+            android:padding="1dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="橙色水果和蔬菜："
+            android:padding="1dip" />
+        <TextView
+            android:layout_column="1"
+            android:text="如甜橙、胡蘿蔔和南瓜等，這些食物中含有大量\n的抗氧化物和維生素C，有助於降低身體的壓力\n反應。"
+            android:gravity="left"
+            android:padding="1dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="深色巧克力："
+            android:padding="1dip" />
+        <TextView
+            android:layout_column="1"
+            android:text="含有可可和多酚等成分，有助於減輕焦慮和壓力\n。"
+            android:gravity="left"
+            android:padding="1dip" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/btn_diet"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="返回"
+        android:textSize="35sp" />
+
+</TableLayout>
