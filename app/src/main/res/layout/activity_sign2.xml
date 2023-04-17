@@ -1,100 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    tools:context=".Sign2Activity">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFC107"
-        android:backgroundTint="#FFC107"
-        android:text="新增聯絡人"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/na"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="姓名:"
-        android:textSize="35sp" />
-
-    <EditText
-        android:id="@+id/name"
+        android:id="@+id/sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="請輸入姓名"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
-
-    <TextView
-        android:id="@+id/ag"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="年齡:"
-        android:textSize="35sp" />
+        android:layout_marginTop="350dp"
+        android:text="性別:"
+        android:textSize="35sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="38dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="60dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        tools:text="請選擇出生日期" />
-
-    <Button
-        android:id="@+id/sign_submit"
-        android:layout_width="145dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#EAC8FD"
-        android:text="選擇"
-        android:onClick="datePicker"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="請選擇出生日期"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/sex"
-        android:layout_width="match_parent"
+        android:id="@+id/ag"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="性別:"
-        android:textSize="35sp" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="216dp"
+        android:text="出生日期:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="基本填寫"
+        android:textSize="35sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="38dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/na"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="108dp"
+        android:text="姓名:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="請輸入姓名" />
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="選擇"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="280dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="250dp"
+        android:text="送出"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <RadioGroup
         android:id="@+id/sexy"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="150dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/male"
-            android:layout_width="137dp"
-            android:layout_height="match_parent"
+            android:id="@+id/man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="男"
-            android:textSize="35sp" />
+            android:textSize="30sp" />
 
         <RadioButton
-            android:id="@+id/female"
-            android:layout_width="134dp"
+            android:id="@+id/woman"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="女"
-            android:textSize="35sp" />
+            android:textSize="30sp" />
     </RadioGroup>
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
