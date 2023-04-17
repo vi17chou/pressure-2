@@ -59,11 +59,12 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="284dp"
-        android:layout_height="212dp"
-        android:layout_marginTop="200dp"
-        android:text="使用者建議"
-        android:textSize="50sp"
+        android:layout_width="405dp"
+        android:layout_height="405dp"
+        android:layout_marginTop="176dp"
+        android:text="使用者建議\n【得分說明】\n1至5題之總分：\n☆得分0-10分：為一般正常範圍，
+表示身心適應狀況良好。\n☆得分11-18分：輕度情緒困擾，建議找家人或朋友談談，紓發情緒。\n☆得分19-28分：中度情緒困擾，建議尋求心理諮商或接受專業諮詢。\n☆得分29分以上或第6題得1分以上：重度情緒困擾，建議尋求心理諮商或接受精神科醫師治療。"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
