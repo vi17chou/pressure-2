@@ -16,6 +16,30 @@
         android:theme="@style/Theme.MainActivity"
         tools:targetApi="31">
         <activity
+            android:name=".TestActivity9"
+            android:exported="false" />
+        <activity
+            android:name=".TestActivity8"
+            android:exported="false" />
+        <activity
+            android:name=".TestActivity7"
+            android:exported="false" />
+        <activity
+            android:name=".TestActivity6"
+            android:exported="false" />
+        <activity
+            android:name=".TestActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".TestActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".TestActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".TestActivity2"
+            android:exported="false" />
+        <activity
             android:name=".Sign2Activity"
             android:exported="false" />
         <activity
@@ -73,7 +97,7 @@
             android:name=".ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".TestActivity2"
+            android:name=".TestActivity10"
             android:exported="false" />
         <activity
             android:name=".TestActivity"
