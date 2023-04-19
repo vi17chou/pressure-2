@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 
 class SignActivity : AppCompatActivity() {
-    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         data?.extras?.let {
             if (requestCode==1 && resultCode == Activity.RESULT_OK){
@@ -18,15 +18,15 @@ class SignActivity : AppCompatActivity() {
                             "性別:${it.getString("sex")}\n"
             }
         }
-    }*/
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign)
         val next=findViewById<Button>(R.id.sign_next)
         val btn_submit=findViewById<Button>(R.id.btn_submit)
         next.setOnClickListener {
-            /*val intent =  Intent(this,Sign2Activity::class.java)
-            startActivityForResult(intent,1)*/
+            val intent =  Intent(this,Sign2Activity::class.java)
+            startActivityForResult(intent,1)
         }
         btn_submit.setOnClickListener {
             val it=Intent(this,MainActivity::class.java)
