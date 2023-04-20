@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="328dp"
         android:text="確認密碼："
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -56,7 +56,7 @@
         app:layout_constraintHorizontal_bias="0.706"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.211"
+        app:layout_constraintVertical_bias="0.275"
         tools:text="輸入你的帳號" />
 
     <EditText
@@ -72,49 +72,49 @@
         app:layout_constraintHorizontal_bias="0.706"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344"
+        app:layout_constraintVertical_bias="0.395"
         tools:text="輸入你的密碼" />
 
     <EditText
         android:id="@+id/checkpwd"
         android:layout_width="183dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="72dp"
         android:ems="10"
         android:inputType="textPassword"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547"
+        app:layout_constraintVertical_bias="0.588"
         tools:text="輸入你的密碼" />
 
     <Button
         android:id="@+id/sign_next"
-        android:layout_width="145dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="172dp"
+        android:layout_width="131dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="92dp"
         android:backgroundTint="#EAC8FD"
         android:text="下一頁"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_submit"
-        android:layout_width="145dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="172dp"
-        android:backgroundTint="#EAC8FD"
+        android:layout_width="138dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="#EBDEFF"
         android:text="送出"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

@@ -3,107 +3,174 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_column="1"
+        android:gravity="left"
+        android:padding="1dip"
+        android:text="提供使用者舒緩壓力的食物一些舒緩壓力的食物包括："
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <TableRow
+        android:layout_width="306dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:padding="1dip"
+            android:text="食物名稱"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
         <TextView
             android:layout_column="1"
             android:gravity="left"
             android:padding="1dip"
-            android:text="提供使用者舒緩壓力的食物一些舒緩壓力的食物包括：" />
-
-    <TableRow>
-
-        <TextView
-            android:padding="1dip"
-            android:text="食物名稱" />
-        <TextView
-            android:layout_column="1"
             android:text="功效。"
-            android:gravity="left"
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </TableRow>
 
     <TableRow>
+
         <TextView
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:padding="1dip"
             android:text="堅果："
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
         <TextView
             android:layout_column="1"
+            android:gravity="left"
+            android:padding="1dip"
             android:text="如核桃、腰果和杏仁等，它們含有富含ω-3脂肪\n酸和抗氧化物，有助於降低壓力水平。"
-            android:gravity="left"
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </TableRow>
 
     <TableRow>
+
         <TextView
+            android:padding="1dip"
             android:text="綠茶："
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
         <TextView
             android:layout_column="1"
+            android:gravity="left"
+            android:padding="1dip"
             android:text="含有茶多酚和氨基酸，有助於降低焦慮和壓力。"
-            android:gravity="left"
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </TableRow>
 
     <TableRow>
+
         <TextView
+            android:padding="1dip"
             android:text="香蕉："
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
         <TextView
             android:layout_column="1"
+            android:gravity="left"
+            android:padding="1dip"
             android:text="富含鎂，有助於緩解壓力和焦慮。"
-            android:gravity="left"
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </TableRow>
 
     <TableRow>
+
         <TextView
+            android:layout_width="154dp"
+            android:layout_height="match_parent"
+            android:padding="1dip"
             android:text="燕麥："
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
         <TextView
             android:layout_column="1"
+            android:gravity="left"
+            android:padding="1dip"
             android:text="燕麥中含有鎂和B族維生素，可以幫助減輕壓力\n和焦慮。"
-            android:gravity="left"
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </TableRow>
 
     <TableRow>
+
         <TextView
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:padding="1dip"
             android:text="奶酪："
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
         <TextView
             android:layout_column="1"
+            android:gravity="left"
+            android:padding="1dip"
             android:text="奶酪中含有鈣質和蛋白質，有助於提高血清素水\n平，使人感覺更放鬆和平靜。"
-            android:gravity="left"
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </TableRow>
 
     <TableRow>
+
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="1dip"
             android:text="橙色水果和蔬菜："
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
         <TextView
             android:layout_column="1"
-            android:text="如甜橙、胡蘿蔔和南瓜等，這些食物中含有大量\n的抗氧化物和維生素C，有助於降低身體的壓力\n反應。"
             android:gravity="left"
-            android:padding="1dip" />
+            android:padding="1dip"
+            android:text="如甜橙、胡蘿蔔和南瓜等，這些食物中含有大量\n的抗氧化物和維生素C，有助於降低身體的壓力\n反應。"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="157dp">
+
         <TextView
+            android:layout_width="162dp"
+            android:layout_height="match_parent"
+            android:padding="1dip"
             android:text="深色巧克力："
-            android:padding="1dip" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
         <TextView
             android:layout_column="1"
-            android:text="含有可可和多酚等成分，有助於減輕焦慮和壓力\n。"
             android:gravity="left"
-            android:padding="1dip" />
+            android:padding="1dip"
+            android:text="含有可可和多酚等成分，有助於減輕焦慮和壓力\n。"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </TableRow>
 
     <Button
         android:id="@+id/btn_diet"
-        android:layout_width="234dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="296dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="220dp"
+        android:backgroundTint="#EBDEFF"
         android:text="返回"
-        android:textSize="35sp" />
+        android:textColor="@color/black"
+        android:textSize="30sp" />
 
 </TableLayout>
