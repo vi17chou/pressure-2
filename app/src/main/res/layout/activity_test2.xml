@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="題目2："
-        android:textSize="45sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +23,7 @@
         android:id="@+id/content1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="88dp"
         android:text="顯示題目"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
     <RadioGroup
         android:layout_width="84dp"
         android:layout_height="292dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="152dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,12 +89,25 @@
         android:id="@+id/Next"
         android:layout_width="123dp"
         android:layout_height="61dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="64dp"
         android:backgroundTint="#EBDEFF"
         android:text="下一題"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/previous_question"
+        android:layout_width="123dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#E4C1F9"
+        android:text="上一題"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
