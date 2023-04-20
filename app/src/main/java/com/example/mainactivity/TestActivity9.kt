@@ -12,14 +12,19 @@ class TestActivity9 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test9)
-        val Next = findViewById<Button>(R.id.previous_question)
-        //題目
-        val content1 = findViewById<TextView>(R.id.content1)
-        val textViewString = content1.text.toString()
-        content1.text = "我對任何事都提不起勁"
-        Next.setOnClickListener {
-            val it = Intent(this, TestActivity10::class.java)
-            startActivity(it)
+        val Next = findViewById<Button>(R.id.Next)
+        val previous_question = findViewById<Button>(R.id.previous_question)
+
+        previous_question.setOnClickListener {
+            finish()
+        }
+            //題目
+            val content1 = findViewById<TextView>(R.id.content1)
+            val textViewString = content1.text.toString()
+            content1.text = "我對任何事都提不起勁"
+            Next.setOnClickListener {
+                val it = Intent(this, TestActivity10::class.java)
+                startActivity(it)
+            }
         }
     }
-}

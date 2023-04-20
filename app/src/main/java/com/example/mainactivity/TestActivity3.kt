@@ -11,6 +11,12 @@ class TestActivity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test3)
         val Next = findViewById<Button>(R.id.Next)
+
+        val previous_question = findViewById<Button>(R.id.previous_question)
+
+        previous_question.setOnClickListener {
+            finish()
+        }
         //題目
         val content1 = findViewById<TextView>(R.id.content1)
         val textViewString = content1.text.toString()
