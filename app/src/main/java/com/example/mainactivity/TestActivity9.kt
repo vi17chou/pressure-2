@@ -18,7 +18,7 @@ class TestActivity9 : AppCompatActivity() {
         val textViewString = content1.text.toString()
         content1.text = "我對任何事都提不起勁"
         Next.setOnClickListener {
-            val it = Intent(this, TestActivity11::class.java)
+            val it = Intent(this, TestActivity10::class.java)
             startActivity(it)
         }
     }
