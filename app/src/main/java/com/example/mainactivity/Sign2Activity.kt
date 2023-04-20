@@ -22,6 +22,7 @@ class Sign2Activity : AppCompatActivity() {
         val age=findViewById<TextView>(R.id.age)
         val name=findViewById<TextView>(R.id.name)
 
+
         btn_date.setOnClickListener {
             val c = Calendar.getInstance()
             val year = c.get(Calendar.YEAR)
