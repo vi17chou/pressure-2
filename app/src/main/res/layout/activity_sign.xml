@@ -79,13 +79,14 @@
         android:id="@+id/checkpwd"
         android:layout_width="183dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="330dp"
+        android:layout_marginEnd="36dp"
         android:ems="10"
         android:inputType="textPassword"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547"
         tools:text="輸入你的密碼" />
 
     <Button

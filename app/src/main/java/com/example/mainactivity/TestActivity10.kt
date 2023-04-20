@@ -1,37 +1,24 @@
 package com.example.mainactivity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import androidx.activity.result.contract.ActivityResultContracts
+import android.widget.TextView
 
 class TestActivity10 : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test10)
-        val submit = findViewById<Button>(R.id.submit)
-        val previous_question=findViewById<Button>(R.id.previous_question)
-
-        var test2=registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result->
-            if(result.resultCode== RESULT_OK){
-                val mydata:Intent?=result.data
-                if (mydata!=null){
-                    Log.d("twoActivity","Mydata:"+mydata.getStringExtra("result"))
-                }
-            }
-        }
-        previous_question.setOnClickListener {v->
-            val it=Intent(this,TestActivity::class.java).apply {
-
-            }
-        }
-
-        //test2.launch(it)
-
-        submit.setOnClickListener {
-            val it = Intent(this, ResultActivity::class.java)
+        val Next = findViewById<Button>(R.id.Next)
+        //題目
+        val content1 = findViewById<TextView>(R.id.content1)
+        val textViewString = content1.text.toString()
+        content1.text = "我對任何事都提不起勁"
+        Next.setOnClickListener {
+            val it = Intent(this, TestActivity11::class.java)
             startActivity(it)
         }
     }

@@ -4,100 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestActivity10"
+    tools:context=".TestActivity"
     android:background="@drawable/gradient2_background">
 
-    <RadioGroup
-        android:layout_width="353dp"
-        android:layout_height="295dp"
-        android:layout_marginTop="180dp"
+    <TextView
+        android:id="@+id/test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="題目10："
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/content1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="顯示題目"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="顯示題目" />
+
+    <RadioGroup
+        android:layout_width="84dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/one"
-            android:layout_width="match_parent"
+            android:layout_width="81dp"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="30sp" />
+            android:text="  0"
+            android:textSize="35sp" />
 
         <RadioButton
             android:id="@+id/good"
-            android:layout_width="match_parent"
+            android:layout_width="81dp"
             android:layout_height="wrap_content"
-            android:text="1"
-            android:textSize="30sp" />
+            android:text="  1"
+            android:textSize="35sp" />
 
         <RadioButton
             android:id="@+id/two"
-            android:layout_width="match_parent"
+            android:layout_width="81dp"
             android:layout_height="wrap_content"
-            android:text="2"
-            android:textSize="30sp" />
+            android:text="  2"
+            android:textSize="35sp" />
 
         <RadioButton
             android:id="@+id/three"
-            android:layout_width="match_parent"
+            android:layout_width="81dp"
             android:layout_height="wrap_content"
-            android:text="3"
-            android:textSize="30sp" />
+            android:text="  3"
+            android:textSize="35sp" />
 
         <RadioButton
             android:id="@+id/four"
-            android:layout_width="match_parent"
+            android:layout_width="81dp"
             android:layout_height="wrap_content"
-            android:text="4"
-            android:textSize="30sp" />
+            android:text="  4"
+            android:textSize="35sp" />
 
         <RadioButton
             android:id="@+id/five"
-            android:layout_width="match_parent"
+            android:layout_width="81dp"
             android:layout_height="wrap_content"
-            android:text="5"
-            android:textSize="30sp" />
+            android:text="  5"
+            android:textSize="35sp" />
 
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="題目10："
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/content2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="TextView"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="顯示題目" />
-
     <Button
-        android:id="@+id/previous_question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="50dp"
-        android:text="上一題"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="50dp"
-        android:text="送出"
+        android:id="@+id/Next"
+        android:layout_width="123dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#EBDEFF"
+        android:text="下一題"
+        android:textColor="@color/black"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

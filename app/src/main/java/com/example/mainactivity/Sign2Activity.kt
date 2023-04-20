@@ -43,6 +43,9 @@ class Sign2Activity : AppCompatActivity() {
             b.putString("ag",age.getText().toString())
             setResult(RESULT_OK, Intent().putExtras(b))
             finish()
+
+                /*val it = Intent(this,MainActivity::class.java)
+                startActivity(it)*/
         }
     }
     private fun setDateFormat(year: Int, month: Int, day: Int): String {
