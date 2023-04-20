@@ -68,12 +68,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/test_diary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="今日日期:"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="525dp"
-        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
