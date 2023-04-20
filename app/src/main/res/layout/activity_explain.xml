@@ -9,14 +9,14 @@
 
     <EditText
         android:id="@+id/edit_text"
-        android:layout_width="407dp"
-        android:layout_height="502dp"
+        android:layout_width="411dp"
+        android:layout_height="456dp"
         android:layout_marginTop="32dp"
         android:gravity="top"
         android:inputType="text|textMultiLine"
         android:lineSpacingExtra="34sp"
-        android:text="             測驗開始前的小提醒:\n  1. 測驗分數 ≠ 診斷、病理\n  2. 測驗分數反應的是你最近的狀態，也提醒您：需要更關心自己也可能需要別人一起關心您\n  3. 在測驗結束後，你可以透過APP來換解您的情緒與壓力~ "
-        android:textSize="25sp"
+        android:text="                        測驗開始前的小提醒:\n  1. 測驗分數 ≠ 診斷、病理\n  2. 測驗分數反應的是你最近的狀態，也提醒您：需要更關心自己也可能需要別人一起關心您\n  3. 在測驗結束後，你可以透過APP來換解您的情緒與壓力~ "
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
