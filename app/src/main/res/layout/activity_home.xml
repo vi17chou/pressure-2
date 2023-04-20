@@ -11,7 +11,7 @@
         android:id="@+id/diary"
         android:layout_width="268dp"
         android:layout_height="69dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="132dp"
         android:backgroundTint="#FDF0D5"
         android:text="心情日記"
         android:textColor="@color/black"
@@ -25,13 +25,13 @@
         android:id="@+id/record"
         android:layout_width="268dp"
         android:layout_height="69dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="284dp"
         android:backgroundTint="#FDF0D5"
         android:text="測驗紀錄"
         android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +39,7 @@
         android:id="@+id/method"
         android:layout_width="268dp"
         android:layout_height="69dp"
-        android:layout_marginTop="512dp"
+        android:layout_marginTop="452dp"
         android:backgroundTint="#FDF0D5"
         android:text="紓壓方法"
         android:textColor="@color/black"
@@ -55,8 +55,8 @@
         android:layout_height="wrap_content"
         android:text="首頁"
         android:textColor="@color/black"
-        android:textSize="35sp"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="40dp"
-        tools:ignore="MissingConstraints" />
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="31dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
