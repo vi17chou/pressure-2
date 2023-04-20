@@ -12,7 +12,7 @@ class TestActivity9 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test9)
-        val Next = findViewById<Button>(R.id.Next)
+        val Next = findViewById<Button>(R.id.previous_question)
         //題目
         val content1 = findViewById<TextView>(R.id.content1)
         val textViewString = content1.text.toString()
