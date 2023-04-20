@@ -28,10 +28,8 @@ class TestActivity11 : AppCompatActivity() {
                 }
             }
         }
-        previous_question.setOnClickListener {v->
-            val it=Intent(this,TestActivity::class.java).apply {
-
-            }
+        previous_question.setOnClickListener {
+           finish()
         }
 
         //test2.launch(it)
