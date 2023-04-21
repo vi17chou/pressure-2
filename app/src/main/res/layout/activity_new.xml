@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewActivity">
+    tools:context=".NewActivity"
+    android:background="@drawable/gradient_background">
 
     <TextView
         android:id="@+id/now_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="今天日期:"
+        android:text="  今天日期:"
         android:textSize="35sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="15dp"
@@ -59,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:singleLine="true"
-        android:text="填寫日記:"
+        android:text=" 填寫日記:"
         android:textSize="35sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
