@@ -27,5 +27,10 @@ class GameActivity : AppCompatActivity() {
             val it= Intent(this,GuessActivity::class.java)
             startActivity(it)
         }
+        val button4 = findViewById<Button>(R.id.button4)
+
+        button4.setOnClickListener {
+            finish()
+        }
     }
 }
