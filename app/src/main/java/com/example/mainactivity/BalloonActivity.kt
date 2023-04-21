@@ -8,6 +8,6 @@ class BalloonActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_balloon)
         //123
-        //是正常的嗎?
+        //是正常的嗎?程式到底怎麼了
     }
 }
