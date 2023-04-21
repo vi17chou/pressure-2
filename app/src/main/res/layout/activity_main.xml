@@ -39,13 +39,13 @@
         android:layout_width="123dp"
         android:layout_height="61dp"
         android:layout_marginBottom="72dp"
-        android:backgroundTint="#E0AAFF"
+        android:backgroundTint="#FFFFFF"
         android:text="登入"
-        android:textColor="#FFFFFF"
+        android:textColor="#E0AAFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintHorizontal_bias="0.829"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -53,13 +53,13 @@
         android:layout_width="123dp"
         android:layout_height="61dp"
         android:layout_marginBottom="72dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="#E0AAFF"
         android:text="註冊"
-        android:textColor="#E0AAFF"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
