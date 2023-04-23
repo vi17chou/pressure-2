@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -16,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MainActivity"
         tools:targetApi="31">
+        <activity
+            android:name=".NewDiaryActivity"
+            android:exported="false" />
         <activity
             android:name=".TestActivity10"
             android:exported="false" />
