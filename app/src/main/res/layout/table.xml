@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background">
 
-    <TableRow>
+    <TableRow android:layout_width="308dp">
 
         <TextView
             android:layout_column="1"
@@ -12,51 +12,62 @@
             android:padding="3dip"
             android:text="方式"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
 
         <TextView
-            android:layout_column="3"
+            android:layout_width="100dp"
+            android:layout_column="2"
             android:gravity="center"
             android:padding="3dip"
             android:text="說明"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
     </TableRow>
 
-    <TableRow>
+    <TableRow android:layout_width="wrap_content">
 
         <TextView
-            android:layout_row="2"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:layout_row="1"
             android:layout_column="1"
             android:padding="1dip"
             android:text="做深呼吸練習"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
-            android:layout_column="3"
+            android:layout_width="285dp"
+            android:layout_height="match_parent"
+            android:layout_row="2"
             android:gravity="left"
             android:padding="1dip"
-            android:text="透過深呼吸可以降低心跳和血壓，有助於放鬆身心。"
-            android:textColor="@color/black" />
+            android:text="透過深呼吸可以降低心跳和\n血壓，有助於放鬆身心。"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
     </TableRow>
 
-    <TableRow>
+    <TableRow android:layout_width="380dp">
 
         <TextView
             android:layout_width="78dp"
             android:layout_height="match_parent"
-            android:layout_row="2"
+            android:layout_row="1"
             android:layout_column="1"
             android:padding="1dip"
             android:text="進行運動"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
-            android:layout_column="3"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_column="2"
             android:gravity="center_vertical"
             android:padding="1dip"
-            android:text="運動可以釋放身體內的內啡肽和血清素等物質，有助\n於提高心情和減輕壓力。去尋找適合自己的運動吧!"
-            android:textColor="@color/black" />
+            android:text="運動可以釋放身體內的內啡\n肽和血清素等物質，有助於\n提高心情和減輕壓力。去尋找適合自己的運動\n吧!"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
     </TableRow>
 
     <TableRow>
@@ -64,18 +75,21 @@
         <TextView
             android:layout_width="78dp"
             android:layout_height="match_parent"
-            android:layout_row="2"
+            android:layout_row="1"
             android:layout_column="1"
             android:padding="1dip"
             android:text="寫日記"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
 
         <TextView
-            android:layout_column="3"
+            android:layout_column="2"
+            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="1dip"
-            android:text="將自己的想法和感受寫下來，可以釋放負面情緒，減\n少壓力和焦慮。"
-            android:textColor="@color/black" />
+            android:text="將自己的想法和感受寫下來，可以釋放負面情\n緒，減少壓力和焦慮。"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
     </TableRow>
 
 
@@ -84,18 +98,21 @@
         <TextView
             android:layout_width="78dp"
             android:layout_height="match_parent"
-            android:layout_row="2"
+            android:layout_row="1"
             android:layout_column="1"
             android:padding="1dip"
             android:text="練瑜珈或冥想"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
 
         <TextView
-            android:layout_column="3"
+            android:layout_column="2"
+            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="1dip"
-            android:text="瑜珈和冥想等放鬆技巧可以幫助人放鬆身心，減少負\n面情緒和壓力。"
-            android:textColor="@color/black" />
+            android:text="瑜珈和冥想等放鬆技巧可以幫助人放鬆身心，\n減少負面情緒和壓力。"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
     </TableRow>
 
     <TableRow>
@@ -103,37 +120,43 @@
         <TextView
             android:layout_width="78dp"
             android:layout_height="match_parent"
-            android:layout_row="2"
+            android:layout_row="1"
             android:layout_column="1"
             android:padding="1dip"
             android:text="聆聽音樂"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
 
         <TextView
-            android:layout_column="3"
+            android:layout_column="2"
+            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="1dip"
-            android:text="音樂有助於降低壓力和放鬆身心，選擇輕鬆愉悅的音\n樂來聆聽。"
-            android:textColor="@color/black" />
+            android:text="音樂有助於降低壓力和放鬆身心，選擇輕鬆愉\n悅的音樂來聆聽。"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
     </TableRow>
 
     <TableRow>
 
         <TextView
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:layout_row="2"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_row="1"
             android:layout_column="1"
             android:padding="1dip"
             android:text="與朋友保持聯繫"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
-            android:layout_column="3"
+            android:layout_column="2"
+            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="1dip"
-            android:text="其實你不需要故作堅強而獨自掙扎，朋友很重要，特\n別是在遭逢生活低潮時，與他們聯絡吧！把心中的負\n面情緒跟一個懂自己、跟自己站在同一陣線的人分享\n，是放鬆心情、降低壓力的絕佳方式。"
-            android:textColor="@color/black" />
+            android:text="其實你不需要故作堅強而獨自掙扎，朋友很重\n要，特別是在遭逢生活低潮時，與他們聯絡吧\n！把心中的負面情緒跟一個懂自己、跟自己站\n在同一陣線的人分享，是放鬆心情、降低壓力\n的絕佳方式。"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
     </TableRow>
 
     <TableRow>
@@ -141,18 +164,21 @@
         <TextView
             android:layout_width="78dp"
             android:layout_height="match_parent"
-            android:layout_row="2"
+            android:layout_row="1"
             android:layout_column="1"
             android:padding="1dip"
             android:text="接受你自己"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
-            android:layout_column="3"
+            android:layout_column="2"
+            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="1dip"
-            android:text="做自己情緒的主人，別被其他人左右了自己的情緒，\n做好自己該做的事，讓自己立於不敗之地，就能夠讓\n自己越來越好。做自己情緒的主人，控制好的情緒，\n就能夠讓自己越來越快樂。"
-            android:textColor="@color/black" />
+            android:text="做自己情緒的主人，別被其他人左右了自己的\n情緒，做好自己該做的事，讓自己立於不敗之\n地，就能夠讓自己越來越好。做自己情緒的主\n人，控制好的情緒，就能夠讓自己越來越快樂\n。"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
     </TableRow>
 
     <TableRow>
@@ -160,42 +186,50 @@
         <TextView
             android:layout_width="78dp"
             android:layout_height="match_parent"
-            android:layout_row="2"
+            android:layout_row="1"
             android:layout_column="1"
             android:padding="1dip"
             android:text="學習新技巧"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
 
         <TextView
-            android:layout_column="3"
+            android:layout_column="2"
+            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="1dip"
-            android:text="不論是為了娛樂、交友或增進工作機會，學習新技巧\n將有助於提昇你的自信。"
-            android:textColor="@color/black" />
+            android:text="不論是為了娛樂、交友或增進工作機會，學習\n新技巧將有助於提昇你的自信。"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
     </TableRow>
 
     <TableRow>
 
         <TextView
-            android:layout_row="2"
+            android:layout_width="86dp"
+            android:layout_height="match_parent"
+            android:layout_row="1"
             android:layout_column="1"
             android:padding="1dip"
             android:text="增加休息時間"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
-            android:layout_column="3"
+            android:layout_column="2"
+            android:layout_height="match_parent"
             android:gravity="left"
             android:padding="1dip"
-            android:text="適當增加休息和睡眠時間可以讓身體恢復和放鬆。"
-            android:textColor="@color/black" />
+            android:text="適當增加休息和睡眠時間可以讓身體恢復和放\n鬆。"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
     </TableRow>
 
     <Button
         android:id="@+id/btn_method"
         android:layout_width="296dp"
         android:layout_height="63dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="1dp"
         android:backgroundTint="#EBDEFF"
         android:text="返回"
         android:textColor="@color/black"
