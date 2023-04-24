@@ -16,7 +16,7 @@ class DiaryActivity : AppCompatActivity() {
         val New=findViewById<Button>(R.id.New)
         val select=findViewById<Button>(R.id.select)
         val del=findViewById<Button>(R.id.del)
-        val back_home=findViewById<Button>(R.id.back_home)
+        val back_home=findViewById<Button>(R.id.back_home2)
 
         fun edit(){
             val i = Intent(this,DiaryActivity::class.java)
