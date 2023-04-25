@@ -3,6 +3,7 @@ package com.example.mainactivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
@@ -15,6 +16,7 @@ class GuessActivity : AppCompatActivity() {
         val number=findViewById<TextView>(R.id.number)
         val historyInput=findViewById<TextView>(R.id.history_input)
         val historyResult=findViewById<TextView>(R.id.history_result)
+
         val game = Game()
         game.generateAnswer();
 
@@ -22,14 +24,19 @@ class GuessActivity : AppCompatActivity() {
             historyInput.setText(number.getText().toString() + "\n" + historyInput.getText());
             historyResult.setText((game.checkAnswer(number.getText().toString()))+"\n"+ historyResult.getText())
             if(game.isWin){
-                
+                // 跳出獲勝的訊息
+                Toast.makeText(this, "You win", Toast.LENGTH_LONG).show();
+                number.setEnabled(false);
+                guess_submit.setEnabled(false);
+
             }
-        }
-
-
+            }
         back6.setOnClickListener {
             finish()
 
         }
+        }
+
+
+
     }
-}
