@@ -81,7 +81,6 @@
         </LinearLayout>
     </ScrollView>
 
-
     <Button
         android:id="@+id/guess_submit"
         android:layout_width="wrap_content"
