@@ -1,15 +1,17 @@
 package com.example.mainactivity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
 class HomeActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        val diary=findViewById<Button>(R.id.run)
+        val diary=findViewById<Button>(R.id.diary)
         val record=findViewById<Button>(R.id.record)
         val method=findViewById<Button>(R.id.method)
 
