@@ -1,5 +1,6 @@
 package com.example.mainactivity
 
+import android.annotation.SuppressLint
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,6 +18,7 @@ import java.util.Calendar
 
 
 class SelectActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select)
@@ -27,6 +29,13 @@ class SelectActivity : AppCompatActivity() {
         btn_rage.setOnClickListener {
             showDatePickerDialog()
         }
+        val Back2 = findViewById<Button>(R.id.Back2)
+
+        Back2.setOnClickListener {
+            finish()
+
+        }
+
     }
 
 

@@ -21,7 +21,7 @@ class TestActivity10 : AppCompatActivity() {
         //題目
         val content1 = findViewById<TextView>(R.id.content1)
         val textViewString = content1.text.toString()
-        content1.text = "我對任何事都提不起勁"
+        content1.text = "我覺得記憶力變差了"
         Next.setOnClickListener {
             val it = Intent(this, TestActivity11::class.java)
             startActivity(it)
