@@ -8,7 +8,7 @@
     android:background="@drawable/gradient_background">
 
     <Button
-        android:id="@+id/diary"
+        android:id="@+id/run"
         android:layout_width="268dp"
         android:layout_height="69dp"
         android:layout_marginTop="132dp"

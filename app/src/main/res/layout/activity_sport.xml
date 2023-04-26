@@ -8,6 +8,48 @@
     android:background="@drawable/gradient_background">
 
     <Button
+        android:id="@+id/run"
+        android:layout_width="268dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="132dp"
+        android:backgroundTint="#FDF0D5"
+        android:text="跑步"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/yuga"
+        android:layout_width="268dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="284dp"
+        android:backgroundTint="#FDF0D5"
+        android:text="瑜珈"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hit"
+        android:layout_width="268dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="436dp"
+        android:backgroundTint="#FDF0D5"
+        android:text="有氧運動"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/Back2"
         android:layout_width="169dp"
         android:layout_height="64dp"
