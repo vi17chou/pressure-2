@@ -28,7 +28,7 @@ class TestActivity2 : AppCompatActivity() {
         val t1=findViewById<RadioGroup>(R.id.t1)
         
         Next.setOnClickListener {
-            val selectedId = t1.checkedRadioButtonId
+            /*val selectedId = t1.checkedRadioButtonId
 
             val tipPercentage = when (selectedId) {
                 R.id.one -> 0
@@ -38,7 +38,7 @@ class TestActivity2 : AppCompatActivity() {
             val test=findViewById<TextView>(R.id.textView10)
             var tip2 = tipPercentage
             val formattedTip = NumberFormat.getCurrencyInstance().format(tip2)
-            test.text = getString(R.string.tip_amount, formattedTip)
+            test.text = getString(R.string.tip_amount, formattedTip)*/
             val it = Intent(this,TestActivity3::class.java)
             startActivity(it)
         }
