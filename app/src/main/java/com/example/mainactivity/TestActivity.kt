@@ -33,6 +33,7 @@ class TestActivity : AppCompatActivity() {
             val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
             test.text = getString(R.string.tip_amount, formattedTip)*/
             val it = Intent(this, TestActivity2::class.java)
+           // it.pu
             startActivity(it)
         }
     }
