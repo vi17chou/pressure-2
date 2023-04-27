@@ -14,6 +14,13 @@ class RecordActivity : AppCompatActivity() {
         btn_rage.setOnClickListener {
             showDatePickerDialog()
         }
+
+        val Back2 = findViewById<Button>(R.id.Back2)
+
+        Back2.setOnClickListener {
+            finish()
+
+        }
     }
 
     private fun showDatePickerDialog() {
