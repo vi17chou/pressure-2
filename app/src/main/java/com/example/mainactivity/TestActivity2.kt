@@ -25,16 +25,7 @@ class TestActivity2 : AppCompatActivity() {
 
         val t1 = findViewById<RadioGroup>(R.id.t1)
         val T02=findViewById<TextView>(R.id.T02)
-
-        val age = intent.getIntExtra("zero", 0)
-        val age1 = intent.getIntExtra("one", 1)
-        val age2 = intent.getIntExtra("two", 2)
-        val age3 = intent.getIntExtra("three", 3)
-        val age4 = intent.getIntExtra("four", 4)
-        val age5 = intent.getIntExtra("five", 5)
-
-
-        T02.text="上一個傳過來的值"+age//接收上一個頁面傳過來的數值，利用intent接收
+            //接收上一個頁面傳過來的數值，利用intent接收
         
         Next.setOnClickListener {
             val b = Bundle()
