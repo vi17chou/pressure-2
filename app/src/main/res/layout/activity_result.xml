@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -62,7 +62,7 @@
         tools:text="/29" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tips"
         android:layout_width="405dp"
         android:layout_height="405dp"
         android:layout_marginTop="120dp"

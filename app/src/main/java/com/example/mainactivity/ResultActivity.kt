@@ -1,6 +1,5 @@
 package com.example.mainactivity
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,7 +11,7 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
         val home_page=findViewById<Button>(R.id.home_page)
-        val textView6 = findViewById<TextView>(R.id.textView6)
+        val textView6 = findViewById<TextView>(R.id.tips)
         val textViewString = textView6.text.toString()
         textView6.text = " 使用者建議\n【得分說明】"+
                  "\n 1至10題之總分：\n" +
