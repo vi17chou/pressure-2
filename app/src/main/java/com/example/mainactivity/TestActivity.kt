@@ -23,8 +23,13 @@ class TestActivity : AppCompatActivity() {
 
         Next.setOnClickListener {v->
             val b = Bundle()
-
+            //27 寫6變
+            b.putInt("zero",0)
+            b.putInt("one",1)
             b.putInt("two",2)
+            b.putInt("three",3)
+            b.putInt("four",4)
+            b.putInt("five",5)
 
             val it = Intent(this, TestActivity2::class.java)
             intent.putExtras(b)
