@@ -1,14 +1,11 @@
 package com.example.mainactivity
 
 import android.content.Intent
-import android.nfc.Tag
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.RadioGroup
 import android.widget.TextView
-import java.text.NumberFormat
+import androidx.appcompat.app.AppCompatActivity
 
 class TestActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,22 +22,23 @@ class TestActivity2 : AppCompatActivity() {
         val content1 = findViewById<TextView>(R.id.content1)
         val textViewString = content1.text.toString()
         content1.text = "感覺緊張不安";
-        val t1=findViewById<RadioGroup>(R.id.t1)
-        //int
+        val t1 = findViewById<RadioGroup>(R.id.t1)
+        val T02=findViewById<TextView>(R.id.T02)
+        val age = intent.getIntExtra("zero", 0)
+        T02.text="上一個傳過來的值"+age//接收上一個頁面傳過來的數值，利用intent接收
+        
         Next.setOnClickListener {
-            /*val selectedId = t1.checkedRadioButtonId
-
-            val tipPercentage = when (selectedId) {
-                R.id.one -> 0
-                else -> "未選擇"
-
-            }
-            val test=findViewById<TextView>(R.id.textView10)
-            var tip2 = tipPercentage
-            val formattedTip = NumberFormat.getCurrencyInstance().format(tip2)
-            test.text = getString(R.string.tip_amount, formattedTip)*/
-            val it = Intent(this,TestActivity3::class.java)
+            val b = Bundle()
+            b.putInt("one",1)
+            val it = Intent(this, TestActivity3::class.java)
+            intent.putExtras(b)
             startActivity(it)
         }
+
     }
+}
+
+
+private operator fun Int.plus(b: Bundle) {
+
 }

@@ -21,20 +21,31 @@ class TestActivity : AppCompatActivity() {
         content1.text = " 睡眠困難，譬如難以入睡、易醒或早醒"
 
 
-        Next.setOnClickListener {
-            /*val selectedId = t0.checkedRadioButtonId
-            val tipPercentage = when (selectedId) {
-                R.id.one ->0
-                else -> "未選擇"
+        Next.setOnClickListener {v->
+            val b = Bundle()
 
-            }
-            val test=findViewById<TextView>(R.id.textView12)
-            var tip = tipPercentage
-            val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
-            test.text = getString(R.string.tip_amount, formattedTip)*/
+            b.putInt("two",2)
+
             val it = Intent(this, TestActivity2::class.java)
-           // it.pu
+            intent.putExtras(b)
             startActivity(it)
         }
     }
 }
+
+
+
+/*
+            b.putExtras("one",1)
+            b.putExtras("two",2)
+            b.putExtras("three",3)
+            b.putExtras("four",4)
+            b.putExtras("five",5)
+
+            private fun Bundle.putExtras(s: String, i: Int) {
+
+}
+
+private fun Intent.putExtras(s: String, i: Int) {
+
+}*/
