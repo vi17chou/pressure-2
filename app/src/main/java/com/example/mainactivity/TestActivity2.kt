@@ -26,7 +26,7 @@ class TestActivity2 : AppCompatActivity() {
         val textViewString = content1.text.toString()
         content1.text = "感覺緊張不安";
         val t1=findViewById<RadioGroup>(R.id.t1)
-        
+        //int
         Next.setOnClickListener {
             /*val selectedId = t1.checkedRadioButtonId
 

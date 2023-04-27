@@ -10,13 +10,13 @@
 
     <Button
         android:id="@+id/RESET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="84dp"
         android:layout_marginTop="360dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="4dp"
         android:background="@null"
         android:onClick="resetTapped"
-        android:text="RESET"
+        android:text="STOP"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,14 +25,14 @@
 
     <Button
         android:id="@+id/START"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_width="190dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="360dp"
         android:background="@null"
         android:onClick="resetTapped"
-        android:text="START"
-        android:textSize="30sp"
+        android:text="START/CONTIUNTE"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="DuplicateIds,MissingConstraints,DuplicateClickableBoundsCheck" />
