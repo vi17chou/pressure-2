@@ -43,14 +43,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/one"
+            android:id="@+id/zero"
             android:layout_width="81dp"
             android:layout_height="wrap_content"
             android:text="  0"
             android:textSize="35sp" />
 
         <RadioButton
-            android:id="@+id/good"
+            android:id="@+id/one"
             android:layout_width="81dp"
             android:layout_height="wrap_content"
             android:text="  1"

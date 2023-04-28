@@ -8,8 +8,6 @@ import android.widget.Chronometer
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-import java.util.*
-
 class TimerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +15,7 @@ class TimerActivity : AppCompatActivity() {
         val START = findViewById<Button>(R.id.START)
         val RESET = findViewById<Button>(R.id.RESET)
         val timerText =findViewById<TextView>(R.id.timerText);
-        var timer=findViewById<TextView>(R.id.timer)
+        var timer=findViewById<TextView>(R.id.T02)
         val chronometer=findViewById<Chronometer>(R.id.timerText)
         chronometer.setBase(SystemClock.elapsedRealtime());
         
