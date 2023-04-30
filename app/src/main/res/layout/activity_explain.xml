@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ExplainActivity"
-    android:background="@drawable/gradient3_background">
+    android:background="@drawable/explainbackground">
 
     <EditText
         android:id="@+id/edit_text"
@@ -15,7 +15,7 @@
         android:gravity="top"
         android:inputType="text|textMultiLine"
         android:lineSpacingExtra="34sp"
-        android:text="  1. 測驗分數 ≠ 診斷、病理\n  2. 測驗分數反應的是您最近的狀態。          在此也提醒您：需要更關心自己也可能需要別人一起關心您\n  3. 在測驗結束後，您可以透過APP來換解您的情緒與壓力~ "
+        android:text="  1. 測驗分數 ≠ 診斷、病理\n  2. 測驗分數反應的是您最近的狀態。          在此也提醒您：需要更關心自己也可能需要別人一起關心您\n  3. 在測驗結束後，您可以透過APP來緩解您的情緒與壓力~ "
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

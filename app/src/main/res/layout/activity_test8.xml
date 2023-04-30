@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TestActivity"
-    android:background="@drawable/gradient2_background">
+    android:background="@drawable/textbackground">
 
     <TextView
         android:id="@+id/test1"
@@ -32,11 +32,37 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="顯示題目" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="183dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/girlcry" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="130dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cry" />
+
     <RadioGroup
         android:id="@+id/t7"
         android:layout_width="84dp"
         android:layout_height="292dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="264dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +105,7 @@
 
         <RadioButton
             android:id="@+id/five"
-            android:layout_width="81dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  5"
             android:textSize="35sp" />
