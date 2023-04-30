@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameActivity"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/gamebackground">
 
     <Button
         android:id="@+id/balloon"
@@ -25,7 +25,7 @@
         android:id="@+id/puzzle"
         android:layout_width="295dp"
         android:layout_height="66dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="256dp"
         android:backgroundTint="#FDF0D5"
         android:text="拼圖遊戲"
         android:textColor="@color/black"
@@ -38,7 +38,7 @@
         android:id="@+id/guess"
         android:layout_width="295dp"
         android:layout_height="66dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="416dp"
         android:backgroundTint="#FDF0D5"
         android:text="幾A幾B"
         android:textColor="@color/black"

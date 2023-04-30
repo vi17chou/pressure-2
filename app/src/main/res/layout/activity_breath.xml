@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BreathActivity"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/breathbackground">
 
     <Button
         android:id="@+id/back3"
@@ -13,6 +13,7 @@
         android:layout_height="64dp"
         android:layout_marginBottom="44dp"
         android:backgroundTint="#EBDEFF"
+
         android:text="返回"
         android:textColor="@color/black"
         android:textSize="30sp"
