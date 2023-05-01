@@ -163,7 +163,7 @@
             android:textColor="@color/black"
             android:textSize="14sp" />
     </TableRow>
-
+    
     <Button
         android:id="@+id/btn_diet"
         android:layout_width="match_parent"

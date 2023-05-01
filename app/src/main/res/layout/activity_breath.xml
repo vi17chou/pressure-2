@@ -7,17 +7,17 @@
     tools:context=".BreathActivity"
     android:background="@drawable/breathbackground">
 
-    <Button
-        android:id="@+id/back3"
-        android:layout_width="169dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="44dp"
-        android:backgroundTint="#EBDEFF"
 
-        android:text="返回"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ImageButton
+        android:id="@+id/back3"
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="564dp"
+        android:background="@drawable/backiamgebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

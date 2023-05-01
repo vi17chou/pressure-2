@@ -2,6 +2,7 @@ package com.example.mainactivity
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -11,8 +12,8 @@ class GuessActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_guess)
-        val guess_submit=findViewById<Button>(R.id.guess_submit)
-        val back6 = findViewById<Button>(R.id.back6)
+        val guess_submit=findViewById<ImageButton>(R.id.guess_submit)
+        val back6 = findViewById<ImageButton>(R.id.back6)
         val number=findViewById<TextView>(R.id.number)
         val historyInput=findViewById<TextView>(R.id.history_input)
         val historyResult=findViewById<TextView>(R.id.history_result)
