@@ -1,22 +1,25 @@
 package com.example.mainactivity
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 
 class DiaryActivity : AppCompatActivity() {
 //123測試是否成功
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diary)
-        val New=findViewById<Button>(R.id.New)
-        val select=findViewById<Button>(R.id.select)
-        val del=findViewById<Button>(R.id.del)
-        val back_home=findViewById<Button>(R.id.back_home)
+        val New=findViewById<ImageButton>(R.id.New)
+        val select=findViewById<ImageButton>(R.id.select)
+        val del=findViewById<ImageButton>(R.id.del)
+        val back_home=findViewById<ImageButton>(R.id.back_home)
 
         fun edit(){
             val i = Intent(this,DiaryActivity::class.java)

@@ -99,18 +99,17 @@
 
     </RadioGroup>
 
-    <Button
+
+    <ImageButton
         android:id="@+id/Next"
-        android:layout_width="123dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="64dp"
-        android:backgroundTint="#EBDEFF"
-        android:text="下一題"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="580dp"
+        android:background="@drawable/nextiamgebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView12"

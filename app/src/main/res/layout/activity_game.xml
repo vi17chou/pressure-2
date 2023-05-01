@@ -7,57 +7,49 @@
     tools:context=".GameActivity"
     android:background="@drawable/gamebackground">
 
-    <Button
-        android:id="@+id/balloon"
-        android:layout_width="295dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="84dp"
-        android:backgroundTint="#FDF0D5"
-        android:text="戳氣球"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/puzzle"
-        android:layout_width="295dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="256dp"
-        android:backgroundTint="#FDF0D5"
-        android:text="拼圖遊戲"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
+    <ImageButton
         android:id="@+id/guess"
-        android:layout_width="295dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="416dp"
-        android:backgroundTint="#FDF0D5"
-        android:text="幾A幾B"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="158dp"
-        android:layout_height="66dp"
-        android:backgroundTint="#EBDEFF"
-        android:text="返回"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="343dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="440dp"
+        android:background="@drawable/guessiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/puzzle"
+        android:layout_width="343dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/puzzleiamgebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/balloon"
+        android:layout_width="343dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/ballooniamgebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/button4"
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="588dp"
+        android:background="@drawable/backiamgebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

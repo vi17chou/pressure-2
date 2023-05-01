@@ -34,33 +34,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/login"
-        android:layout_width="123dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="72dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="登入"
-        android:textColor="#E0AAFF"
-        android:textSize="30sp"
+        android:layout_width="129dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/logiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/sign"
         android:layout_width="123dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="72dp"
-        android:backgroundTint="#E0AAFF"
-        android:text="註冊"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:layout_height="62dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/singiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
