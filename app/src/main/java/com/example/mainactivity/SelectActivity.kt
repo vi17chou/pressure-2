@@ -18,18 +18,14 @@ import java.util.Calendar
 
 
 class SelectActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select)
 
 
-        val btn_rage = findViewById<ImageButton>(R.id.btn_range)
 
-        btn_rage.setOnClickListener {
-            showDatePickerDialog()
-        }
-        val Back2 = findViewById<ImageButton>(R.id.Back2)
+        val Back2 = findViewById<ImageButton>(R.id.back5)
 
         Back2.setOnClickListener {
             finish()
@@ -38,10 +34,14 @@ class SelectActivity : AppCompatActivity() {
 
     }
 
+   /* val btn_rage = findViewById<ImageButton>(R.id.btn_range)
 
+    btn_rage.setOnClickListener {
+        showDatePickerDialog()
+    }
     private fun showDatePickerDialog() {
         val now = Calendar.getInstance()
-        /*val dpd = DatePickerDialog.newInstance(
+        val dpd = DatePickerDialog.newInstance(
             this@SelectActivity,
             now.get(Calendar.YEAR),
             now.get(Calendar.MONTH),
@@ -50,4 +50,4 @@ class SelectActivity : AppCompatActivity() {
         dpd.show(fragmentManager, "Datepickerdialog")*/
     }
 
-}
+
