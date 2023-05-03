@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 
@@ -14,8 +15,8 @@ class TestActivity11 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test11)
-        val submit = findViewById<Button>(R.id.submit)
-        val previous_question=findViewById<Button>(R.id.previous_question)
+        val submit = findViewById<ImageButton>(R.id.submit)
+        val previous_question=findViewById<ImageButton>(R.id.previous_question)
 
         //題目
         val content1 = findViewById<TextView>(R.id.content2)

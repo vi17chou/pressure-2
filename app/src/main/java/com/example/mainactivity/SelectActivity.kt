@@ -24,12 +24,12 @@ class SelectActivity : AppCompatActivity() {
         setContentView(R.layout.activity_select)
 
 
-        val btn_rage = findViewById<Button>(R.id.btn_range)
+        val btn_rage = findViewById<ImageButton>(R.id.btn_range)
 
         btn_rage.setOnClickListener {
             showDatePickerDialog()
         }
-        val Back2 = findViewById<Button>(R.id.Back2)
+        val Back2 = findViewById<ImageButton>(R.id.Back2)
 
         Back2.setOnClickListener {
             finish()

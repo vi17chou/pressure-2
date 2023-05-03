@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
@@ -13,7 +14,7 @@ class TestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test)
-        val Next = findViewById<Button>(R.id.Next)
+        val Next = findViewById<ImageButton>(R.id.Next)
         //題目
         val content1 = findViewById<TextView>(R.id.content1)
         val textViewString = content1.text.toString()

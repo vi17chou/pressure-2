@@ -8,34 +8,27 @@
     android:background="@drawable/timerbackground">
 
 
-    <Button
-        android:id="@+id/RESET"
-        android:layout_width="190dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="360dp"
+    <ImageButton
+        android:id="@+id/STOP"
+        android:layout_width="172dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="372dp"
         android:layout_marginEnd="4dp"
-        android:background="@null"
-        android:onClick="resetTapped"
-        android:text="STOP"
-        android:textColor="@color/white"
-        android:textSize="30sp"
+        android:background="@drawable/stopiamgebutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateIds,MissingConstraints,DuplicateClickableBoundsCheck" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/START"
-        android:layout_width="190dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="360dp"
-        android:background="@null"
-        android:onClick="resetTapped"
-        android:text="START/CONTIUNTE"
-        android:textSize="20sp"
+        android:layout_width="193dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="372dp"
+        android:background="@drawable/sciamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateIds,MissingConstraints,DuplicateClickableBoundsCheck" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/T02"
@@ -51,18 +44,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <ImageButton
         android:id="@+id/Back2"
-        android:layout_width="169dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="44dp"
-        android:backgroundTint="#EBDEFF"
-        android:text="返回"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="564dp"
+        android:background="@drawable/backiamgebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+
 
     <Chronometer
         android:id="@+id/timerText"

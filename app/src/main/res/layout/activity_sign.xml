@@ -75,19 +75,17 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="請輸入姓名" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/btn_date"
-        android:layout_width="90dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="240dp"
+        android:layout_width="114dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="244dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#EAC8FD"
-        android:text="選擇"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:background="@drawable/chooseiamgebutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <RadioGroup
         android:id="@+id/sexy"
@@ -197,19 +195,17 @@
         app:layout_constraintVertical_bias="0.726"
         tools:text="輸入你的密碼" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/btn_submit"
-        android:layout_width="138dp"
-        android:layout_height="62dp"
+        android:layout_width="155dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="#EBDEFF"
-        android:text="送出"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:background="@drawable/sumbit2iamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
 
     <TextView
         android:id="@+id/textView"

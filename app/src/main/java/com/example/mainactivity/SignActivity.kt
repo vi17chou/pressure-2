@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
@@ -15,9 +16,9 @@ class SignActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign)
-        val btn_submit=findViewById<Button>(R.id.btn_submit)
+        val btn_submit=findViewById<ImageButton>(R.id.btn_submit)
         val sex = findViewById<RadioGroup>(R.id.sexy)
-        val btn_date=findViewById<Button>(R.id.btn_date)
+        val btn_date=findViewById<ImageButton>(R.id.btn_date)
         val age=findViewById<TextView>(R.id.age)
         val name=findViewById<TextView>(R.id.name)
         val acc=findViewById<TextView>(R.id.sign_account)

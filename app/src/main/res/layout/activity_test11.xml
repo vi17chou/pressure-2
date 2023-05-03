@@ -11,7 +11,7 @@
         android:id="@+id/t10"
         android:layout_width="84dp"
         android:layout_height="292dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="248dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +77,7 @@
         android:id="@+id/content2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="72dp"
         android:text="TextView"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,8 +88,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="226dp"
-        android:layout_height="119dp"
+        android:layout_width="222dp"
+        android:layout_height="108dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="132dp"
         android:layout_marginEnd="24dp"
@@ -99,29 +99,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/battery" />
 
-    <Button
+    <ImageButton
         android:id="@+id/previous_question"
-        android:layout_width="123dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="224dp"
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="216dp"
         android:layout_marginBottom="64dp"
-        android:backgroundTint="#E4C1F9"
-        android:text="上一題"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:background="@drawable/reiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/submit"
-        android:layout_width="123dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="56dp"
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="64dp"
-        android:backgroundTint="#EBDEFF"
-        android:text="送出"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:background="@drawable/sumbit2iamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
