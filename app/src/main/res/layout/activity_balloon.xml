@@ -12,7 +12,7 @@
         android:layout_width="155dp"
         android:layout_height="72dp"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="564dp"
+        android:layout_marginTop="596dp"
         android:background="@drawable/backiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

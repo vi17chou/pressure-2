@@ -50,10 +50,10 @@
         android:layout_width="150dp"
         android:layout_height="111dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="452dp"
+        android:layout_marginTop="424dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/power" />
@@ -112,30 +112,27 @@
 
     </RadioGroup>
 
-    <Button
+    <ImageButton
         android:id="@+id/Next"
-        android:layout_width="123dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="56dp"
-        android:backgroundTint="#EBDEFF"
-        android:text="下一題"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/nextiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/previous_question"
-        android:layout_width="123dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="56dp"
-        android:backgroundTint="#E4C1F9"
-        android:text="上一題"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/reiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

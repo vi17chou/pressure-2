@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 
 class TestActivity7 : AppCompatActivity() {
@@ -12,9 +13,9 @@ class TestActivity7 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test7)
-        val Next = findViewById<Button>(R.id.Next)
+        val Next = findViewById<ImageButton>(R.id.Next)
 
-        val previous_question = findViewById<Button>(R.id.previous_question)
+        val previous_question = findViewById<ImageButton>(R.id.previous_question)
 
         previous_question.setOnClickListener {
             finish()

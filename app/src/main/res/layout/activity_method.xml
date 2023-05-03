@@ -7,87 +7,73 @@
     tools:context=".MethodActivity"
     android:background="@drawable/methodbackground">
 
-    <Button
+
+    <ImageButton
         android:id="@+id/game"
-        android:layout_width="238dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#FDF0D5"
-        android:text="小遊戲"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:layout_width="272dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/gameiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/breath"
-        android:layout_width="238dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="128dp"
-        android:backgroundTint="#FDF0D5"
-        android:text="深呼吸"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:layout_width="272dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/breathiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/sport"
-        android:layout_width="238dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="224dp"
-        android:backgroundTint="#FDF0D5"
-        android:text="運動"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        android:layout_width="272dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/sportiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/emotion"
-        android:layout_width="238dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="316dp"
-        android:backgroundTint="#FDF0D5"
-        android:text="控制情緒"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        android:layout_width="272dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/controliamgebutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/diet"
-        android:layout_width="238dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="412dp"
-        android:backgroundTint="#FDF0D5"
-        android:text="減壓飲食"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        android:layout_width="272dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="448dp"
+        android:background="@drawable/dietiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/back"
-        android:layout_width="145dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="516dp"
-        android:backgroundTint="#EBDEFF"
-        android:text="返回"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="155dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="568dp"
+        android:background="@drawable/backiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

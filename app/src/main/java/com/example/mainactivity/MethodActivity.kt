@@ -4,17 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 
 class MethodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_method)
-        val game = findViewById<Button>(R.id.game)
-        val breath = findViewById<Button>(R.id.breath)
-        val sport = findViewById<Button>(R.id.sport)
-        val emotion = findViewById<Button>(R.id.emotion)
-        val diet = findViewById<Button>(R.id.diet)
-        val back = findViewById<Button>(R.id.back)
+        val game = findViewById<ImageButton>(R.id.game)
+        val breath = findViewById<ImageButton>(R.id.breath)
+        val sport = findViewById<ImageButton>(R.id.sport)
+        val emotion = findViewById<ImageButton>(R.id.emotion)
+        val diet = findViewById<ImageButton>(R.id.diet)
+        val back = findViewById<ImageButton>(R.id.back)
 
         //小遊戲
         game.setOnClickListener {
