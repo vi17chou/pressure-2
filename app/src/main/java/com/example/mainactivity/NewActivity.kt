@@ -34,6 +34,7 @@ class NewActivity : AppCompatActivity() {
                 .setPositiveButton("是"){dialog,which->
                     //val db=DBHelper(context).writableDatabase
                     //db.execSQL("DELETE FROM Notes WHERE id LIKE ${data[position].id}")
+                    finish()
                 }.show()
             //finish()
         }
