@@ -3,6 +3,7 @@ package com.example.mainactivity
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Im
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
@@ -17,10 +18,10 @@ class SelectActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select)
-
-        val btn_rage = findViewById<ImageButton>(R.id.btn_range)
+        val btn=findViewById<ImageButton>(R.id.BTN)
+        //val btn_rage = findViewById<ImageButton>(R.id.btn_range)
         val date_range=findViewById<TextView>(R.id.date_range)
-        btn_rage.setOnClickListener {
+        btn.setOnClickListener {
             //showDatePickerDialog()
             val c = Calendar.getInstance()
             val year = c.get(Calendar.YEAR)
