@@ -1,17 +1,12 @@
 package com.example.mainactivity
 
-import android.annotation.SuppressLint
-import android.content.Context
+import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.*
-import androidx.appcompat.app.AlertDialog
-import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
-import java.util.Calendar
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.TextView
+import java.util.*
 
 
 
@@ -23,31 +18,48 @@ class SelectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select)
 
+        val btn_rage = findViewById<ImageButton>(R.id.btn_range)
+        val date_range=findViewById<TextView>(R.id.date_range)
+        btn_rage.setOnClickListener {
+            //showDatePickerDialog()
+            val c = Calendar.getInstance()
+            val year = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+            DatePickerDialog(this, { _, year, month, day ->
+                run {
+                    val format = "${setDateFormat(year, month, day)}"
+                    date_range.text = format
+                }
+            }, year, month, day).show()
+        }
 
+        val Back5 = findViewById<ImageButton>(R.id.back5)
 
-        val Back2 = findViewById<ImageButton>(R.id.back5)
-
-        Back2.setOnClickListener {
+        Back5.setOnClickListener {
             finish()
 
         }
-
     }
 
-   /* val btn_rage = findViewById<ImageButton>(R.id.btn_range)
-
-    btn_rage.setOnClickListener {
-        showDatePickerDialog()
+    private fun setDateFormat(year: Int, month: Int, day: Int): String {
+        return "$year-${month + 1}-$day"
     }
-    private fun showDatePickerDialog() {
-        val now = Calendar.getInstance()
-        val dpd = DatePickerDialog.newInstance(
-            this@SelectActivity,
-            now.get(Calendar.YEAR),
-            now.get(Calendar.MONTH),
-            now.get(Calendar.DAY_OF_MONTH)
-        )
-        dpd.show(fragmentManager, "Datepickerdialog")*/
+
+    /* val btn_rage = findViewById<ImageButton>(R.id.btn_range)
+
+     btn_rage.setOnClickListener {
+         showDatePickerDialog()
+     }
+     private fun showDatePickerDialog() {
+         val now = Calendar.getInstance()
+         val dpd = DatePickerDialog.newInstance(
+             this@SelectActivity,
+             now.get(Calendar.YEAR),
+             now.get(Calendar.MONTH),
+             now.get(Calendar.DAY_OF_MONTH)
+         )
+         dpd.show(fragmentManager, "Datepickerdialog")*/
     }
 
 
