@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TestActivity"
-    android:background="@drawable/textbackground">
+    android:background="@drawable/test1">
 
     <TextView
         android:id="@+id/test1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="題目8："
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +23,7 @@
         android:id="@+id/content1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="72dp"
         android:text="顯示題目"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,90 +34,81 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="183dp"
-        android:layout_height="129dp"
+        android:layout_width="155dp"
+        android:layout_height="96dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/girlcry" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="130dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="436dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cry" />
-
     <RadioGroup
         android:id="@+id/t7"
-        android:layout_width="84dp"
-        android:layout_height="292dp"
-        android:layout_marginTop="264dp"
+        android:layout_width="315dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/zero"
-            android:layout_width="81dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  0"
-            android:textSize="35sp" />
+            android:text="  0 完全不符合"
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/one"
-            android:layout_width="81dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  1"
-            android:textSize="35sp" />
+            android:text="  1 有點不符合"
+            android:textSize="30sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
             android:id="@+id/two"
-            android:layout_width="81dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  2"
-            android:textSize="35sp" />
+            android:text="  2 有點符合"
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/three"
-            android:layout_width="81dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  3"
-            android:textSize="35sp" />
+            android:text="  3 部分符合"
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/four"
-            android:layout_width="81dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  4"
-            android:textSize="35sp" />
+            android:text="  4 幾乎符合"
+            android:textSize="30sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
             android:id="@+id/five"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  5"
-            android:textSize="35sp" />
+            android:text="  5 完全符合"
+            android:textSize="30sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
 
     </RadioGroup>
 
     <ImageButton
         android:id="@+id/Next"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="111dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/nextiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,10 +116,10 @@
 
     <ImageButton
         android:id="@+id/previous_question"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="111dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/reiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
