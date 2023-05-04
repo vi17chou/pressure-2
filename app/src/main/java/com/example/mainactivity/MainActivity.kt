@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val login=findViewById<ImageButton>(R.id.login)
         val sign=findViewById<ImageButton>(R.id.sign)
         login.setOnClickListener {

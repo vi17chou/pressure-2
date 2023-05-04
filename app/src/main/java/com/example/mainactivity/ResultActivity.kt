@@ -11,6 +11,8 @@ class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val home_page=findViewById<ImageButton>(R.id.home_page)
         val textView6 = findViewById<TextView>(R.id.tips)
         val textViewString = textView6.text.toString()

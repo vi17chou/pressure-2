@@ -18,6 +18,8 @@ class SelectActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val btn=findViewById<ImageButton>(R.id.BTN)
         //val btn_rage = findViewById<ImageButton>(R.id.btn_range)
         val date_range=findViewById<TextView>(R.id.date_range)

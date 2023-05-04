@@ -10,6 +10,8 @@ class MethodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_method)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val game = findViewById<ImageButton>(R.id.game)
         val breath = findViewById<ImageButton>(R.id.breath)
         val sport = findViewById<ImageButton>(R.id.sport)

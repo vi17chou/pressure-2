@@ -12,6 +12,8 @@ class RecordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_record)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val btn_rage = findViewById<ImageButton>(R.id.btn_range)
         val date_range=findViewById<TextView>(R.id.date_range)
         btn_rage.setOnClickListener {

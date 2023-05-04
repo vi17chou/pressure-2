@@ -10,6 +10,8 @@ class GameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val balloon=findViewById<ImageButton>(R.id.balloon)
         val puzzle=findViewById<ImageButton>(R.id.puzzle)
         val guess=findViewById<ImageButton>(R.id.guess)

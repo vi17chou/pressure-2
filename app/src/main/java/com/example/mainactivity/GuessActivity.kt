@@ -12,6 +12,8 @@ class GuessActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_guess)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val guess_submit=findViewById<ImageButton>(R.id.guess_submit)
         val back6 = findViewById<ImageButton>(R.id.back6)
         val number=findViewById<TextView>(R.id.number)

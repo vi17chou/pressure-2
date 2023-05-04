@@ -13,6 +13,8 @@ class TimerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timer)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val START = findViewById<ImageButton>(R.id.START)
         val STOP = findViewById<ImageButton>(R.id.STOP)
         val timerText =findViewById<TextView>(R.id.timerText);
