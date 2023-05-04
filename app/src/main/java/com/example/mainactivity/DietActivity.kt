@@ -10,6 +10,8 @@ class DietActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.diet_table)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val back = findViewById<ImageButton>(R.id.btn_method)
         back.setOnClickListener {
             finish()

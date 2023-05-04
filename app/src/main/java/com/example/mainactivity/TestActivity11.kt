@@ -15,6 +15,8 @@ class TestActivity11 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test11)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val submit = findViewById<ImageButton>(R.id.submit)
         val previous_question=findViewById<ImageButton>(R.id.previous_question)
 

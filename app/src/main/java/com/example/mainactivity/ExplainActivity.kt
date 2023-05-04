@@ -10,6 +10,8 @@ class ExplainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_explain)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val start=findViewById<ImageButton>(R.id.start)
         start.setOnClickListener {
             val it= Intent(this,TestActivity::class.java)

@@ -12,6 +12,8 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val diary=findViewById<ImageButton>(R.id.diary)
         val record=findViewById<ImageButton>(R.id.record)
         val method=findViewById<ImageButton>(R.id.method)

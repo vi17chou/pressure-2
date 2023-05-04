@@ -10,6 +10,8 @@ class SportActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sport)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val run=findViewById<ImageButton>(R.id.run)
         val yuga=findViewById<ImageButton>(R.id.yuga)
         val hit=findViewById<ImageButton>(R.id.hit)

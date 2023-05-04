@@ -16,6 +16,8 @@ class Sign2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign2)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val btn_submit = findViewById<Button>(R.id.submit)
         val sex = findViewById<RadioGroup>(R.id.sexy)
         val btn_date=findViewById<Button>(R.id.btn_date)

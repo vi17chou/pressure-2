@@ -16,6 +16,8 @@ class NewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new)
+        //設定隱藏標題
+        getSupportActionBar()?.hide();
         val cancel = findViewById<ImageButton>(R.id.btn_cancel)
         val save = findViewById<ImageButton>(R.id.btn_save)
         val new_diary = findViewById<TextView>(R.id.new_diary)
