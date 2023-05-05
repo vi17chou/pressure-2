@@ -20,18 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="選擇日期範圍" />
 
-    <ImageButton
-        android:id="@+id/btn_range"
-        android:layout_width="114dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/chooseiamgebutton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
-
 
     <ListView
         android:id="@+id/lstView"
@@ -54,10 +42,13 @@
 
     <ImageButton
         android:id="@+id/BTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/al"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="1dp" />
+        android:layout_width="108dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/chooseiamgebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
