@@ -15,7 +15,7 @@ class BalloonActivity : AppCompatActivity() {
 
         back5.setOnClickListener {
             finish()//hello123
-//12312322
+//有錯嗎
         }
 
     }
