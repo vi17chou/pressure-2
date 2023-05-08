@@ -27,7 +27,7 @@
         android:layout_width="174dp"
         android:layout_height="63dp"
         android:layout_marginStart="116dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="592dp"
         android:background="@drawable/starttextiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
