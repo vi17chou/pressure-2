@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BreathActivity"
-    android:background="@drawable/bg15">
+    android:background="@drawable/breathbackground">
 
 
     <ImageButton

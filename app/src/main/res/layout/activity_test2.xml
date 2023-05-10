@@ -24,7 +24,7 @@
         android:layout_width="128dp"
         android:layout_height="74dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -34,12 +34,12 @@
 
     <RadioGroup
         android:id="@+id/t1"
-        android:layout_width="229dp"
-        android:layout_height="309dp"
-        android:layout_marginTop="244dp"
+        android:layout_width="315dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="228dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -48,14 +48,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  0 完全不符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  1 有點不符合"
-            android:textSize="25sp"
+            android:textSize="30sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
@@ -63,39 +63,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  2 有點符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  3 部分符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  4 幾乎符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/five"
-            android:layout_width="match_parent"
+            android:layout_width="329dp"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:text="  5 完全符合"
-            android:textSize="25sp"
+            android:textSize="30sp"
             tools:ignore="TouchTargetSizeCheck" />
 
     </RadioGroup>
-
 
     <TextView
         android:id="@+id/content1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="84dp"
         android:text="顯示題目"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +102,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="顯示題目" />
+
 
     <ImageButton
         android:id="@+id/Next"
