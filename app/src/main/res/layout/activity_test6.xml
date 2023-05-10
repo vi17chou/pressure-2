@@ -24,7 +24,7 @@
         android:id="@+id/content1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="80dp"
         android:text="顯示題目"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,22 +38,22 @@
         android:layout_width="125dp"
         android:layout_height="79dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bomb" />
 
     <RadioGroup
         android:id="@+id/t5"
-        android:layout_width="208dp"
-        android:layout_height="297dp"
-        android:layout_marginTop="256dp"
+        android:layout_width="315dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="228dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -62,14 +62,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  0 完全不符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  1 有點不符合"
-            android:textSize="25sp"
+            android:textSize="30sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
@@ -77,28 +77,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  2 有點符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  3 部分符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  4 幾乎符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/five"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  5 完全符合"
-            android:textSize="25sp"
+            android:textSize="30sp"
             tools:ignore="TouchTargetSizeCheck" />
 
 

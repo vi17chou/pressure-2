@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SportActivity"
-    android:background="@drawable/bg16">
+    android:background="@drawable/sportbackground">
 
 
     <ImageButton
@@ -14,7 +14,7 @@
         android:layout_height="87dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="100dp"
-        android:background="@drawable/gymiamgebutton"
+        android:background="@drawable/runiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />

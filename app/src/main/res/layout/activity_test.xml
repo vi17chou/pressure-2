@@ -24,34 +24,33 @@
         android:layout_width="121dp"
         android:layout_height="74dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="148dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/sleep" />
-
 
     <TextView
         android:id="@+id/content1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="88dp"
         android:text="顯示題目"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="顯示題目" />
 
     <RadioGroup
         android:id="@+id/t0"
-        android:layout_width="235dp"
-        android:layout_height="297dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="315dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,14 +61,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  0 完全不符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  1 有點不符合"
-            android:textSize="25sp"
+            android:textSize="30sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
@@ -77,41 +76,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  2 有點符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  3 部分符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  4 幾乎符合"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/five"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  5 完全符合"
-            android:textSize="25sp"
+            android:textSize="30sp"
             tools:ignore="TouchTargetSizeCheck" />
 
     </RadioGroup>
+
 
     <ImageButton
         android:id="@+id/Next"
         android:layout_width="111dp"
         android:layout_height="58dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/nextiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="148dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

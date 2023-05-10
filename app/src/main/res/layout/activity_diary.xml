@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DiaryActivity"
-    android:background="@drawable/bg6">
+    android:background="@drawable/diarybackground">
 
     <ImageButton
         android:id="@+id/New"
