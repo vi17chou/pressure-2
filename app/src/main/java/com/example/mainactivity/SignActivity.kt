@@ -1,8 +1,6 @@
 package com.example.mainactivity
 
-import android.app.Activity
 import android.app.DatePickerDialog
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,20 +10,28 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import java.util.*
 
+private lateinit var btn_submit:ImageButton
+private lateinit var btn_date:ImageButton
+private lateinit var sex:RadioGroup
+private lateinit var account:TextView
+private lateinit var password:TextView
+private lateinit var check_pwd:TextView
+private lateinit var name:TextView
+private lateinit var age:TextView
 class SignActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign)
         //設定隱藏標題
         getSupportActionBar()?.hide();
-        val btn_submit=findViewById<ImageButton>(R.id.btn_submit)
-        val sex = findViewById<RadioGroup>(R.id.sexy)
-        val btn_date=findViewById<ImageButton>(R.id.btn_date)
-        val age=findViewById<TextView>(R.id.age)
-        val name=findViewById<TextView>(R.id.name)
-        val acc=findViewById<TextView>(R.id.sign_account)
-        val pwd=findViewById<TextView>(R.id.sign_password)
-        val checkpwd=findViewById<TextView>(R.id.checkpwd)
+        btn_submit=findViewById<ImageButton>(R.id.btn_submit)
+        sex = findViewById<RadioGroup>(R.id.sexy)
+        btn_date=findViewById<ImageButton>(R.id.btn_date)
+        age=findViewById<TextView>(R.id.age)
+        name=findViewById<TextView>(R.id.name)
+        account=findViewById<TextView>(R.id.sign_account)
+        password=findViewById<TextView>(R.id.sign_password)
+        check_pwd=findViewById<TextView>(R.id.checkpwd)
 
 
         btn_date.setOnClickListener {
@@ -42,18 +48,23 @@ class SignActivity : AppCompatActivity() {
         }
 
         btn_submit.setOnClickListener {
-            val b = Bundle()
-            b.putString("sex",sex.findViewById<RadioButton>
-                (sex.checkedRadioButtonId).text.toString())
-            b.putString("na",name.getText().toString())
-            b.putString("ag",age.getText().toString())
-            b.putString("sign_acc",acc.getText().toString())
-            b.putString("sign_pwd",pwd.getText().toString())
-            b.putString("check_pwd",checkpwd.getText().toString())
-            setResult(RESULT_OK, Intent().putExtras(b))
+            //val b = Bundle()
+            with(getPreferences(MODE_PRIVATE).edit()){
+                putString("sex",sex.findViewById<RadioButton>
+                    (sex.checkedRadioButtonId).text.toString())
+                    putString("na",name.getText().toString())
+                    putString("ag",age.getText().toString())
+                    putString("sign_acc", account.getText().toString())
+                    putString("sign_pwd", password.getText().toString())
+                    putString("check_pwd",check_pwd.getText().toString())
+                    apply()
+            }
+            //setResult(RESULT_OK, Intent().putExtras(b))
             finish()
         }
+
     }
+    
     private fun setDateFormat(year: Int, month: Int, day: Int): String {
         return "$year-${month + 1}-$day"
     }

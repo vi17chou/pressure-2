@@ -42,10 +42,13 @@ class NewActivity : AppCompatActivity() {
         }
 
         save.setOnClickListener {
-            val b = Bundle()
-            b.putString("write_diary", new_diary.getText().toString())
-            b.putString("now_date", today.getText().toString())
-            setResult(RESULT_OK, Intent().putExtras(b))
+            //val b = Bundle()
+            with(getPreferences(MODE_PRIVATE).edit()){
+                putString("write_diary", new_diary.getText().toString())
+                putString("now_date", today.getText().toString())
+                apply()
+            }
+            //setResult(RESULT_OK, Intent().putExtras(b))
             finish()
 
         }
