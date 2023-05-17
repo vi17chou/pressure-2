@@ -64,7 +64,7 @@ class SignActivity : AppCompatActivity() {
         }
 
     }
-    
+
     private fun setDateFormat(year: Int, month: Int, day: Int): String {
         return "$year-${month + 1}-$day"
     }
