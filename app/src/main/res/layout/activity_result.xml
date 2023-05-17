@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/resultbackground"
+    android:background="@drawable/bg5"
     tools:context=".ResultActivity">
 
     <TextView
@@ -63,8 +63,8 @@
 
     <TextView
         android:id="@+id/tips"
-        android:layout_width="405dp"
-        android:layout_height="405dp"
+        android:layout_width="386dp"
+        android:layout_height="404dp"
         android:layout_marginTop="120dp"
 
 

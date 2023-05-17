@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SelectActivity"
-    android:background="@drawable/selectbackground">
+    android:background="@drawable/bg9">
 
     <EditText
         android:id="@+id/date_range"

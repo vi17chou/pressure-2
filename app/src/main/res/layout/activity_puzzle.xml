@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PuzzleActivity"
-    android:background="@drawable/puzzlebackground">
+    android:background="@drawable/bg14">
 
     <ImageButton
         android:id="@+id/back4"
