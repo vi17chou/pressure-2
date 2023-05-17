@@ -2,7 +2,7 @@
 <TableLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/infobackground"
+    android:background="@drawable/bg19"
 
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -15,7 +15,6 @@
         android:text="更多情緒控制的相關資訊"
         android:textColor="@color/black"
         android:textSize="24sp" />
-
 
     <TableRow
         android:layout_width="306dp"
@@ -31,7 +30,7 @@
             android:text="方式"
             android:textColor="@color/black"
 
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="267dp"
@@ -42,7 +41,7 @@
             android:padding="1dip"
             android:text="功效"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
     </TableRow>
 
     <TableRow
@@ -64,7 +63,7 @@
             android:layout_column="1"
             android:gravity="left"
             android:padding="1dip"
-            android:text="透過深呼吸可以降低心跳和血壓，有助於放鬆身心。"
+            android:text="透過深呼吸可以降低心跳和血壓，\n有助於放鬆身心。"
             android:textColor="@color/black"
             android:textSize="16sp" />
     </TableRow>
@@ -88,7 +87,7 @@
             android:layout_column="1"
             android:gravity="left"
             android:padding="1dip"
-            android:text="運動可以釋放身體內的內啡肽和血清素等物質，有助於提高心情和減輕壓力。去尋找適合自己的運動吧!"
+            android:text="運動可以釋放身體內的內啡肽和血\n清素等物質，有助於提高心情和減\n輕壓力。去尋找適合自己的運動吧!"
             android:textColor="@color/black"
             android:textSize="16sp" />
     </TableRow>
@@ -112,7 +111,7 @@
             android:layout_column="1"
             android:gravity="left"
             android:padding="1dip"
-            android:text="音樂有助於降低壓力和放鬆身心，選擇輕鬆愉悅的音樂來聆聽。"
+            android:text="音樂有助於降低壓力和放鬆身心，\n選擇輕鬆愉悅的音樂來聆聽。"
             android:textColor="@color/black"
             android:textSize="16sp" />
     </TableRow>
@@ -136,7 +135,7 @@
             android:layout_column="1"
             android:gravity="left"
             android:padding="1dip"
-            android:text="你不需要故作堅強而獨自掙扎，朋友很重要，特別是在遭逢生活低潮時，與他們聯絡吧！把心中的負面情緒跟一個懂自己、跟自己站在同一陣線的人分享，是放鬆心情、降低壓力的絕佳方式。"
+            android:text="你不需要故作堅強而獨自掙扎，朋友\n很重要，特別是在遭逢生活低潮時，\n與他們聯絡吧！把心中的負面情緒跟\n一個懂自己、跟自己站在同一陣線的\n人分享，是放鬆心情、降低壓力的絕\n佳方式。"
             android:textColor="@color/black"
             android:textSize="15sp" />
     </TableRow>
@@ -160,7 +159,7 @@
             android:layout_column="1"
             android:gravity="left"
             android:padding="1dip"
-            android:text="做自己情緒的主人，別被其他人左右了自己的情緒，做好自己該做的事，讓自己立於不敗之地，就能夠讓自己越來越好。做自己情緒的主人，控制好的情緒，就能夠讓自己越來越快樂。"
+            android:text="做自己情緒的主人，別被其他人左右了\n自己的情緒，做好自己該做的事，讓自\n己立於不敗之地，就能夠讓自己越來越好。\n做自己情緒的主人，控制好的情緒，就\n能夠讓自己越來越快樂。"
             android:textColor="@color/black"
             android:textSize="14sp" />
     </TableRow>
@@ -208,12 +207,10 @@
             android:layout_column="1"
             android:gravity="left"
             android:padding="1dip"
-            android:text="適當增加休息和睡眠時間可以讓身體恢復和放鬆。"
+            android:text="適當增加休息和睡眠時間可以讓身\n體恢復和放鬆。"
             android:textColor="@color/black"
             android:textSize="16sp" />
     </TableRow>
-
-
 
     <TableRow
         android:layout_width="match_parent"
@@ -221,11 +218,17 @@
 
         <ImageButton
             android:id="@+id/btn_method"
-            android:layout_width="102dp"
-            android:layout_height="80dp"
+            android:layout_width="79dp"
+            android:layout_height="58dp"
             android:background="@drawable/backiamgebutton"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </TableRow>
+
+
+
+
+
+
 
 </TableLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SportActivity"
-    android:background="@drawable/timerbackground">
+    android:background="@drawable/bg18">
 
 
     <ImageButton

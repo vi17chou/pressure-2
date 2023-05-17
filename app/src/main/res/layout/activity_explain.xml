@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ExplainActivity"
-    android:background="@drawable/bg2">
+    android:background="@drawable/bg3">
 
 
     <EditText
         android:id="@+id/edit_text"
-        android:layout_width="409dp"
+        android:layout_width="385dp"
         android:layout_height="383dp"
         android:layout_marginTop="84dp"
         android:gravity="top"

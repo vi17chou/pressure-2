@@ -23,11 +23,11 @@
         android:id="@+id/content1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="116dp"
         android:text="顯示題目"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="顯示題目" />
@@ -37,7 +37,7 @@
         android:layout_width="208dp"
         android:layout_height="111dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="111dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="476dp"
+        android:layout_marginTop="536dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.769"
@@ -60,12 +60,12 @@
 
     <RadioGroup
         android:id="@+id/t8"
-        android:layout_width="315dp"
-        android:layout_height="284dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="218dp"
+        android:layout_height="297dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -74,35 +74,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  0 完全不符合"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  1 有點不符合"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  2 有點符合"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  3 部分符合"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  4 幾乎符合"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/five"
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:text="  5 完全符合"
-            android:textSize="30sp"
+            android:textSize="25sp"
             tools:ignore="TouchTargetSizeCheck" />
 
     </RadioGroup>
