@@ -221,7 +221,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.042" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/eye"
         android:layout_width="48dp"
         android:layout_height="48dp"
@@ -233,12 +233,12 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
 
-    <ImageButton
-        android:id="@+id/closeeye"
+    <ImageView
+        android:id="@+id/checkeye"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="184dp"
-        android:background="@drawable/closeeye"
+        android:background="@drawable/eye"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.914"
