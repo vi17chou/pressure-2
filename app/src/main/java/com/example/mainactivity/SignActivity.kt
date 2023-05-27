@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings.Global
 import android.view.View
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -14,6 +15,10 @@ import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
+import androidx.room.Room
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.util.*
 
 private lateinit var btn_submit:ImageButton
@@ -36,14 +41,16 @@ class SignActivity : AppCompatActivity() {
         //設定隱藏標題
         getSupportActionBar()?.hide();
 
-        btn_submit=findViewById<ImageButton>(R.id.btn_submit)
-        sex = findViewById<RadioGroup>(R.id.sexy)
-        btn_date=findViewById<ImageButton>(R.id.btn_date)
-        age=findViewById<TextView>(R.id.age)
-        name=findViewById<TextView>(R.id.name)
-        account=findViewById<TextView>(R.id.sign_account)
-        password=findViewById<TextView>(R.id.sign_password)
-        check_pwd=findViewById<TextView>(R.id.checkpwd)
+        btn_submit=findViewById<ImageButton>(R.id.btn_submit)//送出
+        sex = findViewById<RadioGroup>(R.id.sexy)//性別
+        btn_date=findViewById<ImageButton>(R.id.btn_date)//出生日期
+        age=findViewById<TextView>(R.id.age)//年齡
+        name=findViewById<TextView>(R.id.name)//姓名
+        account=findViewById<TextView>(R.id.sign_account)//帳號
+        password=findViewById<TextView>(R.id.sign_password)//密碼
+        check_pwd=findViewById<TextView>(R.id.checkpwd)//確認密碼
+
+        val db=Room.databaseBuilder(this,AppDatabase::class.java,"mysqlite.db").build()
 
         eye=findViewById<ImageView>(R.id.eye)
         checkeye=findViewById<ImageView>(R.id.checkeye)
@@ -63,8 +70,18 @@ class SignActivity : AppCompatActivity() {
         }
 
         btn_submit.setOnClickListener {
+            val name=name.text.toString()
+            val account= account.text.toString()
+            val password=password.text.toString()
+            val check_pwd=check_pwd.text.toString()
+            GlobalScope.launch {
+                val rowid=db.userDao().insert((user(name = name, acoount = account, password = password, check_pwd = check_pwd)))
+                if (rowid>0){
+                    Snackbar.make(it, "新增成功！$rowid", Snackbar.LENGTH_LONG).show()
+                }
+            }
             //val b = Bundle()
-            with(getPreferences(MODE_PRIVATE).edit()){
+            /*with(getPreferences(MODE_PRIVATE).edit()){
                 putString("sex",sex.findViewById<RadioButton>
                     (sex.checkedRadioButtonId).text.toString())
                     putString("na",name.getText().toString())
@@ -73,10 +90,12 @@ class SignActivity : AppCompatActivity() {
                     putString("sign_pwd", password.getText().toString())
                     putString("check_pwd",check_pwd.getText().toString())
                     apply()
-            }
+            }*/
             //setResult(RESULT_OK, Intent().putExtras(b))
             finish()
         }
+
+
         //密碼
         var isHideFirst = true
         eye.setOnClickListener {
@@ -131,7 +150,6 @@ class SignActivity : AppCompatActivity() {
 private fun TextView.setSelection(index: Int) {
 
 }
-
 
     private fun setDateFormat(year: Int, month: Int, day: Int): String {
         return "$year-${month + 1}-$day"
