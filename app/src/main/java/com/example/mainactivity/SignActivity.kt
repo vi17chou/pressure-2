@@ -19,6 +19,7 @@ import androidx.room.Room
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.time.LocalDateTime
 import java.util.*
 
 private lateinit var btn_submit:ImageButton
@@ -71,13 +72,19 @@ class SignActivity : AppCompatActivity() {
 
         btn_submit.setOnClickListener {
             val name=name.text.toString()
+            val birthday=age.text.toString()
+            val sexy=sex.toString()
             val account= account.text.toString()
             val password=password.text.toString()
             val check_pwd=check_pwd.text.toString()
+
+
             GlobalScope.launch {
-                val rowid=db.userDao().insert((user(name = name, acoount = account, password = password, check_pwd = check_pwd)))
+                val rowid=db.userDao().insert((User(name = name,birthday=birthday,sexy=sexy, account = account, password = password, check_pwd = check_pwd, mTime = LocalDateTime.now())))
                 if (rowid>0){
                     Snackbar.make(it, "新增成功！$rowid", Snackbar.LENGTH_LONG).show()
+                }else{
+                    Snackbar.make(it, "新增失敗！$rowid", Snackbar.LENGTH_LONG).show()
                 }
             }
             //val b = Bundle()
