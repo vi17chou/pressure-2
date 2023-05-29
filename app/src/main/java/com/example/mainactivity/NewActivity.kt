@@ -31,7 +31,7 @@ class NewActivity : AppCompatActivity() {
         val s: CharSequence = DateFormat.format("yyyy-MM-dd", mCal.getTime())
         val today = findViewById<TextView>(R.id.today)
         today.text = s
-
+        val db = Room.databaseBuilder(this, AppDatabase::class.java,"test.db").build()
 
         cancel.setOnClickListener {
             AlertDialog.Builder(this)
@@ -49,8 +49,13 @@ class NewActivity : AppCompatActivity() {
         }
 
         save.setOnClickListener {
-
-
+            val content = new_diary.text.toString()
+            GlobalScope.launch{
+                val row=db.diaryDao().insert(Diary(content = content, mTime = LocalDateTime.now()))
+                if(row > 0){
+                    Snackbar.make(it, "新增成功！$row", Snackbar.LENGTH_LONG).show()
+                }
+            }
         }
             //val b = Bundle()
             /*with(getPreferences(MODE_PRIVATE).edit()){
