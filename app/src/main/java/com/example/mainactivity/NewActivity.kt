@@ -9,8 +9,14 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.room.Room
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.time.LocalDateTime
 import java.util.Calendar
 
+private  lateinit var new_diary:TextView
 class NewActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,11 +26,12 @@ class NewActivity : AppCompatActivity() {
         getSupportActionBar()?.hide();
         val cancel = findViewById<ImageButton>(R.id.btn_cancel)
         val save = findViewById<ImageButton>(R.id.btn_save)
-        val new_diary = findViewById<TextView>(R.id.new_diary)
+        new_diary = findViewById<TextView>(R.id.new_diary)
         val mCal: Calendar = Calendar.getInstance()
         val s: CharSequence = DateFormat.format("yyyy-MM-dd", mCal.getTime())
         val today = findViewById<TextView>(R.id.today)
         today.text = s
+
 
         cancel.setOnClickListener {
             AlertDialog.Builder(this)
@@ -42,15 +49,17 @@ class NewActivity : AppCompatActivity() {
         }
 
         save.setOnClickListener {
+
+
+        }
             //val b = Bundle()
-            with(getPreferences(MODE_PRIVATE).edit()){
+            /*with(getPreferences(MODE_PRIVATE).edit()){
                 putString("write_diary", new_diary.getText().toString())
                 putString("now_date", today.getText().toString())
                 apply()
             }
             //setResult(RESULT_OK, Intent().putExtras(b))
-            finish()
+            finish()*/
 
         }
     }
-}
