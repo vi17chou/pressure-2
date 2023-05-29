@@ -1,5 +1,6 @@
 package com.example.mainactivity
 
+import User
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,11 @@ import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
+import androidx.room.Room
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.time.LocalDateTime
 import java.util.*
 
 private lateinit var btn_submit:ImageButton
@@ -33,7 +39,7 @@ class SignActivity : AppCompatActivity() {
         password=findViewById<TextView>(R.id.sign_password)
         check_pwd=findViewById<TextView>(R.id.checkpwd)
 
-
+        val db = Room.databaseBuilder(this, AppDatabase::class.java,"test.db").build()
         btn_date.setOnClickListener {
             val c = Calendar.getInstance()
             val year = c.get(Calendar.YEAR)
@@ -48,8 +54,21 @@ class SignActivity : AppCompatActivity() {
         }
 
         btn_submit.setOnClickListener {
+
+            val name = name.text.toString()
+            val birthday = age.text.toString()
+            val sexy = sex.checkedRadioButtonId.toString()
+            val account = account.text.toString()
+            val password = password.text.toString()
+            val check_pwd = check_pwd.text.toString()
+            GlobalScope.launch {
+                val rowid = db.userDao().insert(User(name = name,account=account, age = birthday, sex = sexy, password=password,check_pwd=check_pwd ,mTime = LocalDateTime.now()))
+                if(rowid > 0){
+                    Snackbar.make(it, "新增成功！$rowid", Snackbar.LENGTH_LONG).show()
+                }
+            }
             //val b = Bundle()
-            with(getPreferences(MODE_PRIVATE).edit()){
+            /*with(getPreferences(MODE_PRIVATE).edit()){
                 putString("sex",sex.findViewById<RadioButton>
                     (sex.checkedRadioButtonId).text.toString())
                     putString("na",name.getText().toString())
@@ -60,7 +79,7 @@ class SignActivity : AppCompatActivity() {
                     apply()
             }
             //setResult(RESULT_OK, Intent().putExtras(b))
-            finish()
+            finish()*/
         }
 
     }
