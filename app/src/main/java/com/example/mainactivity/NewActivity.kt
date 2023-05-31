@@ -31,7 +31,7 @@ class NewActivity : AppCompatActivity() {
         val s: CharSequence = DateFormat.format("yyyy-MM-dd", mCal.getTime())
         val today = findViewById<TextView>(R.id.today)
         today.text = s
-        val db = Room.databaseBuilder(this, AppDatabase::class.java,"test.db").build()
+        val db = Room.databaseBuilder(this, AppDatabase::class.java,"user2.db").build()
 
         cancel.setOnClickListener {
             AlertDialog.Builder(this)

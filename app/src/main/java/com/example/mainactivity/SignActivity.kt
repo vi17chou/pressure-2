@@ -13,6 +13,7 @@ import android.text.method.PasswordTransformationMethod;
 import android.text.method.TransformationMethod
 import android.widget.ImageView
 import androidx.room.Room
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
@@ -64,7 +65,7 @@ class SignActivity : AppCompatActivity() {
             }, year, month, day).show()
         }
 
-
+        val db = Room.databaseBuilder(this, AppDatabase::class.java,"user2.db").build()
         btn_submit.setOnClickListener {
             val name= name.text.toString()
             val birthday=age.text.toString()
@@ -73,7 +74,12 @@ class SignActivity : AppCompatActivity() {
             val password= password.text.toString()
             val check_pwd= check_pwd.text.toString()
 
-
+            GlobalScope.launch{
+                val row=db.userDao().insert(User(name = name, birthday = birthday, sexy = sexy,account = account, password = password, check_pwd = check_pwd, mTime = LocalDateTime.now()))
+                if(row > 0){
+                    Snackbar.make(it, "新增成功！$row", Snackbar.LENGTH_LONG).show()
+                }
+            }
             //val b = Bundle()
             /*with(getPreferences(MODE_PRIVATE).edit()){
                 putString("sex",sex.findViewById<RadioButton>
