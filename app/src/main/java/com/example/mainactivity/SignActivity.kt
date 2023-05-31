@@ -22,13 +22,13 @@ import java.util.*
 
 private lateinit var btn_submit:ImageButton
 private lateinit var btn_date:ImageButton
-private lateinit var sex:RadioGroup
+//private lateinit var sex:RadioGroup
 private lateinit var account:TextView
 private lateinit var password:TextView
 private lateinit var check_pwd:TextView
 private lateinit var name:TextView
 private lateinit var age:TextView
-
+private lateinit var gender:TextView
 private lateinit var eye:ImageView
 private lateinit var checkeye:ImageView
 
@@ -41,13 +41,14 @@ class SignActivity : AppCompatActivity() {
         //設定隱藏標題
         getSupportActionBar()?.hide();
         btn_submit=findViewById<ImageButton>(R.id.btn_submit)
-        sex = findViewById<RadioGroup>(R.id.sexy)
+        //sex = findViewById<RadioGroup>(R.id.sexy)
         btn_date=findViewById<ImageButton>(R.id.btn_date)
         age=findViewById<TextView>(R.id.age)
         name=findViewById<TextView>(R.id.name)
         account=findViewById<TextView>(R.id.sign_account)
         password=findViewById<TextView>(R.id.sign_password)
         check_pwd=findViewById<TextView>(R.id.checkpwd)
+        gender=findViewById<TextView>(R.id.gender)
 
         eye=findViewById<ImageView>(R.id.eye)
         checkeye=findViewById<ImageView>(R.id.checkeye)
@@ -69,7 +70,7 @@ class SignActivity : AppCompatActivity() {
         btn_submit.setOnClickListener {
             val name= name.text.toString()
             val birthday=age.text.toString()
-            val sexy=sex.toString()
+            val sexy= gender.text.toString()
             val account= account.text.toString()
             val password= password.text.toString()
             val check_pwd= check_pwd.text.toString()

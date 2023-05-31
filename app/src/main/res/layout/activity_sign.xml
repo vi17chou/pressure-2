@@ -76,6 +76,20 @@
         tools:text="請輸入姓名" />
 
 
+    <EditText
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="292dp"
+        android:layout_marginEnd="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="請輸入性別" />
+
     <ImageButton
         android:id="@+id/btn_date"
         android:layout_width="114dp"
@@ -87,32 +101,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-    <RadioGroup
-        android:id="@+id/sexy"
-        android:layout_width="126dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginEnd="150dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/man"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="男"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-        <RadioButton
-            android:id="@+id/woman"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="女"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-    </RadioGroup>
     <TextView
         android:id="@+id/sign_acc"
         android:layout_width="wrap_content"
