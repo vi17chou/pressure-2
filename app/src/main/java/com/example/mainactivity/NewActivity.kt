@@ -54,6 +54,7 @@ class NewActivity : AppCompatActivity() {
                 val row=db.diaryDao().insert(Diary(content = content, mTime = LocalDateTime.now()))
                 if(row > 0){
                     Snackbar.make(it, "新增成功！$row", Snackbar.LENGTH_LONG).show()
+                    finish()
                 }
             }
         }

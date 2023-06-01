@@ -41,7 +41,7 @@ class DiaryActivity : AppCompatActivity() {
             val it= Intent(this,SelectActivity::class.java)
             startActivity(it)
         }
-    val db = Room.databaseBuilder(this, AppDatabase::class.java,"user2.db").build()
+    
         del.setOnClickListener {
             /*val it= Intent(this,DelActivity::class.java)
             startActivity(it)*/
