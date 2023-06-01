@@ -41,7 +41,7 @@ class DiaryActivity : AppCompatActivity() {
             val it= Intent(this,SelectActivity::class.java)
             startActivity(it)
         }
-    
+
         del.setOnClickListener {
             /*val it= Intent(this,DelActivity::class.java)
             startActivity(it)*/
