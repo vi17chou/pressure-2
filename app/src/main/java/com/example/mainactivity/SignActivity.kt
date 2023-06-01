@@ -79,6 +79,7 @@ class SignActivity : AppCompatActivity() {
                 val row=db.userDao().insert(User(name = name, birthday = birthday, sexy = sexy,account = account, password = password, check_pwd = check_pwd, mTime = LocalDateTime.now()))
                 if(row > 0){
                     Snackbar.make(it, "新增成功！$row", Snackbar.LENGTH_LONG).show()
+                    finish()
                 }
             }
             //val b = Bundle()
