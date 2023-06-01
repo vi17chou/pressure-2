@@ -23,10 +23,10 @@
         android:id="@+id/select"
         android:layout_width="278dp"
         android:layout_height="92dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="276dp"
         android:background="@drawable/diaryselectiamgebutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
@@ -35,7 +35,7 @@
         android:id="@+id/del"
         android:layout_width="278dp"
         android:layout_height="92dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="468dp"
         android:background="@drawable/deldiaryiamgebutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
@@ -43,18 +43,16 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-
     <ImageButton
         android:id="@+id/back_home"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="564dp"
+        android:layout_width="131dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="616dp"
         android:background="@drawable/backiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

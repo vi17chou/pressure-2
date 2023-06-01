@@ -23,7 +23,7 @@
         android:id="@+id/content1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="120dp"
         android:text="顯示題目"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
         android:layout_width="130dp"
         android:layout_height="84dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="172dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
@@ -47,12 +47,12 @@
 
     <RadioGroup
         android:id="@+id/t9"
-        android:layout_width="217dp"
-        android:layout_height="305dp"
-        android:layout_marginTop="240dp"
+        android:layout_width="231dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="272dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

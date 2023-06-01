@@ -37,7 +37,7 @@
         android:layout_width="140dp"
         android:layout_height="96dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="172dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
@@ -47,12 +47,12 @@
 
     <RadioGroup
         android:id="@+id/t4"
-        android:layout_width="208dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="248dp"
+        android:layout_width="231dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="268dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintHorizontal_bias="0.966"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

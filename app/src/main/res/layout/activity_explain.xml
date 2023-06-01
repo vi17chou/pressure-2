@@ -12,7 +12,7 @@
         android:id="@+id/edit_text"
         android:layout_width="385dp"
         android:layout_height="383dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="108dp"
         android:gravity="top"
         android:inputType="text|textMultiLine"
         android:lineSpacingExtra="34sp"
@@ -24,10 +24,10 @@
 
     <ImageButton
         android:id="@+id/start"
-        android:layout_width="174dp"
+        android:layout_width="157dp"
         android:layout_height="63dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="576dp"
         android:background="@drawable/starttextiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
