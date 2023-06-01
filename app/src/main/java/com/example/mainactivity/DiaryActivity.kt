@@ -9,6 +9,10 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.room.Room
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class DiaryActivity : AppCompatActivity() {
 //123測試是否成功
@@ -37,7 +41,7 @@ class DiaryActivity : AppCompatActivity() {
             val it= Intent(this,SelectActivity::class.java)
             startActivity(it)
         }
-
+    val db = Room.databaseBuilder(this, AppDatabase::class.java,"user2.db").build()
         del.setOnClickListener {
             /*val it= Intent(this,DelActivity::class.java)
             startActivity(it)*/
@@ -48,8 +52,6 @@ class DiaryActivity : AppCompatActivity() {
 
                 }
                 .setPositiveButton("刪除"){dialog,which->
-                    //val db=DBHelper(context).writableDatabase
-                    //db.execSQL("DELETE FROM Notes WHERE id LIKE ${data[position].id}")
                 }.show()
         }
 
