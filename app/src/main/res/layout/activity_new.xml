@@ -11,11 +11,12 @@
         android:id="@+id/now_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="  今天日期:"
         android:textSize="35sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="15dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="3dp" />
 
     <TextView
         android:id="@+id/today"
@@ -28,12 +29,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+
     <ImageButton
         android:id="@+id/btn_cancel"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="64dp"
+        android:layout_width="111dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/canceliamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,28 +43,26 @@
 
     <ImageButton
         android:id="@+id/btn_save"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="64dp"
+        android:layout_width="116dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/saveliamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-
-
     <TextView
         android:id="@+id/write_diary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="124dp"
         android:singleLine="true"
         android:text=" 填寫日記:"
         android:textSize="35sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="21dp" />
+        tools:layout_editor_absoluteX="25dp" />
 
     <EditText
         android:id="@+id/new_diary"
@@ -76,7 +76,7 @@
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257"
+        app:layout_constraintVertical_bias="0.185"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

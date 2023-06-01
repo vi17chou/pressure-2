@@ -10,10 +10,10 @@
 
     <ImageButton
         android:id="@+id/back6"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="624dp"
+        android:layout_width="135dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="632dp"
         android:background="@drawable/backiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,11 +23,11 @@
         android:id="@+id/guess_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:text="猜數字遊戲"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,10 +83,10 @@
 
     <ImageButton
         android:id="@+id/guess_submit"
-        android:layout_width="136dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="144dp"
+        android:layout_width="123dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="148dp"
         android:background="@drawable/sumbitiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

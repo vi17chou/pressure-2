@@ -7,6 +7,7 @@
     tools:context=".MainActivity"
     android:background="@drawable/bg1">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,24 +17,23 @@
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="466dp"
         android:layout_height="318dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
-
 
     <ImageButton
         android:id="@+id/login"
@@ -69,7 +69,7 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintHorizontal_bias="0.821"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.686"
@@ -81,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="480dp"
         android:text="密碼："
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -93,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="384dp"
+        android:layout_marginTop="404dp"
         android:text="帳號："
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -104,14 +104,14 @@
         android:id="@+id/acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="404dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="輸入你的帳號" />

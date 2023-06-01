@@ -31,8 +31,8 @@
 
     <ImageButton
         android:id="@+id/back5"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
         android:layout_marginStart="128dp"
         android:layout_marginTop="596dp"
         android:background="@drawable/backiamgebutton"

@@ -9,10 +9,10 @@
 
     <ImageButton
         android:id="@+id/back5"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="564dp"
+        android:layout_width="133dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="584dp"
         android:background="@drawable/backiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

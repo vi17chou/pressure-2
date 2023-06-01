@@ -9,15 +9,14 @@
 
     <ImageButton
         android:id="@+id/back4"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="564dp"
+        android:layout_width="135dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="592dp"
         android:background="@drawable/backiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
