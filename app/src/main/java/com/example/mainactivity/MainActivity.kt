@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()?.hide();
         val login=findViewById<ImageButton>(R.id.login)
         val sign=findViewById<ImageButton>(R.id.sign)
+        val mng=findViewById<Button>(R.id.mng)
+
         login.setOnClickListener {
             val it=Intent(this,ExplainActivity::class.java)
             startActivity(it)
@@ -24,6 +26,10 @@ class MainActivity : AppCompatActivity() {
 
         sign.setOnClickListener {
             val it=Intent(this,SignActivity::class.java)
+            startActivity(it)
+        }
+        mng.setOnClickListener {
+            val it=Intent(this,Manage_Home::class.java)
             startActivity(it)
         }
     }
