@@ -42,7 +42,7 @@ class MethodActivity : AppCompatActivity() {
             val it = Intent(this, EmotionActivity::class.java)
             startActivity(it)
         }
-        //控制情緒
+        //減壓飲食
         diet.setOnClickListener {
             val it = Intent(this, DietActivity::class.java)
             startActivity(it)
