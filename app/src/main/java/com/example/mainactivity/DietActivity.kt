@@ -9,12 +9,12 @@ class DietActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.diet_table)
+        setContentView(R.layout.activity_test)//現在的layout是顯示test的畫面
         //設定隱藏標題
         getSupportActionBar()?.hide();
-        val back = findViewById<ImageButton>(R.id.btn_method)
+        /*val back = findViewById<ImageButton>(R.id.im_btn1)
         back.setOnClickListener {
             finish()
-        }
+        }*/
     }
 }
