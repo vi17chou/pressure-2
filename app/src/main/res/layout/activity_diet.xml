@@ -13,6 +13,7 @@
         android:layout_height="121dp"
         app:srcCompat="@drawable/al"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="53dp" />
+        tools:layout_editor_absoluteY="53dp"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

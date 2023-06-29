@@ -10,7 +10,7 @@ class diet_table : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.diet_table2)
+        setContentView(R.layout.diet_table)
         //設定隱藏標題
         getSupportActionBar()?.hide();
         //val diary = findViewById<ImageButton>(R.id.img_btn1)

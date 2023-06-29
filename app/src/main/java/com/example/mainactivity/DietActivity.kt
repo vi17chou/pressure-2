@@ -15,7 +15,7 @@ class DietActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         val img_diet=findViewById<ImageButton>(R.id.img_diet)
         img_diet.setOnClickListener {
-            val it= Intent(this,activity_food1::class.java)
+            val it= Intent(this,Diet_food1Activity::class.java)
             startActivity(it)
         }
         /*val back = findViewById<ImageButton>(R.id.im_btn1)
