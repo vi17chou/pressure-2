@@ -7,6 +7,18 @@
     tools:context=".BalloonActivity"
     android:background="@drawable/bg13">
 
+
+    <ImageView
+        android:id="@+id/imageViewBalloon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/balloon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <ImageButton
         android:id="@+id/back5"
         android:layout_width="133dp"
