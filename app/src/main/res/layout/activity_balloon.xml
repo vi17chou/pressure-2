@@ -30,5 +30,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="52dp"
+        android:text="請按壓氣球"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
