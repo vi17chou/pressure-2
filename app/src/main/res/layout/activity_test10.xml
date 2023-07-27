@@ -60,42 +60,42 @@
             android:id="@+id/zero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  0 完全不符合"
+            android:text=" 完全不符合"
             android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  1 有點不符合"
+            android:text=" 有點不符合"
             android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  2 有點符合"
+            android:text=" 有點符合"
             android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  3 部分符合"
+            android:text=" 部分符合"
             android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  4 幾乎符合"
+            android:text=" 幾乎符合"
             android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/five"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  5 完全符合"
+            android:text=" 完全符合"
             android:textSize="25sp"
             tools:ignore="TouchTargetSizeCheck" />
 
