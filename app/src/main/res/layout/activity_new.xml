@@ -19,7 +19,7 @@
         tools:layout_editor_absoluteX="3dp" />
 
     <TextView
-        android:id="@+id/today"
+        android:id="@+id/txt_today"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -65,7 +65,7 @@
         tools:layout_editor_absoluteX="25dp" />
 
     <EditText
-        android:id="@+id/new_diary"
+        android:id="@+id/txt_newdiary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

@@ -1,37 +1,37 @@
 package com.example.mainactivity
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.text.format.DateFormat
-import android.widget.Button
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Room
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import java.time.LocalDateTime
+import com.example.mainactivity.databinding.ActivityNewBinding
+import com.google.firebase.firestore.FirebaseFirestore
 import java.util.Calendar
+import java.util.HashMap
 
 private  lateinit var new_diary:TextView
-class NewActivity : AppCompatActivity() {
 
+class NewActivity : AppCompatActivity() {
+    private  var binding: ActivityNewBinding? =null
+    val fireStoreDatabase= FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_new)
+        binding= ActivityNewBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
+
         //設定隱藏標題
         getSupportActionBar()?.hide();
         val cancel = findViewById<ImageButton>(R.id.btn_cancel)
         val save = findViewById<ImageButton>(R.id.btn_save)
-        new_diary = findViewById<TextView>(R.id.new_diary)
+        new_diary = findViewById<TextView>(R.id.txt_newdiary)
         val mCal: Calendar = Calendar.getInstance()
         val s: CharSequence = DateFormat.format("yyyy-MM-dd", mCal.getTime())
-        val today = findViewById<TextView>(R.id.today)
+        val today = findViewById<TextView>(R.id.txt_today)
         today.text = s
-        val db = Room.databaseBuilder(this, AppDatabase::class.java,"user2.db").build()
+        //val db = Room.databaseBuilder(this, AppDatabase::class.java,"user2.db").build()
 
         cancel.setOnClickListener {
             AlertDialog.Builder(this)
@@ -49,14 +49,33 @@ class NewActivity : AppCompatActivity() {
         }
 
         save.setOnClickListener {
-            val content = new_diary.text.toString()
+            //連線外部資料庫
+                var today:String=binding!!.txtToday.text.toString()
+                var newdiary:String=binding!!.txtNewdiary.text.toString()
+
+                val Diary:MutableMap<String,Any> = HashMap()
+                    Diary["Today"]=today
+                    Diary["newdiary"]=newdiary
+                    fireStoreDatabase.collection("Diary")
+                        .add(Diary)
+                        .addOnSuccessListener {
+                         Log.d(TAG,"Added document with Id ${it.id}")
+                        }
+                         .addOnFailureListener {
+                         Log.w(TAG,"Error adding document ${it}")
+                        }
+            binding!!.txtToday.text.toString()
+            binding!!.txtNewdiary.text.toString()
+            finish()
+            //原本存取資料寫法
+            /*val content = new_diary.text.toString()
             GlobalScope.launch{
                 val row=db.diaryDao().insert(Diary(content = content, mTime = LocalDateTime.now()))
                 if(row > 0){
                     Snackbar.make(it, "新增成功！$row", Snackbar.LENGTH_LONG).show()
                     finish()
                 }
-            }
+            }*/
         }
             //val b = Bundle()
             /*with(getPreferences(MODE_PRIVATE).edit()){

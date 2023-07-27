@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/sex"
+        android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -22,7 +22,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/age"
+        android:id="@+id/txt_birthday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="196dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/ag"
+        android:id="@+id/birthday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -50,7 +50,7 @@
 
 
     <TextView
-        android:id="@+id/na"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -63,7 +63,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
@@ -77,7 +77,7 @@
         tools:text="請輸入姓名" />
 
     <EditText
-        android:id="@+id/gender"
+        android:id="@+id/txt_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="308dp"
@@ -97,7 +97,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="252dp"
         android:background="@drawable/chooseiamgebutton"
-        app:layout_constraintBottom_toTopOf="@+id/gender"
+        app:layout_constraintBottom_toTopOf="@+id/txt_gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +130,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/check_pwd"
+        android:id="@+id/ConfirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -142,7 +142,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/sign_account"
+        android:id="@+id/txt_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -158,7 +158,7 @@
         tools:text="輸入你的帳號" />
 
     <EditText
-        android:id="@+id/sign_password"
+        android:id="@+id/txt_password"
         android:layout_width="207dp"
         android:layout_height="68dp"
         android:ems="10"
@@ -174,7 +174,7 @@
         tools:text="輸入你的密碼" />
 
     <EditText
-        android:id="@+id/checkpwd"
+        android:id="@+id/txt_ConfirmPassword"
         android:layout_width="204dp"
         android:layout_height="59dp"
         android:layout_marginEnd="24dp"

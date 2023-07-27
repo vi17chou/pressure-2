@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "174363155548",
+    "project_id": "pressure-2",
+    "storage_bucket": "pressure-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174363155548:android:c4bde18adb4c556141da99",
+        "android_client_info": {
+          "package_name": "com.example.mainactivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174363155548-6ebg89p6di6up4tai5jijnojjrnlnimi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mainactivity",
+            "certificate_hash": "4bc7766c1a1357245d4c04da5885a716e3562167"
+          }
+        },
+        {
+          "client_id": "174363155548-ehpv6j80qhm5liked6qvn2d4qns4g3tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu1-kYo88NjsS9kGDKKOk3iKY7Y6AweqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174363155548-5lvsq5198bptgn69fjn7lcroaa75k1v4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

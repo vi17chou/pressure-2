@@ -6,17 +6,15 @@ import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
-import android.widget.RadioGroup
 import android.widget.TextView
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.text.method.TransformationMethod
+import android.util.Log
 import android.widget.ImageView
-import androidx.room.Room
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import java.time.LocalDateTime
+import com.example.mainactivity.databinding.ActivitySignBinding
+import com.google.firebase.firestore.FirebaseFirestore
+
 
 import java.util.*
 
@@ -32,23 +30,26 @@ private lateinit var gender:TextView
 private lateinit var eye:ImageView
 private lateinit var checkeye:ImageView
 
+const val TAG="FIRESTORE"
 class SignActivity : AppCompatActivity() {
-
+    private  var binding:ActivitySignBinding? =null
+    val fireStoreDatabase= FirebaseFirestore.getInstance()
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign)
+        binding= ActivitySignBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
         //設定隱藏標題
         getSupportActionBar()?.hide();
         btn_submit=findViewById<ImageButton>(R.id.btn_submit)
         //sex = findViewById<RadioGroup>(R.id.sexy)
         btn_date=findViewById<ImageButton>(R.id.btn_date)
-        age=findViewById<TextView>(R.id.age)
-        name=findViewById<TextView>(R.id.name)
-        account=findViewById<TextView>(R.id.sign_account)
-        password=findViewById<TextView>(R.id.sign_password)
-        check_pwd=findViewById<TextView>(R.id.checkpwd)
-        gender=findViewById<TextView>(R.id.gender)
+        age=findViewById<TextView>(R.id.txt_birthday)
+        name=findViewById<TextView>(R.id.txt_name)
+        account=findViewById<TextView>(R.id.txt_account)
+        password=findViewById<TextView>(R.id.txt_password)
+        check_pwd=findViewById<TextView>(R.id.txt_ConfirmPassword)
+        gender=findViewById<TextView>(R.id.txt_gender)
 
         eye=findViewById<ImageView>(R.id.eye)
         checkeye=findViewById<ImageView>(R.id.checkeye)
@@ -66,6 +67,41 @@ class SignActivity : AppCompatActivity() {
             }, year, month, day).show()
         }
 
+        //外部資料庫存取
+        btn_submit.setOnClickListener {
+            var Name : String=binding!!.txtName.text.toString()
+            var Birthday : String=binding!!.txtBirthday.text.toString()
+            var Gender : String=binding!!.txtGender.text.toString()
+            var Account : String=binding!!.txtAccount.text.toString()
+            var Password : String=binding!!.txtPassword.text.toString()
+            var ConfirmPassword : String=binding!!.txtConfirmPassword.text.toString()
+
+            val Users:MutableMap<String,Any> = HashMap()
+            Users["Name"]=Name
+            Users["Birthday"]=Birthday
+            Users["Gender"]=Gender
+            Users["Account"]=Account
+            Users["Password"]=Password
+            Users["ConfirmPassword"]=ConfirmPassword
+
+            fireStoreDatabase.collection("Users")
+                .add(Users)
+                .addOnSuccessListener {
+                    Log.d(TAG,"Added document with Id ${it.id}")
+                }
+                .addOnFailureListener {
+                    Log.w(TAG,"Error adding document ${it}")
+                }
+            binding!!.txtName.text.toString()
+            binding!!.txtBirthday.text.toString()
+            binding!!.txtGender.text.toString()
+            binding!!.txtAccount.text.toString()
+            binding!!.txtPassword.text.toString()
+            binding!!.txtConfirmPassword.text.toString()
+            finish()
+        }
+
+        /*Android studio 內建資料庫存取
         val db = Room.databaseBuilder(this, AppDatabase::class.java,"user2.db").build()
         btn_submit.setOnClickListener {
             val name= name.text.toString()
@@ -95,7 +131,8 @@ class SignActivity : AppCompatActivity() {
             }
             //setResult(RESULT_OK, Intent().putExtras(b))
             finish()*/
-        }
+        }*/
+
         //密碼
         var isHideFirst = true
         eye.setOnClickListener {
@@ -153,3 +190,4 @@ class SignActivity : AppCompatActivity() {
 private fun TextView.setSelection(index: Int) {
 
 }
+
