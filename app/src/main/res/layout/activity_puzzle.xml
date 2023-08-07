@@ -21,10 +21,10 @@
 
     <LinearLayout
         android:id="@+id/pt_line1"
-        android:layout_width="404dp"
-        android:layout_height="100dp"
+        android:layout_width="392dp"
+        android:layout_height="127dp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,69 +33,83 @@
 
         <ImageButton
             android:id="@+id/pt_ib_00x01"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:padding="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/xy9_01"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/pt_ib_00x02"
-            android:layout_width="137dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:padding="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/xy9_02"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/pt_ib_00x03"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:padding="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/xy9_03"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/pt_line2"
-        android:layout_width="411dp"
-        android:layout_height="102dp"
+        android:layout_width="392dp"
+        android:layout_height="127dp"
         android:layout_gravity="center"
-        android:layout_marginTop="213dp"
+        android:layout_marginTop="220dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageButton
             android:id="@+id/pt_ib_00x04"
-            android:layout_width="116dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:padding="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/xy9_04"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/pt_ib_00x05"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:padding="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/xy9_05"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/pt_ib_00x06"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:padding="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/xy9_06"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
@@ -105,64 +119,70 @@
         android:layout_width="392dp"
         android:layout_height="148dp"
         android:layout_gravity="center"
-        android:layout_marginTop="333dp"
+        android:layout_marginTop="350dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageButton
             android:id="@+id/pt_ib_00x07"
-            android:layout_width="112dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:padding="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/xy9_07"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/pt_ib_00x08"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:padding="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/xy9_08"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/pt_ib_00x09"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClick"
             android:padding="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/xy9_09"
             android:visibility="invisible" />
     </LinearLayout>
-
 
     <Button
         android:id="@+id/pt_btn_restart"
         android:layout_width="112dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="32dp"
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:onClick="restart"
         android:text="重新開始"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck" />
 
     <ImageView
         android:id="@+id/pt_iv"
-        android:layout_width="159dp"
-        android:layout_height="145dp"
+        android:layout_width="139dp"
+        android:layout_height="126dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="96dp"
         android:src="@drawable/yangtu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,7 +192,7 @@
         android:id="@+id/back4"
         android:layout_width="135dp"
         android:layout_height="68dp"
-        android:layout_marginStart="260dp"
+        android:layout_marginStart="216dp"
         android:layout_marginTop="644dp"
         android:background="@drawable/backiamgebutton"
         app:layout_constraintStart_toStartOf="parent"

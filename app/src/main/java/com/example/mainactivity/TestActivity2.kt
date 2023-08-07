@@ -12,36 +12,48 @@ class TestActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test2)
+
         //設定隱藏標題
         getSupportActionBar()?.hide();
         val Next = findViewById<ImageButton>(R.id.Next)
 
+        //上一題
         val previous_question = findViewById<ImageButton>(R.id.previous_question)
-
         previous_question.setOnClickListener {
             finish()
         }
         //題目
         val content1 = findViewById<TextView>(R.id.content1)
         val textViewString = content1.text.toString()
-        content1.text = "感覺緊張不安"
+        val t1=findViewById<RadioGroup>(R.id.t1)
+        content1.text = " 感覺緊張不安"
 
-        val t1 = findViewById<RadioGroup>(R.id.t1)
-       // val T02=findViewById<TextView>(R.id.T02)
-            //接收上一個頁面傳過來的數值，利用intent接收
-        
-        Next.setOnClickListener {
-            val b = Bundle()
-            b.putInt("zero",0)
-            b.putInt("one",1)
-            b.putInt("two",2)
-            b.putInt("three",3)
-            b.putInt("four",4)
-            b.putInt("five",5)
-            val it = Intent(this, TestActivity3::class.java)
-            intent.putExtras(b)
-            startActivity(it)
+        // 從 test1 接收分數
+        val score1 = intent.getIntExtra("score1", 0)
+
+
+        Next.setOnClickListener {v->
+            // 取得所選擇的分數
+            val score2 = when (t1.checkedRadioButtonId) {
+                R.id.zero -> 0
+                R.id.one -> 1
+                R.id.two -> 2
+                R.id.three -> 3
+                R.id.four -> 4
+                R.id.five -> 5
+                else -> 0 // 如果未選擇，預設為0分
+            }
+
+            // 計算總分（score1+score2）
+            val totalScore = score1 + score2
+
+            // 傳遞分數到下一個頁面
+
+            val intent = Intent(this, TestActivity3::class.java)
+            intent.putExtra("totalScore", totalScore)
+            startActivity(intent)
         }
+
 
     }
 }
