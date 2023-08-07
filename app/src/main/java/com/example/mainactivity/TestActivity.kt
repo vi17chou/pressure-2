@@ -9,19 +9,19 @@ import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
-import com.example.mainactivity.databinding.ActivityNewBinding
-import com.example.mainactivity.databinding.ActivityTestBinding
-import com.google.firebase.firestore.FirebaseFirestore
+//import com.example.mainactivity.databinding.ActivityNewBinding
+//import com.example.mainactivity.databinding.ActivityTestBinding
+//import com.google.firebase.firestore.FirebaseFirestore
 import java.text.NumberFormat
 import java.util.HashMap
 
 class TestActivity : AppCompatActivity() {
-    private  var binding: ActivityTestBinding? =null
-    val fireStoreDatabase= FirebaseFirestore.getInstance()
+    //private  var binding: ActivityTestBinding? =null
+    //val fireStoreDatabase= FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityTestBinding.inflate(layoutInflater)
-        setContentView(binding?.root)
+      //  binding= ActivityTestBinding.inflate(layoutInflater)
+       // setContentView(binding?.root)
         //設定隱藏標題
         getSupportActionBar()?.hide();
         val Next = findViewById<ImageButton>(R.id.Next)
@@ -33,7 +33,7 @@ class TestActivity : AppCompatActivity() {
 
 
         Next.setOnClickListener {
-            //存取外部資料庫
+          /* //存取外部資料庫
             var zero: String =binding!!.zero.text.toString()
             var one: String =binding!!.one.text.toString()
             val Testrecord:MutableMap<String,Any> = HashMap()
@@ -49,7 +49,7 @@ class TestActivity : AppCompatActivity() {
                 }
             finish()
 
-            /*val b = Bundle()
+            val b = Bundle()
             b.putInt("t0",0)
             b.putInt("one",1)
             b.putInt("two",2)
@@ -60,9 +60,25 @@ class TestActivity : AppCompatActivity() {
             val it = Intent(this, TestActivity2::class.java)
             intent.putExtras(b)
             startActivity(it)*/
+
+            // 取得所選擇的分數
+            val score1 = when (t0.checkedRadioButtonId) {
+                R.id.zero -> 0
+                R.id.one -> 1
+                R.id.two -> 2
+                R.id.three -> 3
+                R.id.four -> 4
+                R.id.five -> 5
+                else -> 0 // 如果未選擇，預設為0分
+            }
+            val intent = Intent(this, TestActivity2::class.java)
+            intent.putExtra("score1", score1)
+            startActivity(intent)
+        }
+
         }
     }
-}
+
 
 
 
