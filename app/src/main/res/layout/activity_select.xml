@@ -21,14 +21,6 @@
         tools:text="選擇日期範圍" />
 
 
-    <ListView
-        android:id="@+id/lstView"
-        android:layout_width="409dp"
-        android:layout_height="667dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="63dp"
-        tools:ignore="MissingConstraints" />
-
     <ImageButton
         android:id="@+id/back5"
         android:layout_width="140dp"
@@ -50,5 +42,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/diarylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:textSize="35sp"
+        app:layout_constraintTop_toBottomOf="@+id/date_range"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="顯示心情日記" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

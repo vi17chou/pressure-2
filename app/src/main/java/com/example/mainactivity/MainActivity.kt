@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 
-
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         login.setOnClickListener {
          //   val it=Intent(this,ExplainActivity::class.java)測驗題目先跳過不然每次都要點11題很浪費時間
-            val it=Intent(this,TestActivity::class.java)
+            val it=Intent(this,HomeActivity::class.java)
             startActivity(it)
         }
 
