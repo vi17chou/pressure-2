@@ -36,7 +36,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="52dp"
-        android:text="請按壓氣球"
+        android:text="請長按氣球"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
