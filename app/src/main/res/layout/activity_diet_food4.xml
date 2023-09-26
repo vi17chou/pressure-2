@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Diet_food1Activity">
+    tools:context=".Diet_food4Activity">
 
     <ImageButton
         android:id="@+id/back3"
@@ -18,12 +18,12 @@
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/im_1"
+        android:id="@+id/oat"
         android:layout_width="413dp"
         android:layout_height="203dp"
         android:layout_marginTop="40dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/al"
+        app:srcCompat="@drawable/oat"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-1dp" />
 

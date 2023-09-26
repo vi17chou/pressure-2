@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
 
-class Diet_food1Activity : AppCompatActivity() {
+class Diet_food6Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_diet_food1)
+        setContentView(R.layout.activity_diet_food6)
 
         //設定隱藏標題
         getSupportActionBar()?.hide();
@@ -16,14 +16,14 @@ class Diet_food1Activity : AppCompatActivity() {
 
         //食物名稱
         val foodname = findViewById<TextView>(R.id.foodname)
-        foodname.text = "堅果"
+        foodname.text = "綠茶"
         //營養成分
         val Element = findViewById<TextView>(R.id.Element)
-        Element.text = "含有豐富的維生素E、ω－3脂肪酸和抗氧化物"
+        Element.text = "富含有茶多酚和氨基酸"
 
         //功效
         val effect = findViewById<TextView>(R.id.effect)
-        effect.text = "有助於放鬆心情降低壓力水平"
+        effect.text = "有助於降低焦慮和壓力"
 
         back3.setOnClickListener {
             finish()
