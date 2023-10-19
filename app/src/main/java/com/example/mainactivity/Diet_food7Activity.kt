@@ -16,7 +16,7 @@ class Diet_food7Activity : AppCompatActivity() {
 
         //食物名稱
         val foodname = findViewById<TextView>(R.id.foodname)
-        foodname.text = "綠茶"
+        foodname.text = "巧克力"
         //營養成分
         val Element = findViewById<TextView>(R.id.Element)
         Element.text = "富含有茶多酚和氨基酸"
