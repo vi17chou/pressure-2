@@ -1,5 +1,6 @@
 package com.example.mainactivity
 
+import android.media.metrics.Event
 import android.os.Bundle
 import android.text.format.DateFormat
 import android.util.Log
@@ -7,12 +8,13 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.mainactivity.databinding.ActivityNewBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 import java.util.Calendar
 import java.util.HashMap
-
-private  lateinit var new_diary:TextView
 
 class NewActivity : AppCompatActivity() {
     private  var binding: ActivityNewBinding? =null
@@ -26,7 +28,7 @@ class NewActivity : AppCompatActivity() {
         getSupportActionBar()?.hide();
         val cancel = findViewById<ImageButton>(R.id.btn_cancel)
         val save = findViewById<ImageButton>(R.id.btn_save)
-        new_diary = findViewById<TextView>(R.id.txt_newdiary)
+        var new_diary = findViewById<TextView>(R.id.txt_newdiary)
         val mCal: Calendar = Calendar.getInstance()
         val s: CharSequence = DateFormat.format("yyyy-MM-dd", mCal.getTime())
         val today = findViewById<TextView>(R.id.txt_today)
@@ -52,30 +54,32 @@ class NewActivity : AppCompatActivity() {
             //連線外部資料庫
                 var today:String=binding!!.txtToday.text.toString()
                 var newdiary:String=binding!!.txtNewdiary.text.toString()
-
+            val diary = hashMapOf(
+                "Today" to "${today}",
+                "newdiary" to "${newdiary}"
+            )
                 val Diary:MutableMap<String,Any> = HashMap()
+                    fireStoreDatabase.collection("Diary")
+                        .add(diary)
+                        .addOnSuccessListener {documentReference ->
+                            Log.d(TAG, "DocumentSnapshot successfully written!${documentReference.id}") }
+                        .addOnFailureListener { e ->
+                            Log.w(TAG, "Error writing document", e) }
+
                     Diary["Today"]=today
                     Diary["newdiary"]=newdiary
-                    fireStoreDatabase.collection("Diary")
+                    /*fireStoreDatabase.collection("Diary")
                         .add(Diary)
                         .addOnSuccessListener {
                          Log.d(TAG,"Added document with Id ${it.id}")
                         }
                          .addOnFailureListener {
                          Log.w(TAG,"Error adding document ${it}")
-                        }
+                        }*/
             binding!!.txtToday.text.toString()
             binding!!.txtNewdiary.text.toString()
             finish()
-            //原本存取資料寫法
-            /*val content = new_diary.text.toString()
-            GlobalScope.launch{
-                val row=db.diaryDao().insert(Diary(content = content, mTime = LocalDateTime.now()))
-                if(row > 0){
-                    Snackbar.make(it, "新增成功！$row", Snackbar.LENGTH_LONG).show()
-                    finish()
-                }
-            }*/
+
         }
             //val b = Bundle()
             /*with(getPreferences(MODE_PRIVATE).edit()){
@@ -85,6 +89,14 @@ class NewActivity : AppCompatActivity() {
             }
             //setResult(RESULT_OK, Intent().putExtras(b))
             finish()*/
-
+        /*原本存取資料寫法
+              val content = new_diary.text.toString()
+              GlobalScope.launch{
+                  val row=db.diaryDao().insert(Diary(content = content, mTime = LocalDateTime.now()))
+                  if(row > 0){
+                      Snackbar.make(it, "新增成功！$row", Snackbar.LENGTH_LONG).show()
+                      finish()
+                  }
+              }*/
         }
     }

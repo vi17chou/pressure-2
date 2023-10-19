@@ -18,6 +18,9 @@
         android:theme="@style/Theme.MainActivity"
         tools:targetApi="31">
         <activity
+            android:name=".Backstage"
+            android:exported="false" />
+        <activity
             android:name=".Diet_food7Activity"
             android:exported="false" />
         <activity
