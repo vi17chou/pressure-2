@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         login.setOnClickListener {
             //  val it=Intent(this,ExplainActivity::class.java)測驗題目先跳過不然每次都要點11題很浪費時間
-            val it=Intent(this,HomeActivity::class.java)
+            val it=Intent(this,TestActivity::class.java)
             startActivity(it)
         }
 

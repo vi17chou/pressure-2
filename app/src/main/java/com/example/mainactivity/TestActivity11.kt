@@ -10,12 +10,19 @@ import android.widget.ImageButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.mainactivity.databinding.ActivityNewBinding
+import com.example.mainactivity.databinding.ActivityTest11Binding
+import com.google.firebase.firestore.FirebaseFirestore
+import java.util.HashMap
 
 class TestActivity11 : AppCompatActivity() {
+    private  var binding: ActivityTest11Binding? =null
+    val fireStoreDatabase= FirebaseFirestore.getInstance()
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test11)
+        binding= ActivityTest11Binding.inflate(layoutInflater)
+        setContentView(binding?.root)
         // 設定隱藏標題
         supportActionBar?.hide()
 
@@ -55,6 +62,28 @@ class TestActivity11 : AppCompatActivity() {
                 // 如果需要，為其他單選按鈕添加更多案例
                 else -> 0 // 如果未選擇則 0 分
             }
+            val test = hashMapOf(
+                "前十題總分" to "${totalScoreFrom10}",
+                "第十一題分數" to "${score11}"
+            )
+            val Test:MutableMap<String,Any> = HashMap()
+            fireStoreDatabase.collection("Test")
+                .add(Test)
+                .addOnSuccessListener {documentReference ->
+                    Log.d(TAG, "DocumentSnapshot successfully written!${documentReference.id}") }
+                .addOnFailureListener { e ->
+                    Log.w(TAG, "Error writing document", e) }
+
+            Test["前十題總分"]=totalScoreFrom10
+            Test["第十一題分數"]=score11
+            fireStoreDatabase.collection("Test")
+                .add(Test)
+                .addOnSuccessListener {
+                    Log.d(TAG,"Added document with Id ${it.id}")
+                }
+                .addOnFailureListener {
+                    Log.w(TAG,"Error adding document ${it}")
+                }
             // 計算所有11項活動的總分
             // val totalScore = totalScoreFrom10 + score11
 

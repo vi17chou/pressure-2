@@ -60,7 +60,7 @@ class NewActivity : AppCompatActivity() {
             )
                 val Diary:MutableMap<String,Any> = HashMap()
                     fireStoreDatabase.collection("Diary")
-                        .add(diary)
+                        .add(Diary)
                         .addOnSuccessListener {documentReference ->
                             Log.d(TAG, "DocumentSnapshot successfully written!${documentReference.id}") }
                         .addOnFailureListener { e ->
@@ -68,14 +68,14 @@ class NewActivity : AppCompatActivity() {
 
                     Diary["Today"]=today
                     Diary["newdiary"]=newdiary
-                    /*fireStoreDatabase.collection("Diary")
+                    fireStoreDatabase.collection("Diary")
                         .add(Diary)
                         .addOnSuccessListener {
                          Log.d(TAG,"Added document with Id ${it.id}")
                         }
                          .addOnFailureListener {
                          Log.w(TAG,"Error adding document ${it}")
-                        }*/
+                        }
             binding!!.txtToday.text.toString()
             binding!!.txtNewdiary.text.toString()
             finish()
