@@ -20,6 +20,7 @@ class TestActivity : AppCompatActivity() {
     //val fireStoreDatabase= FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_test)
       //  binding= ActivityTestBinding.inflate(layoutInflater)
        // setContentView(binding?.root)
         //設定隱藏標題

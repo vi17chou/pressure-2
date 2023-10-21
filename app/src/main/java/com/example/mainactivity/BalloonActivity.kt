@@ -59,10 +59,10 @@ class BalloonActivity : AppCompatActivity() {
         scaleYAnimator.interpolator = AccelerateInterpolator()
         // 同時執行X軸、Y軸的縮放動畫和透明度的變化
         currentAnimatorSet.playTogether(scaleXAnimator, scaleYAnimator, alphaAnimator)
-        currentAnimatorSet.duration = 5000 // 调整持续时间为5秒
+        currentAnimatorSet.duration = 5000 // 調整持續時間為5秒
         currentAnimatorSet.addListener(object : AnimatorListenerAdapter() {
             override fun onAnimationEnd(animation: Animator) {
-                // 在动画结束时重新生成气球
+                // 在動畫结束時重新產生氣球
                 resetBalloon()
             }
         })
