@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val mng=findViewById<Button>(R.id.mng)
 
         login.setOnClickListener {
-         //   val it=Intent(this,ExplainActivity::class.java)測驗題目先跳過不然每次都要點11題很浪費時間
+            //  val it=Intent(this,ExplainActivity::class.java)測驗題目先跳過不然每次都要點11題很浪費時間
             val it=Intent(this,HomeActivity::class.java)
             startActivity(it)
         }
