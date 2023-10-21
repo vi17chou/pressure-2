@@ -82,6 +82,9 @@
         android:layout_marginTop="112dp"
         android:text="第1-10的分數是:0分 \n第11題的分数是:0分"
         android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
