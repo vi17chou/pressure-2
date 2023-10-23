@@ -7,41 +7,48 @@
     tools:context=".backstage_USER">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView13"
         android:layout_width="317dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
-        android:text="HOLD情緒後台端"
+        android:layout_marginEnd="60dp"
+        android:text="使用者管理"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="238dp"
-        android:layout_height="90dp"
-        android:text="資訊管理"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="532dp" />
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="113dp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="241dp"
-        android:layout_height="88dp"
-        android:layout_marginBottom="76dp"
-        android:text="測驗管理"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        tools:layout_editor_absoluteX="85dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="338dp"
+        android:layout_height="492dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="198dp" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="240dp"
-        android:layout_height="97dp"
-        android:layout_marginBottom="76dp"
-        android:text="使用者管理"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        tools:layout_editor_absoluteX="83dp" />
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="57dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/magnifying_glass"
+        tools:layout_editor_absoluteX="294dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="55dp"
+        android:layout_height="58dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/add"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
