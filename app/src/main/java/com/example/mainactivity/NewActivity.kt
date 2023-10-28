@@ -1,5 +1,6 @@
 package com.example.mainactivity
 
+import android.annotation.SuppressLint
 import android.media.metrics.Event
 import android.os.Bundle
 import android.text.format.DateFormat
@@ -19,6 +20,7 @@ import java.util.HashMap
 class NewActivity : AppCompatActivity() {
     private  var binding: ActivityNewBinding? =null
     val fireStoreDatabase= FirebaseFirestore.getInstance()
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityNewBinding.inflate(layoutInflater)

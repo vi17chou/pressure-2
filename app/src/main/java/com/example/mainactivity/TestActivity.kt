@@ -21,8 +21,8 @@ class TestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test)
-      //  binding= ActivityTestBinding.inflate(layoutInflater)
-       // setContentView(binding?.root)
+        //binding= ActivityTestBinding.inflate(layoutInflater)
+        //setContentView(binding?.root)
         //設定隱藏標題
         getSupportActionBar()?.hide();
         val Next = findViewById<ImageButton>(R.id.Next)
@@ -34,34 +34,6 @@ class TestActivity : AppCompatActivity() {
 
 
         Next.setOnClickListener {
-          /* //存取外部資料庫
-            var zero: String =binding!!.zero.text.toString()
-            var one: String =binding!!.one.text.toString()
-            val Testrecord:MutableMap<String,Any> = HashMap()
-            Testrecord["zero"]=zero
-            Testrecord["one"]=one
-            fireStoreDatabase.collection("Testrecord")
-                .add(Testrecord)
-                .addOnSuccessListener {
-                    Log.d(TAG,"Added document with Id ${it.id}")
-                }
-                .addOnFailureListener {
-                    Log.w(TAG,"Error adding document ${it}")
-                }
-            finish()
-
-            val b = Bundle()
-            b.putInt("t0",0)
-            b.putInt("one",1)
-            b.putInt("two",2)
-            b.putInt("three",3)
-            b.putInt("four",4)
-            b.putInt("five",5)
-
-            val it = Intent(this, TestActivity2::class.java)
-            intent.putExtras(b)
-            startActivity(it)*/
-
             // 取得所選擇的分數
             val score1 = when (t0.checkedRadioButtonId) {
                 R.id.zero -> 0
@@ -79,21 +51,3 @@ class TestActivity : AppCompatActivity() {
 
         }
     }
-
-
-
-
-/*
-            b.putExtras("one",1)
-            b.putExtras("two",2)
-            b.putExtras("three",3)
-            b.putExtras("four",4)
-            b.putExtras("five",5)
-
-            private fun Bundle.putExtras(s: String, i: Int) {
-
-}
-
-private fun Intent.putExtras(s: String, i: Int) {
-
-}*/

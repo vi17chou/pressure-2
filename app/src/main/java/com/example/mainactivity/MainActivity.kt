@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(it)
         }
         mng.setOnClickListener {
-            val it=Intent(this,Manage_Home::class.java)
+            val it=Intent(this,backstage_main::class.java)
             startActivity(it)
         }
     }

@@ -67,12 +67,6 @@ class TestActivity11 : AppCompatActivity() {
                 "第十一題分數" to "${score11}"
             )
             val Test:MutableMap<String,Any> = HashMap()
-            fireStoreDatabase.collection("Test")
-                .add(Test)
-                .addOnSuccessListener {documentReference ->
-                    Log.d(TAG, "DocumentSnapshot successfully written!${documentReference.id}") }
-                .addOnFailureListener { e ->
-                    Log.w(TAG, "Error writing document", e) }
 
             Test["前十題總分"]=totalScoreFrom10
             Test["第十一題分數"]=score11
