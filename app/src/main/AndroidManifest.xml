@@ -18,6 +18,21 @@
         android:theme="@style/Theme.MainActivity"
         tools:targetApi="31">
         <activity
+            android:name=".backstage_test"
+            android:exported="false" />
+        <activity
+            android:name=".backstage_sport"
+            android:exported="false" />
+        <activity
+            android:name=".backstage_diary"
+            android:exported="false" />
+        <activity
+            android:name=".backstage_diary_check"
+            android:exported="false" />
+        <activity
+            android:name=".activity_backstage_test_check"
+            android:exported="false" />
+        <activity
             android:name=".backstage_user_check"
             android:exported="false" />
         <activity

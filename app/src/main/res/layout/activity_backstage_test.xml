@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".backstage_test">
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="664dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:srcCompat="@drawable/edit" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="342dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="244dp"
+        android:text="查看測驗建議"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="35dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="333dp"
+        android:layout_height="309dp"
+        android:layout_marginBottom="336dp"
+        android:text="運動記錄:編輯/刪除"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="342dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        android:text="返回"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="194dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="16dp"
+        android:text="測驗管理"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="342dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="152dp"
+        android:text="查看控制情緒"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="34dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
