@@ -11,7 +11,7 @@
         android:id="@+id/img_diet"
         android:layout_width="153dp"
         android:layout_height="121dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,10 +21,10 @@
 
     <ImageButton
         android:id="@+id/tea"
-        android:layout_width="115dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="200dp"
+        android:layout_width="153dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="208dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,10 +34,10 @@
 
     <ImageButton
         android:id="@+id/banana"
-        android:layout_width="115dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="153dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="40dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,10 +47,10 @@
 
     <ImageButton
         android:id="@+id/oat"
-        android:layout_width="115dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginTop="216dp"
+        android:layout_width="153dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="208dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,9 +60,9 @@
 
     <ImageButton
         android:id="@+id/cheese"
-        android:layout_width="115dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="153dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="364dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
@@ -73,9 +73,9 @@
 
     <ImageButton
         android:id="@+id/og"
-        android:layout_width="115dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="208dp"
+        android:layout_width="153dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="216dp"
         android:layout_marginTop="364dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
@@ -86,10 +86,10 @@
 
     <ImageButton
         android:id="@+id/chocolate"
-        android:layout_width="115dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="516dp"
+        android:layout_width="153dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="520dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,7 +101,7 @@
         android:id="@+id/back3"
         android:layout_width="125dp"
         android:layout_height="59dp"
-        android:layout_marginStart="160dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="656dp"
         android:background="@drawable/backiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
