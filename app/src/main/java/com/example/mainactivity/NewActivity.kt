@@ -12,8 +12,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mainactivity.databinding.ActivityNewBinding
+import com.google.android.play.integrity.internal.i
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.util.Calendar
 import java.util.HashMap
 
@@ -51,8 +54,13 @@ class NewActivity : AppCompatActivity() {
                 }.show()
             //finish()
         }
-
+        val db=Firebase.firestore
         save.setOnClickListener {
+            val length =100
+            val i=0
+            // 印出0、1、2、3、4
+            for (i in 0 until length) {
+            }
             //連線外部資料庫
                 var today:String=binding!!.txtToday.text.toString()
                 var newdiary:String=binding!!.txtNewdiary.text.toString()
@@ -61,19 +69,13 @@ class NewActivity : AppCompatActivity() {
                 "newdiary" to "${newdiary}"
             )
                 val Diary:MutableMap<String,Any> = HashMap()
-                    fireStoreDatabase.collection("Diary")
-                        .add(Diary)
-                        .addOnSuccessListener {documentReference ->
-                            Log.d(TAG, "DocumentSnapshot successfully written!${documentReference.id}") }
-                        .addOnFailureListener { e ->
-                            Log.w(TAG, "Error writing document", e) }
 
                     Diary["Today"]=today
                     Diary["newdiary"]=newdiary
-                    fireStoreDatabase.collection("Diary")
-                        .add(Diary)
+                    fireStoreDatabase.collection("Diary").document("test$i")
+                        .set(Diary)
                         .addOnSuccessListener {
-                         Log.d(TAG,"Added document with Id ${it.id}")
+                         Log.d(TAG,"Added document with Id ${it}")
                         }
                          .addOnFailureListener {
                          Log.w(TAG,"Error adding document ${it}")
