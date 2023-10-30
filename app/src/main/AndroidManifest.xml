@@ -18,6 +18,15 @@
         android:theme="@style/Theme.MainActivity"
         tools:targetApi="31">
         <activity
+            android:name=".backstage_DietFood"
+            android:exported="false" />
+        <activity
+            android:name=".backstage_control"
+            android:exported="false" />
+        <activity
+            android:name=".backstage_test_sug"
+            android:exported="false" />
+        <activity
             android:name=".backstage_test"
             android:exported="false" />
         <activity
