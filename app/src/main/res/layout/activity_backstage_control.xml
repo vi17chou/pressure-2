@@ -10,17 +10,18 @@
         android:id="@+id/textView25"
         android:layout_width="194dp"
         android:layout_height="55dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="20dp"
         android:text="控制情緒"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView26"
-        android:layout_width="333dp"
-        android:layout_height="309dp"
+        android:layout_width="341dp"
+        android:layout_height="300dp"
         android:layout_marginBottom="336dp"
         android:text="控制情緒:編輯"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,22 +34,26 @@
         android:layout_width="342dp"
         android:layout_height="63dp"
         android:layout_marginBottom="244dp"
+        android:backgroundTint="#E4C1F9"
         android:text="查看測驗題目"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="35dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton9"
         android:layout_width="50dp"
         android:layout_height="49dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="664dp"
+        android:layout_marginEnd="16dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
         app:srcCompat="@drawable/edit" />
 
     <Button
@@ -56,10 +61,13 @@
         android:layout_width="342dp"
         android:layout_height="63dp"
         android:layout_marginBottom="152dp"
+        android:backgroundTint="#E4C1F9"
         android:text="查看測驗建議"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="34dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button26"
@@ -67,7 +75,9 @@
         android:layout_height="63dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="60dp"
+        android:backgroundTint="#E4C1F9"
         android:text="查看減壓飲食"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
