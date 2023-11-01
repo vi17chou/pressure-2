@@ -4,10 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".backstage_test">
+    tools:context=".backstage_test_sug">
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="67dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#E4C1F9"
+        android:text="首頁"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/imageButton8"
         android:layout_width="50dp"
         android:layout_height="49dp"
         android:layout_marginEnd="32dp"
@@ -20,33 +35,33 @@
         app:srcCompat="@drawable/edit" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/button"
         android:layout_width="342dp"
         android:layout_height="63dp"
         android:layout_marginBottom="244dp"
-        android:text="查看測驗建議"
+        android:text="查看測驗題目"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="35dp" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/textView23"
         android:layout_width="333dp"
         android:layout_height="309dp"
         android:layout_marginBottom="336dp"
-        android:text="測驗題目:編輯/刪除"
+        android:text="測驗建議:編輯"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/button3"
         android:layout_width="342dp"
         android:layout_height="63dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="60dp"
-        android:text="返回"
+        android:text="查看減壓飲食"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,18 +71,18 @@
         app:layout_constraintVertical_bias="0.059" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/textView24"
         android:layout_width="194dp"
         android:layout_height="55dp"
         android:layout_marginStart="108dp"
         android:layout_marginTop="16dp"
-        android:text="測驗管理"
+        android:text="測驗建議"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button22"
+        android:id="@+id/button5"
         android:layout_width="342dp"
         android:layout_height="63dp"
         android:layout_marginBottom="152dp"
