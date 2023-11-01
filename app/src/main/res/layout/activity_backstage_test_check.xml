@@ -10,9 +10,10 @@
         android:id="@+id/textView9"
         android:layout_width="194dp"
         android:layout_height="55dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="28dp"
         android:text="使用者ID"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +22,7 @@
         android:id="@+id/textView14"
         android:layout_width="333dp"
         android:layout_height="309dp"
-        android:layout_marginBottom="332dp"
+        android:layout_marginBottom="308dp"
         android:text="測驗紀錄:刪除"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,25 +32,29 @@
         android:id="@+id/button6"
         android:layout_width="342dp"
         android:layout_height="63dp"
-        android:layout_marginBottom="244dp"
+        android:layout_marginBottom="228dp"
         android:backgroundTint="#E4C1F9"
         android:text="使用者資訊"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="35dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="342dp"
         android:layout_height="63dp"
-        android:layout_marginBottom="152dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#E4C1F9"
         android:text="日記紀錄"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="34dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button9"
@@ -62,22 +67,22 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button8"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.161" />
 
     <Button
         android:id="@+id/button20"
         android:layout_width="67dp"
         android:layout_height="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#E4C1F9"
         android:text="首頁"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
