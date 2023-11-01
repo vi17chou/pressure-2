@@ -24,8 +24,8 @@
 
     <Button
         android:id="@+id/mng"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
+        android:layout_width="142dp"
+        android:layout_height="56dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#FFFFFF"
         android:text="後台"
@@ -33,7 +33,6 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -53,11 +52,11 @@
         android:id="@+id/login"
         android:layout_width="129dp"
         android:layout_height="77dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="76dp"
         android:background="@drawable/logiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
 
@@ -65,8 +64,8 @@
         android:id="@+id/sign"
         android:layout_width="123dp"
         android:layout_height="62dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="84dp"
         android:background="@drawable/singiamgebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

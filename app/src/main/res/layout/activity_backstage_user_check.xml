@@ -11,9 +11,10 @@
         android:id="@+id/textView7"
         android:layout_width="194dp"
         android:layout_height="55dp"
-        android:layout_marginStart="108dp"
+        android:layout_marginStart="132dp"
         android:layout_marginTop="16dp"
         android:text="使用者ID"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,9 +64,13 @@
         android:layout_width="58dp"
         android:layout_height="59dp"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/edit"
-        tools:layout_editor_absoluteX="302dp"
-        tools:layout_editor_absoluteY="106dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.889"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133"
+        app:srcCompat="@drawable/edit" />
 
     <Button
         android:id="@+id/button6"

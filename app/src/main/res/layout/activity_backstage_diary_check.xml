@@ -38,9 +38,10 @@
         android:id="@+id/textView18"
         android:layout_width="194dp"
         android:layout_height="55dp"
-        android:layout_marginStart="108dp"
+        android:layout_marginStart="136dp"
         android:layout_marginTop="16dp"
         android:text="使用者ID"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
