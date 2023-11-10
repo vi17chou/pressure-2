@@ -7,20 +7,21 @@
     tools:context=".backstage_diary">
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/delete"
         android:layout_width="47dp"
         android:layout_height="53dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.896"
-        app:layout_constraintStart_toStartOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="@+id/backhome"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.056"
-        app:srcCompat="@drawable/bin" />
+        app:srcCompat="@drawable/bin"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/diary_id"
         android:layout_width="194dp"
         android:layout_height="55dp"
         android:layout_marginStart="108dp"
@@ -32,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/backhome"
         android:layout_width="74dp"
         android:layout_height="54dp"
         android:layout_marginStart="16dp"
@@ -47,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/diary_result"
         android:layout_width="312dp"
         android:layout_height="321dp"
         android:layout_marginBottom="200dp"
@@ -57,7 +58,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/diary_edit"
         android:layout_width="58dp"
         android:layout_height="59dp"
         android:scaleType="fitCenter"
@@ -68,5 +69,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.22"
         app:srcCompat="@drawable/edit"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

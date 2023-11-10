@@ -48,8 +48,7 @@ class NewActivity : AppCompatActivity() {
 
                 }
                 .setPositiveButton("是"){dialog,which->
-                    //val db=DBHelper(context).writableDatabase
-                    //db.execSQL("DELETE FROM Notes WHERE id LIKE ${data[position].id}")
+
                     finish()
                 }.show()
             //finish()
@@ -85,22 +84,5 @@ class NewActivity : AppCompatActivity() {
             finish()
 
         }
-            //val b = Bundle()
-            /*with(getPreferences(MODE_PRIVATE).edit()){
-                putString("write_diary", new_diary.getText().toString())
-                putString("now_date", today.getText().toString())
-                apply()
-            }
-            //setResult(RESULT_OK, Intent().putExtras(b))
-            finish()*/
-        /*原本存取資料寫法
-              val content = new_diary.text.toString()
-              GlobalScope.launch{
-                  val row=db.diaryDao().insert(Diary(content = content, mTime = LocalDateTime.now()))
-                  if(row > 0){
-                      Snackbar.make(it, "新增成功！$row", Snackbar.LENGTH_LONG).show()
-                      finish()
-                  }
-              }*/
         }
     }

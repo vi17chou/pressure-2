@@ -101,38 +101,6 @@ class SignActivity : AppCompatActivity() {
             finish()
         }
 
-        /*Android studio 內建資料庫存取
-        val db = Room.databaseBuilder(this, AppDatabase::class.java,"user2.db").build()
-        btn_submit.setOnClickListener {
-            val name= name.text.toString()
-            val birthday=age.text.toString()
-            val sexy= gender.text.toString()
-            val account= account.text.toString()
-            val password= password.text.toString()
-            val check_pwd= check_pwd.text.toString()
-
-            GlobalScope.launch{
-                val row=db.userDao().insert(User(name = name, birthday = birthday, sexy = sexy,account = account, password = password, check_pwd = check_pwd, mTime = LocalDateTime.now()))
-                if(row > 0){
-                    Snackbar.make(it, "新增成功！$row", Snackbar.LENGTH_LONG).show()
-                    finish()
-                }
-            }
-            //val b = Bundle()
-            /*with(getPreferences(MODE_PRIVATE).edit()){
-                putString("sex",sex.findViewById<RadioButton>
-                    (sex.checkedRadioButtonId).text.toString())
-                    putString("na",name.getText().toString())
-                    putString("ag",age.getText().toString())
-                    putString("sign_acc", account.getText().toString())
-                    putString("sign_pwd", password.getText().toString())
-                    putString("check_pwd",check_pwd.getText().toString())
-                    apply()
-            }
-            //setResult(RESULT_OK, Intent().putExtras(b))
-            finish()*/
-        }*/
-
         //密碼
         var isHideFirst = true
         eye.setOnClickListener {

@@ -18,6 +18,12 @@
         android:theme="@style/Theme.MainActivity"
         tools:targetApi="31">
         <activity
+            android:name=".backstage_emotion"
+            android:exported="false" />
+        <activity
+            android:name=".backstage_information"
+            android:exported="false" />
+        <activity
             android:name=".backstage_DietFood"
             android:exported="false" />
         <activity
