@@ -6,9 +6,14 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import com.example.mainactivity.databinding.ActivitySelectBinding
+import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 
 class RecordActivity : AppCompatActivity() {
+    private var binding: ActivitySelectBinding?=null
+    val fireStoreDatabase= FirebaseFirestore.getInstance()
+    private var selectedDate: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_record)
@@ -16,7 +21,8 @@ class RecordActivity : AppCompatActivity() {
         getSupportActionBar()?.hide();
         val btn_rage = findViewById<ImageButton>(R.id.btn_range)
         val date_range=findViewById<TextView>(R.id.date_range)
-        btn_rage.setOnClickListener {
+        val diarylist = findViewById<TextView>(R.id.diarylist2)
+        binding?.BTN?.setOnClickListener() {
             //showDatePickerDialog()
             val c = Calendar.getInstance()
             val year = c.get(Calendar.YEAR)
@@ -24,10 +30,27 @@ class RecordActivity : AppCompatActivity() {
             val day = c.get(Calendar.DAY_OF_MONTH)
             DatePickerDialog(this, { _, year, month, day ->
                 run {
-                    val format = "${setDateFormat(year, month, day)}"
+                    selectedDate = setDateFormat(year, month, day)
+                    val format = "$selectedDate"
                     date_range.text = format
+                    fireStoreDatabase.collection("Diary")
+                        .whereEqualTo("Today", selectedDate) // 添加过滤条件，只获取选择的日期
+                        .get()
+                        .addOnCompleteListener {
+                            val result:StringBuffer=StringBuffer()
+                            if (it.isSuccessful){
+                                for (document in it.result!!)
+                                    result//.append(document.data.getValue("Today")).append(" ")
+                                        .append(document.data.getValue("測驗分數")).append(" ")
+                            }
+                            else{
+                                binding?.diarylist?.setText("查無此紀錄")
+                            }
+                            binding?.diarylist?.setText(result)
+                        }
                 }
             }, year, month, day).show()
+
         }
 
         val Back2 = findViewById<ImageButton>(R.id.Back2)
