@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 val it = Intent(this, backstage_main::class.java)
                 startActivity(it)
             } else {
-                val it = Intent(this, ExplainActivity::class.java)
+                val it = Intent(this, HomeActivity::class.java)
                 startActivity(it)
             }
         }

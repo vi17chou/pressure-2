@@ -16,6 +16,7 @@ import java.util.*
 class SelectActivity : AppCompatActivity() {
     private var binding:ActivitySelectBinding?=null
     val fireStoreDatabase=FirebaseFirestore.getInstance()
+    private var selectedDate: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivitySelectBinding.inflate(layoutInflater)
@@ -35,15 +36,17 @@ class SelectActivity : AppCompatActivity() {
             val day = c.get(Calendar.DAY_OF_MONTH)
             DatePickerDialog(this, { _, year, month, day ->
                 run {
-                    val format = "${setDateFormat(year, month, day)}"
+                    selectedDate = setDateFormat(year, month, day)
+                    val format = "$selectedDate"
                     date_range.text = format
                     fireStoreDatabase.collection("Diary")
+                        .whereEqualTo("Today", selectedDate) // 添加过滤条件，只获取选择的日期
                         .get()
                         .addOnCompleteListener {
                             val result:StringBuffer=StringBuffer()
                             if (it.isSuccessful){
                                 for (document in it.result!!)
-                                    result.append(document.data.getValue("Today")).append(" ")
+                                    result//.append(document.data.getValue("Today")).append(" ")
                                         .append(document.data.getValue("newdiary")).append(" ")
                             }
                             else{

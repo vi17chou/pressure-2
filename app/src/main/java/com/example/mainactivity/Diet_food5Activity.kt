@@ -16,14 +16,14 @@ class Diet_food5Activity : AppCompatActivity() {
 
         //食物名稱
         val foodname = findViewById<TextView>(R.id.foodname)
-        foodname.text = "綠茶"
+        foodname.text = "奶酪"
         //營養成分
         val Element = findViewById<TextView>(R.id.Element)
-        Element.text = "富含有茶多酚和氨基酸"
+        Element.text = "富含有鈣質和蛋白質"
 
         //功效
         val effect = findViewById<TextView>(R.id.effect)
-        effect.text = "有助於降低焦慮和壓力"
+        effect.text = "有助於提高血清素水平，使人感覺更放鬆和平靜"
 
         back3.setOnClickListener {
             finish()

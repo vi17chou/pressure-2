@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-
+import android.widget.ImageButton
 class GuessActivity : AppCompatActivity() {
 
     private lateinit var answer: String
@@ -32,6 +32,13 @@ class GuessActivity : AppCompatActivity() {
         val submitButton = findViewById<ImageButton>(R.id.guess_submit)
         submitButton.setOnClickListener {
             checkGuess()
+        }
+
+        val back6 = findViewById<ImageButton>(R.id.back6)
+
+        back6.setOnClickListener {
+            finish()
+
         }
 
     }
