@@ -35,17 +35,6 @@
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="333dp"
-        android:layout_height="309dp"
-        android:layout_marginBottom="300dp"
-        android:text="測驗題目:編輯/刪除"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/backhome"
         android:layout_width="342dp"
@@ -74,5 +63,13 @@
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/test_list"
+        android:layout_width="409dp"
+        android:layout_height="389dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="130dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -75,12 +75,12 @@
         app:srcCompat="@drawable/add"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ListView
         android:id="@+id/user_list"
         android:layout_width="409dp"
         android:layout_height="567dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="163dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="163dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
