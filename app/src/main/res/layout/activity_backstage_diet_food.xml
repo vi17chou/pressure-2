@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".backstage_DietFood">
+    tools:context=".backstage_DietFood"
+    android:background="@drawable/bg27">
 
     <TextView
         android:id="@+id/diet_title"
         android:layout_width="194dp"
         android:layout_height="55dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:text="減壓飲食"
         android:textColor="@color/black"
         android:textSize="34sp"
@@ -23,7 +24,7 @@
         android:layout_width="67dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#E4C1F9"
         android:text="首頁"
         android:textColor="@color/black"
@@ -37,19 +38,18 @@
         android:id="@+id/edit_diet"
         android:layout_width="333dp"
         android:layout_height="309dp"
-        android:layout_marginBottom="336dp"
+        android:layout_marginBottom="256dp"
         android:text="減壓飲食:編輯"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/diet_backhome"
-        android:layout_width="50dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="664dp"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="600dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
