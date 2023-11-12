@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DietActivity"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/bg29">
 
     <TextView
         android:id="@+id/textView13"
@@ -15,8 +15,8 @@
         android:layout_marginTop="16dp"
         android:text="減壓飲食"
         android:textAlignment="center"
-        android:textColor="#85000000"
-        android:textSize="48sp"
+        android:textColor="@color/black"
+        android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
