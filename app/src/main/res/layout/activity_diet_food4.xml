@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Diet_food4Activity">
+    tools:context=".Diet_food4Activity"
+    android:background="@drawable/bg30">
 
     <ImageButton
         android:id="@+id/back3"
