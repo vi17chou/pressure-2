@@ -161,21 +161,17 @@
             android:visibility="invisible" />
     </LinearLayout>
 
-    <Button
+
+    <ImageButton
         android:id="@+id/pt_btn_restart"
-        android:layout_width="112dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="32dp"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="restart"
-        android:text="重新開始"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
+        android:layout_width="135dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="644dp"
+        android:background="@drawable/restartbutton"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextSizeCheck" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/pt_iv"

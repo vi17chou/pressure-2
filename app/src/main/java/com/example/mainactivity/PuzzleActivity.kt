@@ -10,6 +10,8 @@ import android.view.View
 import android.widget.TextView
 import android.app.Activity
 import android.app.AlertDialog
+import android.util.Log
+
 class PuzzleActivity : AppCompatActivity() {
 
     private lateinit var button01: ImageButton
@@ -21,7 +23,7 @@ class PuzzleActivity : AppCompatActivity() {
     private lateinit var button07: ImageButton
     private lateinit var button08: ImageButton
     private lateinit var button09: ImageButton
-    private lateinit var buttonrestart: Button
+    private lateinit var buttonrestart: ImageButton
     private lateinit var textView: TextView
     private var imagex = 3
     private var imagey = 3
@@ -115,7 +117,11 @@ class PuzzleActivity : AppCompatActivity() {
             finish()
 
         }
+        val buttonRestart = findViewById<ImageButton>(R.id.pt_btn_restart)
 
+        buttonRestart.setOnClickListener {
+            restart(it)
+        }
     }
 
     //隨機打亂拼圖
@@ -262,6 +268,7 @@ class PuzzleActivity : AppCompatActivity() {
 
     //重新開始遊戲
     fun restart(view: View) {
+        Log.d("PuzzleActivity", "Restart button clicked")
         time = 0
         restore()
         textView.text = "時間：$time"

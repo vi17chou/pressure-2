@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()?.hide();
         val login=findViewById<ImageButton>(R.id.login)
         val sign=findViewById<ImageButton>(R.id.sign)
-        val mng=findViewById<Button>(R.id.mng)
+        //val mng=findViewById<Button>(R.id.mng)
 
         val usernameEditText = findViewById<EditText>(R.id.acc)
         val passwordEditText = findViewById<EditText>(R.id.pwd)
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 val it = Intent(this, backstage_main::class.java)
                 startActivity(it)
             } else {
-                val it = Intent(this, HomeActivity::class.java)
+                val it = Intent(this, ExplainActivity::class.java)
                 startActivity(it)
             }
         }
@@ -51,10 +51,10 @@ class MainActivity : AppCompatActivity() {
             val it=Intent(this,SignActivity::class.java)
             startActivity(it)
         }
-        mng.setOnClickListener {
+       /* mng.setOnClickListener {
             val it=Intent(this,backstage_main::class.java)
             startActivity(it)
-        }
+        }*/
     }
 
     private fun validateCredentials(username: String, password: String): Boolean {
