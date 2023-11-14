@@ -10,25 +10,24 @@
 
     <TextView
         android:id="@+id/diarylist2"
-        android:layout_width="379dp"
-        android:layout_height="158dp"
+        android:layout_width="400dp"
+        android:layout_height="381dp"
         android:layout_marginTop="88dp"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date_range"
-        app:layout_constraintVertical_bias="0.119"
-        tools:text="顯示測驗分數
-" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="顯示測驗分數" />
 
     <EditText
         android:id="@+id/date_range"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -37,11 +36,11 @@
         tools:text="選擇日期範圍" />
 
     <ImageButton
-        android:id="@+id/btn_range"
-        android:layout_width="114dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/BTN"
+        android:layout_width="108dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/chooseiamgebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -1,77 +1,115 @@
 package com.example.mainactivity
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import com.example.mainactivity.databinding.ActivityRecordBinding
 import com.example.mainactivity.databinding.ActivitySelectBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
 import java.util.*
 
 class RecordActivity : AppCompatActivity() {
-    private var binding: ActivitySelectBinding?=null
-    val fireStoreDatabase= FirebaseFirestore.getInstance()
+
+    private var binding: ActivityRecordBinding? = null
+    private val fireStoreDatabase = FirebaseFirestore.getInstance()
     private var selectedDate: String? = null
+    private var isClickHandled = false
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_record)
+        binding = ActivityRecordBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
+        // setContentView(R.layout.activity_record)
         //設定隱藏標題
         getSupportActionBar()?.hide();
-        val btn_rage = findViewById<ImageButton>(R.id.btn_range)
-        val date_range=findViewById<TextView>(R.id.date_range)
-        val diarylist = findViewById<TextView>(R.id.diarylist2)
-        binding?.BTN?.setOnClickListener() {
-            //showDatePickerDialog()
-            val c = Calendar.getInstance()
-            val year = c.get(Calendar.YEAR)
-            val month = c.get(Calendar.MONTH)
-            val day = c.get(Calendar.DAY_OF_MONTH)
-            DatePickerDialog(this, { _, year, month, day ->
-                run {
-                    selectedDate = setDateFormat(year, month, day)
-                    val format = "$selectedDate"
-                    date_range.text = format
-                    fireStoreDatabase.collection("Diary")
-                        .whereEqualTo("Today", selectedDate) // 添加过滤条件，只获取选择的日期
-                        .get()
-                        .addOnCompleteListener {
-                            val result:StringBuffer=StringBuffer()
-                            if (it.isSuccessful){
-                                for (document in it.result!!)
-                                    result//.append(document.data.getValue("Today")).append(" ")
-                                        .append(document.data.getValue("測驗分數")).append(" ")
+
+        val btn = findViewById<ImageButton>(R.id.BTN)
+        //val btn_rage = findViewById<ImageButton>(R.id.btn_range)
+        val date_range = findViewById<TextView>(R.id.date_range)
+        val diarylist2 = findViewById<TextView>(R.id.diarylist2)
+        btn.setOnClickListener {
+            if (!isClickHandled) {
+                isClickHandled = true
+                //showDatePickerDialog()
+                val c = Calendar.getInstance()
+                val year = c.get(Calendar.YEAR)
+                val month = c.get(Calendar.MONTH)
+                val day = c.get(Calendar.DAY_OF_MONTH)
+
+                DatePickerDialog(this, { _, year, month, day ->
+                    run {
+                        selectedDate = setDateFormat(year, month, day)
+                        val format = "$selectedDate"
+                        date_range.text = format
+
+                        fireStoreDatabase.collection("Test")
+                            .whereEqualTo("DAY", selectedDate) // 添加过滤条件，只获取选择的日期
+                            .get()
+                            .addOnCompleteListener { task ->
+                                val result: StringBuffer = StringBuffer()
+                                if (task.isSuccessful) {
+                                    var field1Displayed = false
+                                    var field2Displayed = false
+
+                                    for (document in task.result!!) {
+                                        if (!field1Displayed) {
+                                            val field1 = document.getLong("前十題總分") //前十題總分
+                                            result.append("前十題總分: ").append(field1 ?: "未知")
+                                                .append("\n ")
+                                            field1Displayed = true
+                                        }
+
+                                        if (!field2Displayed) {
+                                            val field2 = document.getLong("第十一題分數") // 第十一題的分數
+                                            result.append("第十一題分數: ").append(field2 ?: "未知")
+                                                .append(" ")
+                                            field2Displayed = true
+                                        }
+                                        if (field1Displayed && field2Displayed) {
+                                            break  // 已经显示了两个字段，不再遍历其他文档
+                                        }
+                                    }
+
+                                } else {
+                                    Log.e(
+                                        "FirestoreQuery",
+                                        "Error getting documents: ",
+                                        task.exception
+                                    )
+                                    binding?.diarylist2?.setText("查無此紀錄")
+                                }
+                                binding?.diarylist2?.setText(result.toString())
                             }
-                            else{
-                                binding?.diarylist?.setText("查無此紀錄")
-                            }
-                            binding?.diarylist?.setText(result)
-                        }
-                }
-            }, year, month, day).show()
+                    }
+                }, year, month, day).show()
 
+            }
+
+
+            val Back2 = findViewById<ImageButton>(R.id.Back2)
+
+            Back2.setOnClickListener {
+                finish()
+
+            }
         }
+        /*   private fun setDateFormat(year: Int, month: Int, day: Int): String? {
+            return "$year-${month + 1}-$day"
+        }*/
 
-        val Back2 = findViewById<ImageButton>(R.id.Back2)
-
-        Back2.setOnClickListener {
-            finish()
-
-        }
     }
 
-    private fun setDateFormat(year: Int, month: Int, day: Int): String {
+    private fun setDateFormat(year: Int, month: Int, day: Int): String? {
         return "$year-${month + 1}-$day"
     }
 
-    /* private fun showDatePickerDialog() {
-         val now = Calendar.getInstance()
-         val dpd = DatePickerDialog.newInstance(
-             this@SelectActivity,
-             now.get(Calendar.YEAR),
-             now.get(Calendar.MONTH),
-             now.get(Calendar.DAY_OF_MONTH)
-         )
-         dpd.show(fragmentManager, "Datepickerdialog")*/
-    }
+}

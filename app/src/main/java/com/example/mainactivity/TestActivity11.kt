@@ -30,8 +30,8 @@ class TestActivity11 : AppCompatActivity() {
         val submit = findViewById<ImageButton>(R.id.submit)
         val t10 = findViewById<RadioGroup>(R.id.t10)
         val mCal: Calendar = Calendar.getInstance()
-        val s: CharSequence = DateFormat.format("yyyy-MM-dd", mCal.getTime())
-        val today = findViewById<TextView>(R.id.txt_today)
+        val S: CharSequence = DateFormat.format("yyyy-MM-dd", mCal.getTime())
+        val DAY = findViewById<TextView>(R.id.txt_today)
         val previous_question=findViewById<ImageButton>(R.id.previous_question)
         // 題目
         val content1 = findViewById<TextView>(R.id.content2)
@@ -67,12 +67,12 @@ class TestActivity11 : AppCompatActivity() {
                 else -> 0 // 如果未選擇則 0 分
             }
             val test = hashMapOf(
-                "Today" to "${s}",
+           //     "Today" to "${s}",
                 "前十題總分" to "${totalScoreFrom10}",
                 "第十一題分數" to "${score11}"
             )
             val Test:MutableMap<String,Any> = HashMap()
-            Test["Today"]=s
+            Test["DAY"]=S
 
             Test["前十題總分"]=totalScoreFrom10
             Test["第十一題分數"]=score11
