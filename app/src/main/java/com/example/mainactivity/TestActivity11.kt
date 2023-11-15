@@ -31,7 +31,7 @@ class TestActivity11 : AppCompatActivity() {
         val t10 = findViewById<RadioGroup>(R.id.t10)
         val mCal: Calendar = Calendar.getInstance()
         val test_time: CharSequence = DateFormat.format("yyyy-MM-dd", mCal.getTime())
-        val test_today = findViewById<TextView>(R.id.test_today)
+        val test_today = findViewById<TextView>(R.id.test_today1)
         test_today.text =test_time
         val previous_question=findViewById<ImageButton>(R.id.previous_question)
         // 題目
@@ -68,12 +68,12 @@ class TestActivity11 : AppCompatActivity() {
                 else -> 0 // 如果未選擇則 0 分
             }
             val test = hashMapOf(
-                "Today" to "${test_time}",
+                "test_today" to "${test_time}",
                 "前十題總分" to "${totalScoreFrom10}",
                 "第十一題分數" to "${score11}"
             )
             val Test:MutableMap<String,Any> = HashMap()
-            Test["DAY"]=test_time
+            Test["test_today"]=test_time
             Test["前十題總分"]=totalScoreFrom10
             Test["第十一題分數"]=score11
             fireStoreDatabase.collection("Test")
