@@ -54,7 +54,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#E4C1F9"
+        android:backgroundTint="#ffe6a7"
         android:text="首頁"
         android:textColor="@color/black"
         android:textSize="16sp"
