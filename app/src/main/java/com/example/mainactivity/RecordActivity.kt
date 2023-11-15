@@ -52,7 +52,7 @@ class RecordActivity : AppCompatActivity() {
                         date_range.text = format
 
                         fireStoreDatabase.collection("Test")
-                            .whereEqualTo("DAY", selectedDate) // 添加过滤条件，只获取选择的日期
+                            .whereEqualTo("test_today", selectedDate) // 添加过滤条件，只获取选择的日期
                             .get()
                             .addOnCompleteListener { task ->
                                 val result: StringBuffer = StringBuffer()
@@ -88,6 +88,8 @@ class RecordActivity : AppCompatActivity() {
                                     binding?.diarylist2?.setText("查無此紀錄")
                                 }
                                 binding?.diarylist2?.setText(result.toString())
+                                // 重置 isClickHandled，以便用户可以选择新的日期
+                                isClickHandled = false
                             }
                     }
                 }, year, month, day).show()
