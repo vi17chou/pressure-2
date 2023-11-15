@@ -60,14 +60,6 @@
         app:srcCompat="@drawable/add"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ListView
-        android:id="@+id/user_list"
-        android:layout_width="409dp"
-        android:layout_height="567dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="163dp" />
-
     <EditText
         android:id="@+id/search_name"
         android:layout_width="wrap_content"
@@ -82,5 +74,13 @@
         app:layout_constraintVertical_bias="0.157"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck"
         tools:text="請輸入姓名" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_list"
+        android:layout_width="409dp"
+        android:layout_height="567dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="163dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
