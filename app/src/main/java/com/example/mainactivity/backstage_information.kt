@@ -24,7 +24,7 @@ class backstage_information : AppCompatActivity() {
         }
 
         emotion_select.setOnClickListener {
-            val it= Intent(this,backstage_emotion::class.java)
+            val it= Intent(this,backstage_control::class.java)
             startActivity(it)
         }
     }

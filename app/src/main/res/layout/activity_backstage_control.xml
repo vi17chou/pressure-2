@@ -7,7 +7,7 @@
     tools:context=".backstage_control">
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/control_title"
         android:layout_width="194dp"
         android:layout_height="55dp"
         android:layout_marginStart="136dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/control_list"
         android:layout_width="341dp"
         android:layout_height="300dp"
         android:layout_marginBottom="336dp"
@@ -29,21 +29,8 @@
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button24"
-        android:layout_width="342dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="244dp"
-        android:backgroundTint="#E4C1F9"
-        android:text="查看測驗題目"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/control_edit"
         android:layout_width="50dp"
         android:layout_height="49dp"
         android:layout_marginEnd="16dp"
@@ -54,40 +41,11 @@
         app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.029"
-        app:srcCompat="@drawable/edit" />
+        app:srcCompat="@drawable/edit"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button25"
-        android:layout_width="342dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="152dp"
-        android:backgroundTint="#E4C1F9"
-        android:text="查看測驗建議"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button26"
-        android:layout_width="342dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="60dp"
-        android:backgroundTint="#E4C1F9"
-        android:text="查看減壓飲食"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8"
-        app:layout_constraintVertical_bias="0.059" />
-
-    <Button
-        android:id="@+id/button27"
+        android:id="@+id/backhome"
         android:layout_width="67dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
