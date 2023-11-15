@@ -15,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toStartOf="@+id/backhome"
+        app:layout_constraintStart_toStartOf="@+id/backhome5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.053"
         app:srcCompat="@drawable/bin"
@@ -43,21 +43,9 @@
         android:text="首頁"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
         app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/diary_result"
-        android:layout_width="312dp"
-        android:layout_height="321dp"
-        android:layout_marginBottom="216dp"
-        android:text="日記記錄"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/diary_edit"
@@ -72,4 +60,16 @@
         app:layout_constraintVertical_bias="0.227"
         app:srcCompat="@drawable/edit"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/diary_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

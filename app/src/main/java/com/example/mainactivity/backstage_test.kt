@@ -19,7 +19,7 @@ class backstage_test : AppCompatActivity() {
         // 初始化 Adapter
         adapter = TestAdapter(emptyList())
 
-        val backhome = findViewById<Button>(R.id.backhome)
+        val backhome = findViewById<Button>(R.id.backhome5)
         val test_result = findViewById<Button>(R.id.test_result)
         var recyclerView = findViewById<RecyclerView>(R.id.test_list)
         recyclerView.layoutManager = LinearLayoutManager(this)

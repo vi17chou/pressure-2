@@ -9,7 +9,7 @@ class backstage_DietFood : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_backstage_diet_food)
-        val backhome=findViewById<Button>(R.id.backhome)
+        val backhome=findViewById<Button>(R.id.backhome5)
 
         backhome.setOnClickListener {
             val it= Intent(this,backstage_main::class.java)
