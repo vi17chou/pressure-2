@@ -9,12 +9,12 @@ class DiaryAdapter (private var dataList: List<String>) :
     RecyclerView.Adapter<DiaryAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: android.view.View) : RecyclerView.ViewHolder(itemView) {
-        val textView: TextView = itemView.findViewById(R.id.textView)!!
+        val textView: TextView = itemView.findViewById(R.id.textView)
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.diary_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.test_item, parent, false)
         return MyViewHolder(itemView)
     }
 

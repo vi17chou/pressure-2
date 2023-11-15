@@ -11,13 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class backstage_diary : AppCompatActivity() {
-    private lateinit var adapter: TestAdapter
+    private lateinit var adapter: DiaryAdapter
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_diary)
+        setContentView(R.layout.activity_backstage_diary)
         // 初始化 Adapter
-        adapter = TestAdapter(emptyList())
+        adapter = DiaryAdapter(emptyList())
 
         val backhome=findViewById<Button>(R.id.backhome)
         val recyclerView=findViewById<RecyclerView>(R.id.diary_list)
@@ -50,8 +50,8 @@ class backstage_diary : AppCompatActivity() {
                     val Today = document.getString("Today")
                     val newdiary = document.getString("newdiary")
 
-                    val test1Value = Today?.toString() ?: ""
-                    val test2Value = newdiary?.toString() ?: ""
+                    val test1Value = Today?: ""
+                    val test2Value = newdiary?: ""
 
                     val rowData = "Today$test1Value,newdiary $test2Value"
                     data.add(rowData)
