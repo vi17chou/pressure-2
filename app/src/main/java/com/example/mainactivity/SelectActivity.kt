@@ -46,8 +46,11 @@ class SelectActivity : AppCompatActivity() {
                         .addOnCompleteListener { task ->
                             val result: StringBuffer = StringBuffer()
                             if (task.isSuccessful) {
+                                var count = 1
                                 for (document in task.result!!) {
-                                    result.append(document.data.getValue("newdiary")).append(" ")
+                                    val diaryContent = document.data.getValue("newdiary")
+                                    result.append("$count. $diaryContent").append("\n")  // 在每则日记之后添加换行符
+                                    count++
                                 }
                                 Log.d("FirestoreQuery", "Selected Date: $selectedDate, Result: $result")
                             } else {
