@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Im
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ListView
@@ -29,7 +30,6 @@ class SelectActivity : AppCompatActivity() {
         val date_range=findViewById<TextView>(R.id.date_range)
         val diarylist=findViewById<TextView>(R.id.diarylist)
         binding!!.BTN.setOnClickListener() {
-            //showDatePickerDialog()
             val c = Calendar.getInstance()
             val year = c.get(Calendar.YEAR)
             val month = c.get(Calendar.MONTH)
@@ -39,24 +39,25 @@ class SelectActivity : AppCompatActivity() {
                     selectedDate = setDateFormat(year, month, day)
                     val format = "$selectedDate"
                     date_range.text = format
+
                     fireStoreDatabase.collection("Diary")
-                        .whereEqualTo("Today", selectedDate) // 添加过滤条件，只获取选择的日期
+                        .whereEqualTo("Today", selectedDate)
                         .get()
-                        .addOnCompleteListener {
-                            val result:StringBuffer=StringBuffer()
-                            if (it.isSuccessful){
-                                for (document in it.result!!)
-                                    result//.append(document.data.getValue("Today")).append(" ")
-                                        .append(document.data.getValue("newdiary")).append(" ")
-                            }
-                            else{
+                        .addOnCompleteListener { task ->
+                            val result: StringBuffer = StringBuffer()
+                            if (task.isSuccessful) {
+                                for (document in task.result!!) {
+                                    result.append(document.data.getValue("newdiary")).append(" ")
+                                }
+                                Log.d("FirestoreQuery", "Selected Date: $selectedDate, Result: $result")
+                            } else {
+                                Log.e("FirestoreQuery", "Error getting documents: ", task.exception)
                                 binding?.diarylist?.setText("查無此紀錄")
                             }
-                            binding?.diarylist?.setText(result)
+                            binding?.diarylist?.setText(result.toString())
                         }
                 }
             }, year, month, day).show()
-
         }
 
 

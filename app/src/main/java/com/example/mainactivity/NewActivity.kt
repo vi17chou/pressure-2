@@ -55,11 +55,11 @@ class NewActivity : AppCompatActivity() {
         }
         val db=Firebase.firestore
         save.setOnClickListener {
-            val length =100
+           /* val length =100
             val i=0
             // 印出0、1、2、3、4
             for (i in 0 until length) {
-            }
+            }*/
             //連線外部資料庫
                 var today:String=binding!!.txtToday.text.toString()
                 var newdiary:String=binding!!.txtNewdiary.text.toString()
@@ -71,8 +71,8 @@ class NewActivity : AppCompatActivity() {
 
                     Diary["Today"]=today
                     Diary["newdiary"]=newdiary
-                    fireStoreDatabase.collection("Diary").document("test$i")
-                        .set(Diary)
+                    fireStoreDatabase.collection("Diary")
+                        .add(Diary)
                         .addOnSuccessListener {
                          Log.d(TAG,"Added document with Id ${it}")
                         }
