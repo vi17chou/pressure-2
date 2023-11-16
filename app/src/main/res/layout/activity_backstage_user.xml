@@ -78,8 +78,10 @@
         android:id="@+id/user_list"
         android:layout_width="409dp"
         android:layout_height="567dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="163dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
