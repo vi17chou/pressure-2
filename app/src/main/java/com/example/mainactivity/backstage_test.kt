@@ -20,7 +20,7 @@ class backstage_test : AppCompatActivity() {
         adapter = TestAdapter(emptyList())
 
         val backhome = findViewById<Button>(R.id.backhome5)
-        val test_result = findViewById<Button>(R.id.test_result)
+       // val test_result = findViewById<Button>(R.id.test_result)
         var recyclerView = findViewById<RecyclerView>(R.id.test_list)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -29,10 +29,10 @@ class backstage_test : AppCompatActivity() {
         // 讀取資料並更新 Adapter
         readDataFromFirestore()
 
-        test_result.setOnClickListener {
+        /*test_result.setOnClickListener {
             val it= Intent(this,backstage_DietFood::class.java)
             startActivity(it)
-        }
+        }*/
 
         backhome.setOnClickListener {
             val it= Intent(this,backstage_main::class.java)

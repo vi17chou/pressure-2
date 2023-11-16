@@ -25,7 +25,7 @@ class backstage_main : AppCompatActivity() {
         }
 
         manage_info.setOnClickListener {
-            val it= Intent(this,backstage_information::class.java)
+            val it= Intent(this,backstage_diary::class.java)
             startActivity(it)
         }
     }
