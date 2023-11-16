@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.jar.Attributes.Name
 
 
 class backstage_USER : AppCompatActivity() {
@@ -20,7 +21,7 @@ class backstage_USER : AppCompatActivity() {
         // 初始化 Adapter
         adapter = UserAdapter(emptyList())
 
-        val backhome=findViewById<Button>(R.id.backhome)
+        val backhome=findViewById<Button>(R.id.backhome5)
         val recyclerView=findViewById<RecyclerView>(R.id.user_list)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -49,24 +50,23 @@ class backstage_USER : AppCompatActivity() {
                 for (document in result) {
                     // 取得文件中的資料
                     val Account = document.getString("Account")
-                    val Birthday = document.getString("Birthday")
-                    val Gender = document.getString("Gender")
-                    val Name = document.getString("Name")
                     val Password = document.getString("Password")
-                    val ConfirmPassword = document.getString("ConfirmPassword")
+                    val Name = document.getString("Name")
+                    val Gender = document.getString("Gender")
+                    val Birthday = document.getString("Birthday")
 
-                    val test1Value = Name?: ""
-                    val test2Value = Birthday?: ""
-                    val test3Value = Gender?: ""
-                    val test4Value = Account?: ""
-                    val test5Value = Password?: ""
-                    val test6Value = ConfirmPassword?: ""
 
-                    val rowData = "姓名$test1Value,生日 $test2Value,性別 $test3Value,帳號 $test4Value,密碼 $test5Value,確認密碼 $test6Value"
+                    val test1Value = Account?: ""
+                    val test2Value = Password?: ""
+                    val test3Value = Name?: ""
+                    val test4Value = Gender?: ""
+                    val test5Value = Birthday?: ""
+
+                    val rowData = "帳號:$test1Value\n密碼:$test2Value\n姓名:$test3Value\n性別:$test4Value\n生日:$test5Value"
                     data.add(rowData)
                     Log.d("FirestoreData", "Document: $rowData")
                 }
-                Log.d("FirestoreData", "Number of documents: ${result.size()}")
+                //Log.d("FirestoreData", "Number of documents: ${result.size()}")
                 // 更新 Adapter 的資料
                 adapter.updateData(data)
 

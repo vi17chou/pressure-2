@@ -60,11 +60,11 @@ class backstage_test : AppCompatActivity() {
                     val test2Value = SCORE11?.toString() ?: ""
                     val test3Value = test_today?: ""
 
-                    val rowData = "前十題總分$test1Value,第十一題分數 $test2Value, 今日日期$test3Value"
+                    val rowData = "$test3Value,\n前十題總分$test1Value,\n第十一題分數 $test2Value"
                     data.add(rowData)
                     Log.d("FirestoreData", "Document: $rowData")
                 }
-                Log.d("FirestoreData", "Number of documents: ${result.size()}")
+                //Log.d("FirestoreData", "Number of documents: ${result.size()}")
                 // 更新 Adapter 的資料
                 adapter.updateData(data)
 

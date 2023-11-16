@@ -53,11 +53,11 @@ class backstage_diary : AppCompatActivity() {
                     val test1Value = Today?: ""
                     val test2Value = newdiary?: ""
 
-                    val rowData = "Today$test1Value,newdiary $test2Value"
+                    val rowData = "$test1Value\n$test2Value"
                     data.add(rowData)
                     Log.d("FirestoreData", "Document: $rowData")
                 }
-                Log.d("FirestoreData", "Number of documents: ${result.size()}")
+                //Log.d("FirestoreData", "Number of documents: ${result.size()}")
                 // 更新 Adapter 的資料
                 adapter.updateData(data)
 
