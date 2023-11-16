@@ -158,10 +158,11 @@ class SignActivity : AppCompatActivity() {
                 if (documents.isEmpty) {
                     // Account doesn't exist, you can proceed with registration
                     Log.d(TAG, "Account does not exist, proceed with registration")
+                    // ... Existing code ...
                 } else {
                     // Account already exists
                     Log.d(TAG, "Account already exists")
-                    showToast("這個 $account 已經有人使用，請再輸入一個新的帳號")
+                    showToast(" $account is already taken. Please choose a different one.")
                 }
             }
             .addOnFailureListener { exception ->
