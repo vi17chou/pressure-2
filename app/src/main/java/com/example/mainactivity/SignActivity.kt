@@ -12,6 +12,7 @@ import android.text.method.PasswordTransformationMethod;
 import android.text.method.TransformationMethod
 import android.util.Log
 import android.widget.ImageView
+import android.widget.Toast
 import com.example.mainactivity.databinding.ActivitySignBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -83,7 +84,7 @@ class SignActivity : AppCompatActivity() {
             Users["Account"]=Account
             Users["Password"]=Password
             Users["ConfirmPassword"]=ConfirmPassword
-
+            checkAccountExists(Account)
             fireStoreDatabase.collection("Users")
                 .add(Users)
                 .addOnSuccessListener {
@@ -147,6 +148,30 @@ class SignActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    private fun checkAccountExists(account: String) {
+        fireStoreDatabase.collection("Users")
+            .whereEqualTo("Account", account)
+            .get()
+            .addOnSuccessListener { documents ->
+                if (documents.isEmpty) {
+                    // Account doesn't exist, you can proceed with registration
+                    Log.d(TAG, "Account does not exist, proceed with registration")
+                } else {
+                    // Account already exists
+                    Log.d(TAG, "Account already exists")
+                    showToast("這個 $account 已經有人使用，請再輸入一個新的帳號")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w(TAG, "Error getting documents: ", exception)
+                // Handle the error
+            }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     private fun setDateFormat(year: Int, month: Int, day: Int): String {

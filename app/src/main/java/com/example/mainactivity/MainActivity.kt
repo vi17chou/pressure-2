@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
 
             if (validateCredentials(enteredUsername, enteredPassword)) {
                 val it = Intent(this, backstage_main::class.java)
+                intent.putExtra("Account", enteredUsername)
                 startActivity(it)
             } else {
                 val it = Intent(this, HomeActivity::class.java)
