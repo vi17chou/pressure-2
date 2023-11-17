@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("Account", enteredUsername)
                 startActivity(it)
             } else {
-                val it = Intent(this, HomeActivity::class.java)
+                val it = Intent(this, TestActivity::class.java)
                 startActivity(it)
             }
         }
