@@ -49,10 +49,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/test_list"
-        android:layout_width="396dp"
-        android:layout_height="544dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="268dp"
+        android:layout_height="467dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="16dp"
         android:clipToPadding="false"
         android:paddingTop="8dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
