@@ -30,11 +30,19 @@ private lateinit var age:TextView
 private lateinit var gender:TextView
 private lateinit var eye:ImageView
 private lateinit var checkeye:ImageView
+private lateinit var userid:TextView
 
 const val TAG="FIRESTORE"
 class SignActivity : AppCompatActivity() {
     private  var binding:ActivitySignBinding? =null
     val fireStoreDatabase= FirebaseFirestore.getInstance()
+
+    private var currentUserId = 0
+    private fun generateUserId(): String {
+        currentUserId = (currentUserId % 1000000)
+        return "ID_$currentUserId"
+    }
+
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,9 +59,14 @@ class SignActivity : AppCompatActivity() {
         password=findViewById<TextView>(R.id.txt_password)
         check_pwd=findViewById<TextView>(R.id.txt_ConfirmPassword)
         gender=findViewById<TextView>(R.id.txt_gender)
-
+        userid=findViewById<TextView>(R.id.user_id)
         eye=findViewById<ImageView>(R.id.eye)
         checkeye=findViewById<ImageView>(R.id.checkeye)
+
+        userid = findViewById<TextView>(R.id.user_id)
+        // 在這裡設定 UserID 的值
+        userid.text = "ID: ${generateUserId()}"
+
 
         btn_date.setOnClickListener {
             val c = Calendar.getInstance()
@@ -67,40 +80,61 @@ class SignActivity : AppCompatActivity() {
                 }
             }, year, month, day).show()
         }
+        account.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                // 帳號輸入框失去焦點時執行的動作
+                val enteredAccount = account.text.toString()
+                checkAccountExists(enteredAccount)
+            }
+        }
 
+        val generatedUserId = generateUserId()
+        userid.text = "$generatedUserId"
+        
         //外部資料庫存取
         btn_submit.setOnClickListener {
-            var Name : String=binding!!.txtName.text.toString()
-            var Birthday : String=binding!!.txtBirthday.text.toString()
-            var Gender : String=binding!!.txtGender.text.toString()
-            var Account : String=binding!!.txtAccount.text.toString()
-            var Password : String=binding!!.txtPassword.text.toString()
-            var ConfirmPassword : String=binding!!.txtConfirmPassword.text.toString()
+            var userid:String=binding!!.userId.text.toString()
+            var Name: String = binding!!.txtName.text.toString()
+            var Birthday: String = binding!!.txtBirthday.text.toString()
+            var Gender: String = binding!!.txtGender.text.toString()
+            var Account: String = binding!!.txtAccount.text.toString()
+            var Password: String = binding!!.txtPassword.text.toString()
+            var ConfirmPassword: String = binding!!.txtConfirmPassword.text.toString()
 
-            val Users:MutableMap<String,Any> = HashMap()
-            Users["Name"]=Name
-            Users["Birthday"]=Birthday
-            Users["Gender"]=Gender
-            Users["Account"]=Account
-            Users["Password"]=Password
-            Users["ConfirmPassword"]=ConfirmPassword
-            checkAccountExists(Account)
-            fireStoreDatabase.collection("Users")
-                .add(Users)
-                .addOnSuccessListener {
-                    Log.d(TAG,"Added document with Id ${it.id}")
-                }
-                .addOnFailureListener {
-                    Log.w(TAG,"Error adding document ${it}")
-                }
-            binding!!.txtName.text.toString()
-            binding!!.txtBirthday.text.toString()
-            binding!!.txtGender.text.toString()
-            binding!!.txtAccount.text.toString()
-            binding!!.txtPassword.text.toString()
-            binding!!.txtConfirmPassword.text.toString()
-            finish()
+            // 檢查密碼和確認密碼是否相同
+            if (Password == ConfirmPassword) {
+                // 密碼相同，繼續處理
+                val Users: MutableMap<String, Any> = HashMap()
+                Users["User_id"]=userid
+                Users["Name"] = Name
+                Users["Birthday"] = Birthday
+                Users["Gender"] = Gender
+                Users["Account"] = Account
+                Users["Password"] = Password
+                Users["ConfirmPassword"] = ConfirmPassword
+
+                // 檢查帳號是否存在
+                checkAccountExists(Account)
+
+                // 寫入資料庫
+                fireStoreDatabase.collection("Users")
+                    .add(Users)
+                    .addOnSuccessListener {
+                        Log.d(TAG, "Added document with Id ${it.id}")
+                    }
+                    .addOnFailureListener {
+                        Log.w(TAG, "Error adding document $it")
+                    }
+
+                // 其他程式碼...
+
+                finish()
+            } else {
+                // 密碼不相同，顯示錯誤訊息或者阻止提交
+                showToast("確認密碼有錯，請再輸入一次!!")
+            }
         }
+
 
         //密碼
         var isHideFirst = true
@@ -162,7 +196,6 @@ class SignActivity : AppCompatActivity() {
                 } else {
                     // Account already exists
                     Log.d(TAG, "Account already exists")
-                    showToast(" $account is already taken. Please choose a different one.")
                 }
             }
             .addOnFailureListener { exception ->
