@@ -37,10 +37,11 @@ class SignActivity : AppCompatActivity() {
     private  var binding:ActivitySignBinding? =null
     val fireStoreDatabase= FirebaseFirestore.getInstance()
 
-    private var currentUserId = 0
+    private var currentUserId = 1000 // 设置一个适当的起始值
+
     private fun generateUserId(): String {
-        currentUserId = (currentUserId % 1000000)
-        return "ID_$currentUserId"
+        currentUserId++
+        return "$currentUserId"
     }
 
     @SuppressLint("WrongViewCast", "MissingInflatedId")
@@ -65,7 +66,10 @@ class SignActivity : AppCompatActivity() {
 
         userid = findViewById<TextView>(R.id.user_id)
         // 在這裡設定 UserID 的值
-        userid.text = "ID: ${generateUserId()}"
+        fun registerNewUser() {
+            // 其他注册逻辑...
+            userid.text = generateUserId()
+        }
 
 
         btn_date.setOnClickListener {
@@ -89,8 +93,8 @@ class SignActivity : AppCompatActivity() {
         }
 
         val generatedUserId = generateUserId()
-        userid.text = "$generatedUserId"
-        
+        userid.text = "User$generatedUserId"
+
         //外部資料庫存取
         btn_submit.setOnClickListener {
             var userid:String=binding!!.userId.text.toString()
@@ -217,4 +221,3 @@ class SignActivity : AppCompatActivity() {
 private fun TextView.setSelection(index: Int) {
 
 }
-
