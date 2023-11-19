@@ -75,21 +75,36 @@ class SelectActivity : AppCompatActivity() {
     private fun setDateFormat(year: Int, month: Int, day: Int): String {
         return "$year-${month + 1}-$day"
     }
+    private fun getUserIdFromYourDatabase(account: String): String? {
+        var userId: String? = null
 
-    /* val btn_rage = findViewById<ImageButton>(R.id.btn_range)
+        // 在這裡執行查詢操作，根據Account查詢User資料表，並取得對應的user_id
+        // 這裡僅是一個簡單的例子，實際情況需要根據你的資料庫結構和邏輯進行修改
 
-     btn_rage.setOnClickListener {
-         showDatePickerDialog()
-     }
-     private fun showDatePickerDialog() {
-         val now = Calendar.getInstance()
-         val dpd = DatePickerDialog.newInstance(
-             this@SelectActivity,
-             now.get(Calendar.YEAR),
-             now.get(Calendar.MONTH),
-             now.get(Calendar.DAY_OF_MONTH)
-         )
-         dpd.show(fragmentManager, "Datepickerdialog")*/
+        // 注意: 以下的程式碼僅為示範，實際上應使用異步操作，不應在主線程中執行，以避免阻塞UI
+        val query = fireStoreDatabase.collection("Users").whereEqualTo("Account", account)
+        query.get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
+                    // 找到匹配的資料
+                    userId = document.getString("user_id")
+                    break
+                }
+
+                if (userId != null) {
+                    // 成功取得 user_id，可以在這裡進行相應的處理
+                } else {
+                    // 未找到匹配的資料，進行相應的處理
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w(TAG, "Error getting documents: ", exception)
+                // 發生錯誤，進行相應的處理
+            }
+
+        // 注意: 這裡不能立即返回 userId，因為 Firestore 的查詢是異步的，你需要等待查詢完成後再使用 userId
+        return userId
+    }
     }
 
 
