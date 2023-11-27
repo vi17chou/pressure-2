@@ -23,6 +23,7 @@ class RecordActivity : AppCompatActivity() {
     private var selectedDate: String? = null
     private var isClickHandled = false
 
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +76,7 @@ class RecordActivity : AppCompatActivity() {
                                             field2Displayed = true
                                         }
                                         if (field1Displayed && field2Displayed) {
-                                            break  // 已经显示了两个字段，不再遍历其他文档
+                                            break  // 已经顯示了兩個字段，不再其他文档
                                         }
                                     }
 

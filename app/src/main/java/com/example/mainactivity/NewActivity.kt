@@ -21,7 +21,7 @@ import java.util.Calendar
 import java.util.HashMap
 
 private fun CharSequence.clear() {
-    TODO("Not yet implemented")
+     ""
 }
 
 class NewActivity : AppCompatActivity() {
@@ -80,8 +80,8 @@ class NewActivity : AppCompatActivity() {
                         Log.w(TAG, "Error adding document", e)
                     }
 
-                binding!!.txtToday.text.clear()
-                binding!!.txtNewdiary.text.clear()
+            binding?.txtToday?.text?.clear()
+            binding?.txtNewdiary?.text?.clear()
                 finish()
             }
         }
