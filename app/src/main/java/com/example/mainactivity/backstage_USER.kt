@@ -49,20 +49,22 @@ class backstage_USER : AppCompatActivity() {
 
                 for (document in result) {
                     // 取得文件中的資料
+                    val User_id = document.getString("User_id")
                     val Account = document.getString("Account")
                     val Password = document.getString("Password")
                     val Name = document.getString("Name")
                     val Gender = document.getString("Gender")
                     val Birthday = document.getString("Birthday")
 
+                    val test1Value = User_id?: ""
+                    val test2Value = Account?: ""
+                    val test3Value = Password?: ""
+                    val test4Value = Name?: ""
+                    val test5Value = Gender?: ""
+                    val test6Value = Birthday?: ""
 
-                    val test1Value = Account?: ""
-                    val test2Value = Password?: ""
-                    val test3Value = Name?: ""
-                    val test4Value = Gender?: ""
-                    val test5Value = Birthday?: ""
 
-                    val rowData = "帳號:$test1Value\n密碼:$test2Value\n姓名:$test3Value\n性別:$test4Value\n生日:$test5Value"
+                    val rowData = "ID:$test1Value\n帳號:$test2Value\n密碼:$test3Value\n姓名:$test4Value\n性別:$test5Value\n生日:$test6Value"
                     data.add(rowData)
                     Log.d("FirestoreData", "Document: $rowData")
                 }
