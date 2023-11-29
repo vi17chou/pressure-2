@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 
 
 val fireStoreDatabase= FirebaseFirestore.getInstance()
@@ -45,6 +46,7 @@ class backstage_test : AppCompatActivity() {
 
         // 執行查詢
         collectionRef
+            .orderBy("test_today", Query.Direction.ASCENDING) // 根據"Today"字段以升序排序
             .get()
             .addOnSuccessListener { result ->
                 // 在這裡處理查詢成功的結果
