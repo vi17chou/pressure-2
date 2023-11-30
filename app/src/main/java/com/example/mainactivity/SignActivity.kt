@@ -37,11 +37,13 @@ class SignActivity : AppCompatActivity() {
     private  var binding:ActivitySignBinding? =null
     val fireStoreDatabase= FirebaseFirestore.getInstance()
 
-    private var currentUserId = 1000 // 设置一个适当的起始值
-
+    companion object {
+        private var currentUserId = 100 // 设置一个适当的起始值
+    }
     private fun generateUserId(): String {
         currentUserId++
         return "$currentUserId"
+       // return "${++currentUserId}" // 递增并返回
     }
 
     @SuppressLint("WrongViewCast", "MissingInflatedId")
@@ -51,6 +53,13 @@ class SignActivity : AppCompatActivity() {
         setContentView(binding?.root)
         //設定隱藏標題
         getSupportActionBar()?.hide();
+
+        // 在這裡設定 UserID 的值
+        fun registerNewUser() {
+            val generatedUserId = generateUserId()
+            userid.text = "User$generatedUserId"
+        }
+
         btn_submit=findViewById<ImageButton>(R.id.btn_submit)
         //sex = findViewById<RadioGroup>(R.id.sexy)
         btn_date=findViewById<ImageButton>(R.id.btn_date)
@@ -64,12 +73,12 @@ class SignActivity : AppCompatActivity() {
         eye=findViewById<ImageView>(R.id.eye)
         checkeye=findViewById<ImageView>(R.id.checkeye)
 
-        userid = findViewById<TextView>(R.id.user_id)
+       /* userid = findViewById<TextView>(R.id.user_id)
         // 在這裡設定 UserID 的值
         fun registerNewUser() {
             // 其他注册逻辑...
             userid.text = generateUserId()
-        }
+        }*/
 
 
         btn_date.setOnClickListener {
@@ -92,11 +101,13 @@ class SignActivity : AppCompatActivity() {
             }
         }
 
-        val generatedUserId = generateUserId()
-        userid.text = "User$generatedUserId"
+      /*  val generatedUserId = generateUserId()
+        userid.text = "User$generatedUserId"*/
 
         //外部資料庫存取
         btn_submit.setOnClickListener {
+
+
             var userid:String=binding!!.userId.text.toString()
             var Name: String = binding!!.txtName.text.toString()
             var Birthday: String = binding!!.txtBirthday.text.toString()
@@ -108,8 +119,13 @@ class SignActivity : AppCompatActivity() {
             // 檢查密碼和確認密碼是否相同
             if (Password == ConfirmPassword) {
                 // 密碼相同，繼續處理
+              /*  val userId = generateUserId() // 生成ID
+                binding?.userId?.text = "User$userId" // 设置 UserID 的显示*/
+                var userId: String = generateUserId() // 生成ID
+                binding?.userId?.text = "User$userId" // 设置 UserID 的显示
+
                 val Users: MutableMap<String, Any> = HashMap()
-                Users["User_id"]=userid
+                Users["User_id"]=userId
                 Users["Name"] = Name
                 Users["Birthday"] = Birthday
                 Users["Gender"] = Gender
@@ -122,9 +138,11 @@ class SignActivity : AppCompatActivity() {
 
                 // 寫入資料庫
                 fireStoreDatabase.collection("Users")
-                    .add(Users)
+                    .document(userId) // 使用手动生成的ID
+                    .set(Users)
+                    //.add(Users)
                     .addOnSuccessListener {
-                        Log.d(TAG, "Added document with Id ${it.id}")
+                        Log.d(TAG, "Added document with Id : $userId")
                     }
                     .addOnFailureListener {
                         Log.w(TAG, "Error adding document $it")
@@ -138,7 +156,6 @@ class SignActivity : AppCompatActivity() {
                 showToast("確認密碼有錯，請再輸入一次!!")
             }
         }
-
 
         //密碼
         var isHideFirst = true
@@ -186,6 +203,11 @@ class SignActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    private fun registerNewUser() {
+        // 在這裡設定 UserID 的值
+        userid.text = generateUserId()
     }
 
     private fun checkAccountExists(account: String) {
