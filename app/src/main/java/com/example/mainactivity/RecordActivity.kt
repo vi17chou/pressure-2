@@ -112,7 +112,7 @@ class RecordActivity : AppCompatActivity() {
     }
 
     private fun setDateFormat(year: Int, month: Int, day: Int): String? {
-        return "$year-${month + 1}-$day"
+        return "$year-${String.format("%02d", month + 1)}-${String.format("%02d", day)}"
     }
 
 }
