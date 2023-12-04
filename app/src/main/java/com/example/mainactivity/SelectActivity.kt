@@ -73,7 +73,7 @@ class SelectActivity : AppCompatActivity() {
     }
 
     private fun setDateFormat(year: Int, month: Int, day: Int): String {
-        return "$year-${month + 1}-$day"
+        return "$year-${String.format("%02d", month + 1)}-${String.format("%02d", day)}"
     }
     private fun getUserIdFromYourDatabase(account: String): String? {
         var userId: String? = null
