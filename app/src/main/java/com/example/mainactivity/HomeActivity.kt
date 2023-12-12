@@ -17,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
         val diary=findViewById<ImageButton>(R.id.diary)
         val record=findViewById<ImageButton>(R.id.record)
         val method=findViewById<ImageButton>(R.id.method)
+        val signout=findViewById<Button>(R.id.signout)
 
         diary.setOnClickListener {
             val it= Intent(this,DiaryActivity::class.java)
@@ -30,6 +31,11 @@ class HomeActivity : AppCompatActivity() {
 
         method.setOnClickListener {
             val it= Intent(this,MethodActivity::class.java)
+            startActivity(it)
+        }
+
+        signout.setOnClickListener {
+            val it= Intent(this,MainActivity::class.java)
             startActivity(it)
         }
     }
