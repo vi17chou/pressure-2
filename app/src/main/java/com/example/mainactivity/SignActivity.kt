@@ -216,17 +216,16 @@ class SignActivity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { documents ->
                 if (documents.isEmpty) {
-                    // Account doesn't exist, you can proceed with registration
-                    Log.d(TAG, "Account does not exist, proceed with registration")
-                    // ... Existing code ...
+                    // 帳號不存在，可以繼續註冊
+                    // ... 其他程式碼 ...
                 } else {
-                    // Account already exists
-                    Log.d(TAG, "Account already exists")
+                    // 帳號已存在
+                    showToast("此帳號已重複，請輸入新的帳號名稱")
                 }
             }
             .addOnFailureListener { exception ->
-                Log.w(TAG, "Error getting documents: ", exception)
-                // Handle the error
+                Log.w(TAG, "取得文件時發生錯誤: ", exception)
+                // 處理錯誤
             }
     }
 
